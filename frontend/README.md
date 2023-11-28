@@ -49,7 +49,7 @@ Before you begin, ensure you have the following software installed on your syste
 
 2. Change the directory to the project folder:
 
-  ```cd PES-Website/client```
+  ```cd PES-Website/frontend```
 
 3. Install project dependencies using npm or yarn:
 
