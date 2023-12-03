@@ -1,4 +1,6 @@
 import Navbar from "../components/Navbar"
+import "../styles/pagesStyles/CelebrationsPage.css"
+
 function CelebrationsPage(){
     return(
     <>

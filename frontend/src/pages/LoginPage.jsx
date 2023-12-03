@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+import "../styles/pagesStyles/LoginPage.css"
 
 function LoginPage(){
     return(

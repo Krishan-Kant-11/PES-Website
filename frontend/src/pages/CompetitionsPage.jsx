@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+import "../styles/pagesStyles/CompetitionsPage.css"
 
 function CompetitionsPage(){
     return(

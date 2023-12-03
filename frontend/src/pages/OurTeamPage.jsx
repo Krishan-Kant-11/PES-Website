@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+import "../styles/pagesStyles/OurTeamPage.css"
 
 function OurTeamPage(){
     return(
