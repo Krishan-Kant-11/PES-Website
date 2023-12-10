@@ -23,6 +23,7 @@ import OurTeamPage from "./pages/OurTeamPage"
 import OutreachPage from "./pages/OutreachPage"
 import PaathshalaPage from "./pages/PaathshalaPage"
 import SchoolOutreachPage from "./pages/SchoolOutreachPage"
+import PastTeams from './pages/PastTeams.jsx'
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <LoginPage />,
+  },
+  {
+    path: "pastteams",
+    element: <PastTeams />
   }
 ]);
 
