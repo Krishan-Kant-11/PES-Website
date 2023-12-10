@@ -1,13 +1,32 @@
+
+
 import Navbar from "../components/Navbar"
 import "../styles/pagesStyles/DonatePage.css"
+function Image()
+{
+  return(
+     
+  )
+
+}
 
 function DonatePage(){
     return(
         <>
         <Navbar />
-            <h1>this is donate page</h1>
-        </>
+        <Image />
+        <MainContent_1 /> 
+        <MainContent_2/>
+
+        
+
+        </>  
+  
+     
     )
 }
 
-export default DonatePage
+
+export default DonatePage;
+
+// export default TagTypesExample;
