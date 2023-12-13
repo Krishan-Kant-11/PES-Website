@@ -8,3 +8,13 @@
     text-decoration-color: rgb(255,102,0);
     text-underline-offset: 0.3em;
 }
+
+.PastTeamsCards {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
