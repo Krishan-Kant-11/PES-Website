@@ -1,5 +1,25 @@
-h1 {
-    /* sanity check */
-    /* color: red; */
-    color: black;
+.HomePage {
+    padding: 5% 10%;
+
+}
+
+.AboutUs {
+    /* width: 70%; */
+}
+
+.AboutUs > h1 {
+    text-align: center;
+}
+
+.AboutUs-Content {
+    display: flex;
+}
+
+.AboutUs-Content > p {
+    padding-left: 5%;
+}
+
+.AboutUs-Content > img {
+    width: 45%;
+    margin-left: 5%;
 }
