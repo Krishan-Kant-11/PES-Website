@@ -1,25 +1,56 @@
 .HomePage {
-    padding: 5% 10%;
+    padding: 5% 12%;
 
 }
 
-.AboutUs {
-    /* width: 70%; */
-}
+/* .AboutUs {
+    width: 70%;
+} */
 
-.AboutUs > h1 {
+.AboutUs >h1, .OurWork > h1, .Achievements>h1, .Testimonials>h1, .JoinUs>h1 {
+    /* text-align: center; */
+    margin-top: 10%;
+    margin-bottom: 5%;
+    /* font-size: 50px; */
+    font-size: 350%;
+    font-weight: 300;
+    padding: 5px;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    color: rgb(255,102,0);
+    text-decoration-color: black;
+    text-underline-offset: 0.5em;
 }
 
 .AboutUs-Content {
     display: flex;
+    /* flex-flow: wrap; */
 }
 
 .AboutUs-Content > p {
-    padding-left: 5%;
+    /* padding-left: 5%; */
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .AboutUs-Content > img {
-    width: 45%;
+    width: 55%;
     margin-left: 5%;
 }
+
+.OurWork-Content {
+    display: flex;
+    flex-direction: column;
+}
+
+.OurWork-Pathshala, .OurWork-Outreach, .OurWork-Others {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.1%;
+}
+
+.OurWork-Pathshala >img, .OurWork-Outreach >img, .OurWork-Others >img {
+    width: 24%;
+}
+
