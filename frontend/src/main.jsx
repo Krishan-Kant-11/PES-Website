@@ -1,14 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
-
 
 import {
   createBrowserRouter, 
   RouterProvider
 } from "react-router-dom"
-
 
 import CelebrationsPage from "./pages/CelebrationsPage"
 import CompetitionsPage from "./pages/CompetitionsPage"
@@ -22,17 +19,17 @@ import OtherEventsPage from "./pages/OtherEventsPage"
 import OurTeamPage from "./pages/OurTeamPage"
 import OutreachPage from "./pages/OutreachPage"
 import PaathshalaPage from "./pages/PaathshalaPage"
+import PastTeams from './pages/PastTeams'
 import SchoolOutreachPage from "./pages/SchoolOutreachPage"
-import PastTeams from './pages/PastTeams.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
   },
   {
     path: "home",
-    element: <App />,
+    element: <HomePage />,
   },
   {
     path: "contact",
@@ -90,6 +87,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Navbar />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

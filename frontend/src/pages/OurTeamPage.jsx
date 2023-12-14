@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Navbar from "../components/Navbar"
 import "../styles/pagesStyles/OurTeamPage.css"
 import TeamsCard from "../components/TeamsCard"
 import profilepic from "../assets/sample-image.jpg"
@@ -7,7 +6,6 @@ import profilepic from "../assets/sample-image.jpg"
 function OurTeamPage(){
     return(
         <>
-            <Navbar />
             <div className="TeamPage">
                 <section className="PatronAndMentor OurTeam">
                     <h1>Patron and Mentors</h1>

@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar"
 import StickyJoinButton from "../components/StickyJoinButton";
 import StickyDonateButton from "../components/StickyDonateButton";
 import "../styles/pagesStyles/HomePage.css"
