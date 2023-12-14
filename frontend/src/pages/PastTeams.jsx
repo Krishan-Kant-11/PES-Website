@@ -1,11 +1,9 @@
 import "../styles/pagesStyles/PastTeams.css"
-import Navbar from "../components/Navbar";
 import PastTeamsCard from "../components/PastTeamsCard";
 
 function PastTeams(){
     return(
         <>
-            <Navbar />
             <div className="PastTeams">
                 <h1>Past Teams</h1>
                 <div className="PastTeamsCards">
