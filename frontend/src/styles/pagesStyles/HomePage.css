@@ -26,17 +26,21 @@
 .AboutUs-Content {
     display: flex;
     /* flex-flow: wrap; */
+    position: relative;
+    width: 60%;
 }
 
 .AboutUs-Content > p {
-    /* padding-left: 5%; */
+    padding-left: 5%;
     text-align: justify;
     text-justify: inter-word;
+    width: 65%;
 }
 
-.AboutUs-Content > img {
-    width: 55%;
+.Carousels > img {
+    width: 100%;
     margin-left: 5%;
+    position: absolute;
 }
 
 .OurWork-Content {
