@@ -5,7 +5,9 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT;
 
+const cors = require('cors');
 const logger = require('./src/middlewares/logger.js');
+app.use(cors());
 app.use(logger);
 
 const events_routes = require('./src/routes/events.js');

@@ -11,7 +11,17 @@ router.get('/list', (req, res) => {
 });
 
 router.get('/details', (req, res) => {
-  res.send('Events details works!');
+  if(req.query.eventid == undefined) {
+    res.status(404).json({});
+  }else{
+    res.status(200).json({
+      id: 1,
+      name: 'Event Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec tellus non lectus vestibulum lacinia bibendum eget eros. Proin leo metus, efficitur et gravida ac, placerat et metus. Fusce varius est eros. Curabitur imperdiet odio justo, efficitur egestas quam cursus eu. Vivamus mollis sem ac porta commodo. Nunc aliquam risus.',
+      date: '14 December, 2023',
+      images: Array(5).fill("https://placehold.co/500x250/FF6600/993300?text=PES+Event"),
+    });
+  }
 });
 
 router.get('/create', authMiddleware, (req, res) => {
