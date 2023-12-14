@@ -1,0 +1,139 @@
+.Events {
+  transition: all 2s ease;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.EventPopupContainer {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.EventPopup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  max-height: 90vh;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #fff;
+  box-shadow: 0 20px 50px 0 #fff;
+}
+
+.EventTile,
+.EventPopup {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 500px;
+  flex: 1; 
+  margin: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 3px 5px 0 #0001;
+}
+
+.EventTile img,
+.EventPopup img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.EventTile div,
+.EventPopup div {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.EventTile h2,
+.EventPopup h2{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.EventTile hr,
+.EventPopup hr {
+  width: 80%;
+  margin-left: 0;
+  border: 1px solid var(--color-primary);
+}
+
+.EventTile h3,
+.EventPopup h3 {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  font-weight: 100;
+  font-size: smaller;
+  color: gray;
+}
+
+.EventTile p,
+.EventPopup p {
+  text-align: justify;
+  text-overflow: ellipsis;
+}
+
+.EventTile p {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2rem;
+}
+.EventTile p::after{
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.EventTile button {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border-width: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  outline: none;
+  font-size: medium;
+}
+
+.EventTile button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.EventPopup button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 50%;
+  outline: none;
+  border-width: 0;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.EventPopup button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.EventPopup div{
+  overflow-y: auto;
+  scrollbar-width: none;
+}
