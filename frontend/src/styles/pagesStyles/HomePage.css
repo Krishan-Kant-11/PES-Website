@@ -1,11 +1,7 @@
 .HomePage {
-    padding: 5% 12%;
+    /* padding: 5% 5%; */
 
 }
-
-/* .AboutUs {
-    width: 70%;
-} */
 
 .AboutUs >h1, .OurWork > h1, .Achievements>h1, .Testimonials>h1, .JoinUs>h1 {
     /* text-align: center; */
@@ -23,38 +19,17 @@
     text-underline-offset: 0.5em;
 }
 
-.AboutUs-Content {
-    display: flex;
-    /* flex-flow: wrap; */
-    position: relative;
-    width: 60%;
-}
-
-.AboutUs-Content > p {
-    padding-left: 5%;
-    text-align: justify;
-    text-justify: inter-word;
-    width: 65%;
-}
-
-.Carousels > img {
-    width: 100%;
-    margin-left: 5%;
-    position: absolute;
-}
-
 .OurWork-Content {
     display: flex;
-    flex-direction: column;
+    gap:2%;
+    justify-content: center;
 }
 
-.OurWork-Pathshala, .OurWork-Outreach, .OurWork-Others {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.1%;
+@media screen and (max-width:1100px) {
+    .OurWork-Content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.OurWork-Pathshala >img, .OurWork-Outreach >img, .OurWork-Others >img {
-    width: 24%;
-}
 
