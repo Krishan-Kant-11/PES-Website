@@ -1,3 +1,12 @@
+/* @import url('mdb-react-ui-kit/dist/css/mdb.min.css'); */
+
+.container{
+	margin:auto;
+}
+.row{
+	display: flex;
+}
+
 .site-footer
 {
   background-color:#0c0c0e;
@@ -25,12 +34,14 @@
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;
-  letter-spacing:2px
+  letter-spacing:2px;
+  margin-bottom: 2px
 }
 
 .site-footer a
 {
     color:#999797;
+    text-decoration:none;
 }
 .site-footer a:hover
 {
