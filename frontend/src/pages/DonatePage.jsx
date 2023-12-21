@@ -5,7 +5,7 @@ function DonatePage(){
     return(
         <>
         <Navbar />
-            <h1>this is donate page</h1>
+            
         </>
     )
 }
