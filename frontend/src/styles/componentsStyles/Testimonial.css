@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --testimonial-background-color: #fff;
+  --testimonial-text-color: #000; 
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--testimonial-background-color);
+  overflow: hidden;
+}
+
+.testimonial {
+  position: relative;
+  max-width: 1300px;
+  width: 100%;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+  
+.testimonial .image {
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.slide .mid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.testimonial button {
+  margin: 0px 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: #000;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-chevron {
+  font-size: 18px;
+  color: #fff;
+}
+
+.slide p {
+  text-align: center;
+  padding: 0px 10%;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--testimonial-text-color);
+}
+
+.slide .quote-icon {
+  font-size: 15px;
+  color: rgb(255, 102, 0);
+}
+
+.slide .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details .name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--testimonial-text-color);
+}
+
+.details .job {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--testimonial-text-color);
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  opacity: 1; /* Set initial opacity to 1 */
+  animation: slideAnimation 1s ease; /* Use animation for the sliding effect */
+  border: 2px solid #000; 
+  border-radius: 30px;
+  padding: 10px 0px;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@keyframes slideAnimation {
+  from {
+      transform: translateX(30%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}

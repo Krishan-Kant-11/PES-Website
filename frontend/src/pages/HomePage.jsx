@@ -15,6 +15,8 @@ const heroSliderImages = [
     hero_image1, hero_image2, hero_image3, hero_image4
 ]; 
 
+import Testimonial from "../components/Testimonial";
+
 function HomePage(){
     return(
         <>
@@ -25,6 +27,7 @@ function HomePage(){
                 heroHeading="Education for underpriviledged"
                 heroParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."    
             />
+            <Testimonial />
             <h1>this is home page for PES website</h1>
             <p>This is the paragraph on home page</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellendus quo eius earum accusamus tenetur aspernatur laudantium? Impedit, laborum voluptatum quae velit nesciunt mollitia labore, veritatis officia earum sit nostrum!</p>
