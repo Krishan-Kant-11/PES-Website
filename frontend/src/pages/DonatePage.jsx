@@ -2,7 +2,7 @@
 
 import Navbar from "../components/Navbar"
 import "../styles/pagesStyles/DonatePage.css"
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 function Image()
 {
   return(
