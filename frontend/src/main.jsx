@@ -11,6 +11,7 @@ import {
 } from "react-router-dom"
 
 import Navbar from "./components/Navbar"
+import FooterPES from './components/Footer';
 
 import CelebrationsPage from "./pages/CelebrationsPage"
 import CompetitionsPage from "./pages/CompetitionsPage"

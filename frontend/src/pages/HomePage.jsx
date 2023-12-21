@@ -1,6 +1,7 @@
 import StickyJoinButton from "../components/StickyJoinButton";
 import StickyDonateButton from "../components/StickyDonateButton";
 import "../styles/pagesStyles/HomePage.css"
+import FooterPES from "../components/Footer";
 
 function HomePage(){
     return(
@@ -10,6 +11,7 @@ function HomePage(){
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellendus quo eius earum accusamus tenetur aspernatur laudantium? Impedit, laborum voluptatum quae velit nesciunt mollitia labore, veritatis officia earum sit nostrum!</p>
             <StickyJoinButton />
             <StickyDonateButton />
+            <FooterPES />
         </>
     )
 }
