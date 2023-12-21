@@ -5,7 +5,7 @@ function ContactPage(){
     return(
         <div class="main">
             <Navbar/>
-            <div class="image"> <p>CONTACT US</p>  </div>
+            <div class="image"> <p>CONTACTT US</p>  </div>
             <div class="text1s">
                 <div class="quote1"><b>"The best way to find yourself is to lose yourself in the     service of others"   </b></div>
                 <div class="quote2">       BY  Mahatma Gandhi</div>
