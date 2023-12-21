@@ -9,6 +9,7 @@ import hero_image1 from "../assets/hero_image1.jpg";
 import hero_image2 from "../assets/hero_image2.jpg";
 import hero_image3 from "../assets/hero_image3.jpg";
 import hero_image4 from "../assets/hero_image4.jpg";
+import Navbar from "../components/Navbar";
 
 const heroSliderImages = [
     hero_image1, hero_image2, hero_image3, hero_image4
@@ -17,6 +18,7 @@ const heroSliderImages = [
 function HomePage(){
     return(
         <>
+            <Navbar />
             <Hero 
                 heroClassName="hero"
                 heroSliderImages={heroSliderImages}
