@@ -1,8 +1,6 @@
 .AboutUs >h1, .OurWork > h1, .Achievements>h1, .Testimonials>h1, .JoinUs>h1 {
-    /* text-align: center; */
     margin-top: 10%;
     margin-bottom: 5%;
-    /* font-size: 50px; */
     font-size: 350%;
     font-weight: 300;
     padding: 5px;

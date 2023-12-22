@@ -1,6 +1,16 @@
+import "../styles/pagesStyles/HomePage.css"
 import StickyJoinButton from "../components/StickyJoinButton";
 import StickyDonateButton from "../components/StickyDonateButton";
-import "../styles/pagesStyles/HomePage.css"
+import WeDoCard from "../components/WhatWeDoCard";
+import homepage_about_1 from "../assets/home-page-about-1.jpg"
+import homepage_about_2 from "../assets/home-page-about-2.jpg"
+import homepage_pathshala from "../assets/home-page-our-work-pathshala.jpg"
+import homepage_pathshala_2 from "../assets/home-page-our-work-pathshala-2.jpg"
+import homepage_outreach from "../assets/home-page-our-work-outreach.jpg"
+import homepage_outreach_2 from "../assets/home-page-our-work-outreach-2.jpg"
+import homepage_others from "../assets/home-page-our-work-others.jpg"
+import homepage_others_2 from "../assets/home-page-our-work-others-2.jpg"
+
 import FooterPES from "../components/Footer";
 
 
