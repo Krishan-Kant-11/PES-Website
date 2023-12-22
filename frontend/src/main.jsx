@@ -9,20 +9,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import FooterPES from "./components/Footer";
 
-import CelebrationsPage from "./pages/CelebrationsPage";
-import CompetitionsPage from "./pages/CompetitionsPage";
-import ContactPage from "./pages/ContactPage";
-import DonatePage from "./pages/DonatePage";
-import HomePage from "./pages/HomePage";
-import JoinUsPage from "./pages/JoinUsPage";
-import KV_IITRopar_Page from "./pages/KV_IITRopar_Page";
-import LoginPage from "./pages/LoginPage";
-import OtherEventsPage from "./pages/OtherEventsPage";
-import OurTeamPage from "./pages/OurTeamPage";
-import OutreachPage from "./pages/OutreachPage";
-import PaathshalaPage from "./pages/PaathshalaPage";
-import PastTeams from "./pages/PastTeams";
-import SchoolOutreachPage from "./pages/SchoolOutreachPage";
+import CelebrationsPage from "./pages/CelebrationsPage"
+import CompetitionsPage from "./pages/CompetitionsPage"
+import ContactPage from "./pages/ContactPage"
+import DonatePage from "./pages/DonatePage"
+import HomePage from "./pages/HomePage"
+import JoinUsPage from "./pages/JoinUsPage"
+import KV_IITRopar_Page from "./pages/KV_IITRopar_Page"
+import LoginPage from "./pages/LoginPage"
+import OtherEventsPage from "./pages/OtherEventsPage"
+import OurTeamPage from "./pages/OurTeamPage"
+import OutreachPage from "./pages/OutreachPage"
+import PaathshalaPage from "./pages/PaathshalaPage"
+import PastTeams from './pages/PastTeams'
+import SchoolOutreachPage from "./pages/SchoolOutreachPage"
+import kviitroparpage from "./pages/kviitroparpage"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

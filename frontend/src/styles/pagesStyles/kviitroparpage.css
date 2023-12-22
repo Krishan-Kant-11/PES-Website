@@ -1,0 +1,29 @@
+
+.Carousel
+{
+   display: flexbox;
+   background-color: blanchedalmond;
+   height: 27rem;
+}
+.OutMain_1
+{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.outReach_1
+{
+    display: flex;
+    justify-content: center;
+}
+.OutHeading1
+{
+  color: #262261;
+  /* display: flex; */
+}
+.outReachInfo_1
+{
+    margin: 2rem;
+    padding: 1rem;
+}
