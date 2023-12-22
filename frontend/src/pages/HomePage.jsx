@@ -29,9 +29,32 @@ function HomePage(){
                 heroParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."    
             />
             <Testimonial />
-            <h1>this is home page for PES website</h1>
-            <p>This is the paragraph on home page</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellendus quo eius earum accusamus tenetur aspernatur laudantium? Impedit, laborum voluptatum quae velit nesciunt mollitia labore, veritatis officia earum sit nostrum!</p>
+
+            <section className="OurWork">
+                <h1>WHAT WE DO</h1>
+                <div className="OurWork-Content">
+                        {/* Make sure the image are in 3:4 ratio */}
+                        <WeDoCard 
+                            img = {homepage_pathshala_2} 
+                            title = "PAATHSHALA"
+                            details = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
+                            link = "/paathshala"
+                        />
+                        <WeDoCard 
+                            img = {homepage_outreach_2} 
+                            title = "OUTREACH"
+                            details = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
+                            link = "/outreach"
+                        />
+                        <WeDoCard 
+                            img = {homepage_others_2} 
+                            title = "EVENTS"
+                            details = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
+                            link = "/otherevents"
+                        />
+                </div>
+            </section>
+            
             <StickyJoinButton />
             <StickyDonateButton />
             <FooterPES />
