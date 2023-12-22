@@ -27,6 +27,7 @@ import OutreachPage from "./pages/OutreachPage"
 import PaathshalaPage from "./pages/PaathshalaPage"
 import PastTeams from './pages/PastTeams'
 import SchoolOutreachPage from "./pages/SchoolOutreachPage"
+import kviitroparpage from "./pages/kviitroparpage"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -44,6 +45,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/outreach' element={<OutreachPage />} />
         <Route path='/paathshala' element={<PaathshalaPage />} />
         <Route path='/schooloutreach' element={<SchoolOutreachPage />} />
+        <Route path='/kviitropar1' element={<kviitroparpage />} />
         <Route path='/kviitropar' element={<KV_IITRopar_Page />} />
         <Route path='/otherevents' element={<OtherEventsPage />} />
         <Route path='/login' element={<LoginPage />} />
