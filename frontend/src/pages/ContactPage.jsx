@@ -3,7 +3,6 @@ import "../styles/pagesStyles/ContactPage.css"
 function ContactPage(){
     return(
         <div class="main">
-            <Navbar/>
             <div class="image"> <p>CONTACTT US</p>  </div>
             <div class="text1s">
                 <div class="quote1"><b>"The best way to find yourself is to lose yourself in the     service of others"   </b></div>

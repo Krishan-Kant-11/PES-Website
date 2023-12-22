@@ -3,7 +3,6 @@ import "../styles/pagesStyles/PaathshalaPage.css"
 function PaathshalaPage(){
     return(
         <div class="main">
-            <Navbar/>
             <div class="body1"> 
                 <div class="heading"> PAATHSHALA </div>
                 <div class="body1text">
