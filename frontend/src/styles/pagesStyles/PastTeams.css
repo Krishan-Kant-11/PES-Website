@@ -1,0 +1,20 @@
+.PastTeams > h1 {
+    font-size: 40px;
+    font-weight: 300;
+    padding: 5px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: rgb(255,102,0);
+    text-underline-offset: 0.3em;
+}
+
+.PastTeamsCards {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}

@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar"
 import "../styles/pagesStyles/PaathshalaPage.css"
 
 function PaathshalaPage(){

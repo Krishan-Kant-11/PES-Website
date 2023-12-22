@@ -61,13 +61,13 @@ Before you begin, ensure you have the following software installed on your syste
 
   ```npm run dev``` or ```yarn dev```
 
-2. Runs the development server. Your app will be available at http://localhost:5173.
+which will runs the development server. Your app will be available at http://localhost:5173.
 
-```npm run build``` or ```yarn build```
+2. ```npm run build``` or ```yarn build```
 
-3. Builds the app for production in the dist/ directory.
+ Builds the app for production in the dist/ directory.
 
-```npm run serve``` or ```yarn serve```
+3. ```npm run serve``` or ```yarn serve```
 
 Serves the production build, allowing you to preview the app locally.
 
