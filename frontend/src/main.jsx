@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import {
   BrowserRouter,
@@ -9,6 +11,7 @@ import {
 } from "react-router-dom"
 
 import Navbar from "./components/Navbar"
+import FooterPES from './components/Footer';
 
 import CelebrationsPage from "./pages/CelebrationsPage"
 import CompetitionsPage from "./pages/CompetitionsPage"
@@ -25,6 +28,7 @@ import PaathshalaPage from "./pages/PaathshalaPage"
 import PastTeams from "./pages/PastTeams"
 import SchoolOutreachPage from "./pages/SchoolOutreachPage"
 import Event from "./pages/Event"
+import KVIITRoparPage from "./pages/kviitroparpage"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -42,6 +46,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/outreach' element={<OutreachPage />} />
         <Route path='/paathshala' element={<PaathshalaPage />} />
         <Route path='/schooloutreach' element={<SchoolOutreachPage />} />
+        <Route path='/kviitropar1' element={<KVIITRoparPage />} />
         <Route path='/kviitropar' element={<KV_IITRopar_Page />} />
         <Route path='/otherevents' element={<OtherEventsPage />} />
         <Route path='/login' element={<LoginPage />} />

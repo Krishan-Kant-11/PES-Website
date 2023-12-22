@@ -1,0 +1,84 @@
+
+.dImage_1
+{
+    display: flex;
+    justify-content: center;
+    height:27rem;
+    background-color: aquamarine;
+}
+.dImage_2
+{
+    background-color: blueviolet;
+      
+}
+.dImage_3
+{
+    background-color: pink;
+}
+.donateMain_1
+{
+    display:grid;
+    grid-template-columns: 60% 40%;
+    place-items: center;
+    margin: 5rem 5rem;
+}
+
+.donateMain_2
+{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    place-items: center;
+    margin: 5rem 5rem;
+    margin-top: 2rem;
+    
+    
+
+}
+.donateMain_3
+{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    place-items: center;
+    margin: 5rem 5rem;
+    margin-top: 2rem;
+    
+    
+
+}
+
+.donateBox
+{
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+.donateHeading
+{
+       color: #262261;
+     
+}
+
+.Money
+{
+    display:flex;
+    justify-content: center;
+    column-gap: 10rem;
+}
+.payButton
+{
+    background-color: #ffba00;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none; /* Remove button border */
+    cursor: pointer; 
+    border-radius: 25rem
+}
+
+.donateInfo_1
+{
+    padding: 3rem 3rem
+}

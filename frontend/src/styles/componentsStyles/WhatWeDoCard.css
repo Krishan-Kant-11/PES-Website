@@ -1,0 +1,50 @@
+.WeDoCard {
+    width: 350px;
+    padding-bottom: 5%;
+}
+
+.WeDoCard-img {
+    width:100%;
+}
+
+.WeDoCard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-right: 2%;
+}
+
+.WeDoCard-header >h1 {
+    color: rgb(255,102,0);
+    font-size: 150%;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: black;
+    text-underline-offset: 0.5em;
+}
+
+.WeDoCard-button {
+    text-align: center;
+    padding: 8px 15px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.2s all ease-in-out;
+}
+
+.WeDoCard-button:hover {
+    color: white;
+    background-color: rgb(255,102,0);
+}
+
+.WeDoCard-details {
+    font-size: 80%;
+    margin-top: 0px;
+    padding-right: 1%;
+    text-align: justify;
+}
