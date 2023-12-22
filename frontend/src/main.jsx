@@ -1,14 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
-
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import {
-  createBrowserRouter, 
-  RouterProvider
+  BrowserRouter,
+  Routes,
+  Route,
 } from "react-router-dom"
 
+import Navbar from "./components/Navbar"
+import FooterPES from './components/Footer';
 
 import CelebrationsPage from "./pages/CelebrationsPage"
 import CompetitionsPage from "./pages/CompetitionsPage"
@@ -22,74 +25,30 @@ import OtherEventsPage from "./pages/OtherEventsPage"
 import OurTeamPage from "./pages/OurTeamPage"
 import OutreachPage from "./pages/OutreachPage"
 import PaathshalaPage from "./pages/PaathshalaPage"
+import PastTeams from './pages/PastTeams'
 import SchoolOutreachPage from "./pages/SchoolOutreachPage"
-import PastTeams from './pages/PastTeams.jsx'
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "home",
-    element: <App />,
-  },
-  {
-    path: "contact",
-    element: <ContactPage />,
-  },
-  {
-    path: "celebrations",
-    element: <CelebrationsPage />,
-  },
-  {
-    path: "donate",
-    element: <DonatePage />,
-  },
-  {
-    path: "competitions",
-    element: <CompetitionsPage />,
-  },
-  {
-    path: "joinus",
-    element: <JoinUsPage />,
-  },
-  {
-    path: "ourteam",
-    element: <OurTeamPage />,
-  },
-  {
-    path: "outreach",
-    element: <OutreachPage />,
-  },
-  {
-    path: "paathshala",
-    element: <PaathshalaPage />,
-  },
-  {
-    path: "schooloutreach",
-    element: <SchoolOutreachPage />,
-  },
-  {
-    path: "kviitropar",
-    element: <KV_IITRopar_Page />,
-  },
-  {
-    path: "otherevents",
-    element: <OtherEventsPage />,
-  },
-  {
-    path: "login",
-    element: <LoginPage />,
-  },
-  {
-    path: "pastteams",
-    element: <PastTeams />
-  }
-]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/home' element={<HomePage />} />
+        <Route path='/contact' element={<ContactPage />} />
+        <Route path='/celebrations' element={<CelebrationsPage />} />
+        <Route path='/donate' element={<DonatePage />} />
+        <Route path='/competitions' element={<CompetitionsPage />} />
+        <Route path='/joinus' element={<JoinUsPage />} />
+        <Route path='/ourteam' element={<OurTeamPage />} />
+        <Route path='/outreach' element={<OutreachPage />} />
+        <Route path='/paathshala' element={<PaathshalaPage />} />
+        <Route path='/schooloutreach' element={<SchoolOutreachPage />} />
+        <Route path='/kviitropar' element={<KV_IITRopar_Page />} />
+        <Route path='/otherevents' element={<OtherEventsPage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/pastteams' element={<PastTeams />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
 )

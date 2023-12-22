@@ -1,0 +1,151 @@
+.main{
+    overflow:scroll;
+}
+/*would like to improvise the scrollbar ...?? */
+::-webkit-scrollbar {
+    width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+    background: #f6f6f4;
+    }
+    ::-webkit-scrollbar-thumb {
+    background: #86af49;
+    } 
+    ::-webkit-scrollbar-thumb:hover {
+    Background: #E5cdbc
+}
+.heading {
+    width: 100%;
+    font-size: 30px;
+    font-family:edo;
+    padding: 5px 5px;
+    text-align: center;
+    text-shadow: 5px;
+    text-decoration: underline;
+    color: rgb(255,102,0);
+}
+.body1text{
+    width:90%;
+    font-size: 16px;
+    padding: 0px 23px;
+    /*font-family:segoe script ;*/
+    text-align: justify;
+}
+/*padding : top-left-right-bottom*/
+.body2{ 
+    margin-top: 20px;
+    margin-left:20px ;
+    background-color: aliceblue;
+}
+.subbutton{
+    width : 95%;
+    height : 50px;
+    background-color: #FDCD6F; 
+}
+.button {
+         /* Green */
+    background-color: rgb(255,102,0);
+    border-radius: 10px;
+    border: 2px solid red;
+    box-shadow: 0 9px #999;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    height: 35px;
+    width: 170px;
+    font-family: Algerian;
+    font-size: 20px;
+    margin-top: 7px;
+    margin-left: 18px;   
+}
+.button:hover{
+    background-color:black;
+    color:white;
+}
+.location{
+    width: 95%;
+    height: 400px;
+}
+.text2{
+    width: 90%;
+    font-size: 19px;
+    padding : 15px 15px;
+    font-family:josefin sans std ;
+    float:left;
+    text-align: justify;
+}
+
+/* *********************************************** LAPTOP KE LIYE ****************************************************************/
+@media only screen and (min-width: 1000px) {
+    .body1 {
+        width:100%px;
+        margin-left: 5px;
+    }
+    .heading {
+        font-size: 45px;
+        font-family:edo;
+        padding-left: 160px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        text-shadow: 5px;
+        text-decoration: underline;
+        text-align: left;
+    }
+    .body1text{
+        width:44%;
+        font-size: 20px;
+        padding: 0px 50px;
+        text-align: justify;
+    }
+    /*padding : top-left-right-bottom*/
+    /*Bradley Hand ITC - another font that can be used */
+        /* body 2- subbutton(button) - location */
+     
+    .subbutton{
+        width : 100%;
+        height : 50px;
+        background-color: #FDCD6F; 
+    }
+    .button {
+                 /* Green */
+        background-color: rgb(255,102,0);
+        border-radius: 10px;
+        border: 2px solid red;
+        box-shadow: 0 9px #999;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        float: left;
+        height: 35px;
+        width: 170px;
+        font-family: Algerian;
+        font-size: 20px;
+        margin-top: 7px;
+        margin-left: 25px;   
+    }
+    .button:hover{
+        background-color:black;
+        color:white;
+    }
+    .text2{
+        width: 45%;
+        font-size: 25px;
+        padding : 15px 30px;
+        font-family:josefin sans std ;
+        text-align: justify;
+        float:left;
+    }
+    .body2{ 
+        margin-top: 20px;
+        background-color:#E0FAFC;
+        margin-left:20px;   
+        height:540px;
+    }
+    .location{
+        width: 47%;
+        float:left;
+        padding-top: 1.5%;
+    }
+    
+}

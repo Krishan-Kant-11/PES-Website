@@ -11,15 +11,34 @@ import homepage_outreach_2 from "../assets/home-page-our-work-outreach-2.jpg"
 import homepage_others from "../assets/home-page-our-work-others.jpg"
 import homepage_others_2 from "../assets/home-page-our-work-others-2.jpg"
 
+import FooterPES from "../components/Footer";
+
+
+import Hero from "../components/Hero";
+
+import hero_image1 from "../assets/hero_image1.jpg";
+import hero_image2 from "../assets/hero_image2.jpg";
+import hero_image3 from "../assets/hero_image3.jpg";
+import hero_image4 from "../assets/hero_image4.jpg";
+import Navbar from "../components/Navbar";
+
+const heroSliderImages = [
+    hero_image1, hero_image2, hero_image3, hero_image4
+]; 
+
+import Testimonial from "../components/Testimonial";
 
 function HomePage(){
     return(
         <>
-        <div className="HomePage">
-            <section className="AboutUs">
-                <h1>WHO WE ARE</h1>
-                
-            </section>
+            <Navbar />
+            <Hero 
+                heroClassName="hero"
+                heroSliderImages={heroSliderImages}
+                heroHeading="Education for underpriviledged"
+                heroParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."    
+            />
+            <Testimonial />
 
             <section className="OurWork">
                 <h1>WHAT WE DO</h1>
@@ -45,23 +64,10 @@ function HomePage(){
                         />
                 </div>
             </section>
-
-            <section className="Achievements">
-                <h1>OUR ACHIEVEMENTS</h1>
-            </section>
-
-            <section className="Testimonials">
-                <h1>TESTIMONIALS</h1>
-            </section>
-
-            <section className="JoinUs">
-                <h1>BE PART OF THE TEAM</h1>
-            </section>
-
-
+            
             <StickyJoinButton />
             <StickyDonateButton />
-        </div>
+            <FooterPES />
         </>
     )
 }
