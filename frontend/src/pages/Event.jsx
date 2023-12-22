@@ -22,6 +22,7 @@ function Event() {
       <div className="carousel">
         <Carousel>
           {eventDetails.images.map((image, index) => (
+            // Make sure the images are in 2:1 ratio
             <img src={image} alt={eventDetails.title} />
           ))}
         </Carousel>
