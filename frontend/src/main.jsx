@@ -20,7 +20,7 @@ import OtherEventsPage from "./pages/OtherEventsPage"
 import OurTeamPage from "./pages/OurTeamPage"
 import OutreachPage from "./pages/OutreachPage"
 import PaathshalaPage from "./pages/PaathshalaPage"
-import PastTeams from './pages/PastTeams'
+import PastTeams from "./pages/PastTeams"
 import SchoolOutreachPage from "./pages/SchoolOutreachPage"
 import Kviitroparpage from "./pages/kviitroparpage"
 
@@ -44,6 +44,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/otherevents" element={<OtherEventsPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/pastteams" element={<PastTeams />} />
+        <Route path='/event/:eventid' element={<Event />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
