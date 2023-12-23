@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import FooterPES from "./components/Footer";
+import Footer from "./components/Footer";
 
 import CelebrationsPage from "./pages/CelebrationsPage"
 import CompetitionsPage from "./pages/CompetitionsPage"
