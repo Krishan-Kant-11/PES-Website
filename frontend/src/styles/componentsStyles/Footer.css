@@ -4,8 +4,16 @@
 
 .row{
 	display: flex;
+  flex-wrap: wrap;
 }
 
+.row-first{
+  justify-content: space-evenly;
+}
+
+.row-last{
+  justify-content: space-between;
+}
 
 .site-footer
 {
