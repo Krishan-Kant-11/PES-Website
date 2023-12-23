@@ -1,9 +1,11 @@
-.container{
+.footer-container {
 	margin:auto;
 }
+
 .row{
 	display: flex;
 }
+
 
 .site-footer
 {
