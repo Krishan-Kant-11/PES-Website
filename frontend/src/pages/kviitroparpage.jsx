@@ -14,7 +14,7 @@ function MainContent_1()
     return(
         <div className="KVIIT_Ropar">
         <div className= "KV_School"  >
-        <h1 className="OutHeading1">School Outnpmreach</h1>
+        <h1 className="OutHeading1">KV IIT Ropar</h1>
        </div>
         <p className="KVIIT_Admission">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi scelerisque eu ultrices vitae auctor eu. Vitae suscipit tellus mauris a diam maecenas sed enim. Enim sit amet venenatis urna cursus eget nunc scelerisque. Mauris cursus mattis molestie a iaculis. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Mauris vitae ultricies leo integer. Commodo odio aenean sed adipiscing diam. Pulvinar elementum integer enim neque. Morbi tincidunt augue interdum velit euismod in. Turpis egestas sed tempus urna.
@@ -29,7 +29,7 @@ function MainContent_1()
 
 
 
-function kviitroparpage(){
+function Kviitroparpage(){
     return(
         <>
         <Navbar />
@@ -40,4 +40,4 @@ function kviitroparpage(){
     )
 }
 
-export default kviitroparpage
+export default Kviitroparpage
