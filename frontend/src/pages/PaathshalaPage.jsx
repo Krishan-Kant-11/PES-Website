@@ -11,13 +11,6 @@ const heroSliderImages = [img1, img2, img3, img4];
 function PaathshalaPage(){
     return(
         <div class="main">
-            <Navbar/>
-            <div class="carousel">
-                    <Carousel
-                            heroClassName="hero"
-                             heroSliderImages={heroSliderImages}            
-                        />
-            </div>
             <div class="body1"> 
                 <div class="heading"> PAATHSHALA </div>
                 <div class="body1text">

@@ -21,6 +21,10 @@ const links = [
           Head: "School Outreach",
           Link: "/schooloutreach"
         },
+        {
+          Head: "KV IIT Ropar",
+          Link: "/kviitropar"
+        },
       ],
     },
     {

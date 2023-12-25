@@ -5,7 +5,7 @@ function StickyDonateButton(props){
     return(
         <>
         <div className="StickyDonateButton">
-            <Link to="/donate" className="StickyButtonText"><p>Donate Us</p></Link>
+            <Link to="/donate" className="StickyButtonText"><p>&#10084; Donate</p></Link>
         </div>
         </>
     )
