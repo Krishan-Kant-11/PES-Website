@@ -1,26 +1,68 @@
-.AboutUs >h1, .OurWork > h1, .Achievements>h1, .Testimonials>h1, .JoinUs>h1 {
-    margin-top: 10%;
-    margin-bottom: 5%;
-    font-size: 350%;
-    font-weight: 300;
-    padding: 5px;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 1.5px;
-    color: rgb(255,102,0);
-    text-decoration-color: black;
-    text-underline-offset: 0.5em;
+.AboutUs > h1,
+.OurWork > h1,
+.Achievements > h1,
+.Testimonials > h1,
+.JoinUs > h1 {
+  /* margin-top: 10%; */
+  margin-bottom: 3%;
+  font-size: 350%;
+  font-weight: 300;
+  padding: 5px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  color: rgb(255, 102, 0);
+  text-decoration-color: black;
+  text-underline-offset: 0.5em;
 }
+
+.AboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.AboutUs-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AboutUs-p {
+  margin: 0% 7%;
+  width: 30%;
+  text-align: justify;
+}
+
+.AboutUs-img {
+  width: 550px;
+  border-radius: 8px;
+}
+
+.Testimonial-cards {
+  /* border: 2px red solid; */
+}
+
 
 .OurWork-Content {
-    display: flex;
-    gap:2%;
-    justify-content: center;
+  display: flex;
+  gap: 2%;
+  justify-content: center;
 }
 
-@media screen and (max-width:1100px) {
-    .OurWork-Content {
-        flex-direction: column;
-        align-items: center;
-    }
+@media screen and (max-width: 1100px) {
+  .OurWork-Content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.testing {
+  /* border: 2px red solid; */
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
