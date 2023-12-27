@@ -1,56 +1,35 @@
+import { useState, useEffect } from "react"
 import "../styles/pagesStyles/CelebrationsPage.css"
+import Hero from '../components/Hero';
+import heroImg from '../assets/hero_image3.jpg';
 import Events from "../components/Events"
 
 function CelebrationsPage() {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_BASE}/events/list?type=celebrations`)
+      .then(res => res.json())
+      .then(data => setEvents(data))
+      .catch(err => console.log(err));
+  }, []);
+
+  if(events.length == 0) return <>Loading</>;
   return (
     <>
-      <h1>this is celbrations page</h1>
+    <Hero
+      heroSliderImages={[heroImg]}
+      heroHeading="Celebrations"
+    />
       <Events>
-        <Events.Tile
-          title={"Event 1"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
-        <Events.Tile
-          title={"Event 2"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
-        <Events.Tile
-          title={"Event 3"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
-        <Events.Tile
-          title={"Event 4"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
-        <Events.Tile
-          title={"Event 5"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
-        <Events.Tile
-          title={"Event 6"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
-        <Events.Tile
-          title={"Event 7"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
-        <Events.Tile
-          title={"Event 8"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
-        <Events.Tile
-          title={"Event 9"}
-          date={"14 December, 2023"}
-          image={"https://placehold.co/500x250/FF6600/993300?text=PES+Event"}
-        />
+        {events.map(event => (
+          <Events.Tile
+            key={event.id}
+            title={event.title}
+            date={event.date}
+            image={event.image}
+          />
+        ))}
       </Events>
     </>
   )

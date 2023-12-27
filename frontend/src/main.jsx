@@ -22,6 +22,7 @@ import PaathshalaPage from "./pages/PaathshalaPage"
 import PastTeams from "./pages/PastTeams"
 import SchoolOutreachPage from "./pages/SchoolOutreachPage"
 import Kviitroparpage from "./pages/kviitroparpage"
+import Event from "./pages/Event";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

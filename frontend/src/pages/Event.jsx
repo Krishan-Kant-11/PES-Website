@@ -19,11 +19,12 @@ function Event() {
   if(eventDetails.title == undefined) return <>Loading</>;
   return (
     <div className="event">
-      <div className="carousel">
+      <div className="my-carousel">
         <Carousel>
           {eventDetails.images.map((image, index) => (
-            // Make sure the images are in 2:1 ratio
-            <img src={image} alt={eventDetails.title} />
+            <div key={index} style={{width:"100%", height:'100%'}}>
+              <img src={image} alt={eventDetails.title} style={{objectFit:'cover', placeSelf:'center', width:'100%', height:'100%'}} />
+            </div>
           ))}
         </Carousel>
       </div>
