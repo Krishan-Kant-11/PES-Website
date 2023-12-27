@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Carousel } from 'react-responsive-carousel';
+import Hero from "../components/Hero";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "../styles/pagesStyles/Event.css"
@@ -19,18 +19,16 @@ function Event() {
   if(eventDetails.title == undefined) return <>Loading</>;
   return (
     <div className="event">
-      <div className="my-carousel">
-        <Carousel>
-          {eventDetails.images.map((image, index) => (
-            <div key={index} style={{width:"100%", height:'100%'}}>
-              <img src={image} alt={eventDetails.title} style={{objectFit:'cover', placeSelf:'center', width:'100%', height:'100%'}} />
-            </div>
-          ))}
-        </Carousel>
-      </div>
+      <Hero 
+        heroHeading={eventDetails.title || 'Title'}
+        heroSliderImages={eventDetails.images}
+      />
       <div className="content">
-        <h1>{eventDetails.title || 'Title'}</h1>
-        <p>{eventDetails.description || 'Description'}</p>
+        <p style={{marginBottom:'10px'}}>{eventDetails.description || 'Description'}</p>
+        <p style={{marginBottom:'10px'}}>{eventDetails.description || 'Description'}</p>
+        <p style={{marginBottom:'10px'}}>{eventDetails.description || 'Description'}</p>
+        <p style={{marginBottom:'10px'}}>{eventDetails.description || 'Description'}</p>
+        <p style={{marginBottom:'10px'}}>{eventDetails.description || 'Description'}</p>
       </div>
     </div>
   )

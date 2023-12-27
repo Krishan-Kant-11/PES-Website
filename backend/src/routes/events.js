@@ -29,7 +29,7 @@ router.get('/details', (req, res) => {
       title: 'Event Title',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec tellus non lectus vestibulum lacinia bibendum eget eros. Proin leo metus, efficitur et gravida ac, placerat et metus. Fusce varius est eros. Curabitur imperdiet odio justo, efficitur egestas quam cursus eu. Vivamus mollis sem ac porta commodo. Nunc aliquam risus.',
       date: '14 December, 2023',
-      images: ['/src/assets/hero_image1.jpg', '/src/assets/hero_image2.jpg', '/src/assets/hero_image3.jpg', '/src/assets/hero_image4.jpg'],
+      images: ['/src/assets/hero_image1.jpg', '/src/assets/hero_image2.jpg', '/src/assets/hero_image4.jpg'],
     });
   }
 });
