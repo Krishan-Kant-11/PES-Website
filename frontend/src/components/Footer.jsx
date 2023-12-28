@@ -2,7 +2,7 @@ import React from 'react';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../styles/componentsStyles/Footer.css"
 
-export default function FooterPES(){
+export default function Footer(){
   return(
       <div>
         <footer className="site-footer">
