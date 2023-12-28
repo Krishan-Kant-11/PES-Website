@@ -16,3 +16,7 @@ body {
   margin: 0px;
 }
 
+#root {
+  margin: 0 auto;
+  color: black;
+}
