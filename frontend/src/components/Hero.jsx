@@ -41,8 +41,8 @@ const Hero = ({ heroClassName, heroSliderImages, heroHeading, heroParagraph }) =
   return (
     <>
       <section>
-        <div className={heroClassName}>
-            <img src={heroSliderImages[currentHeroImage]} alt='heroImg'/>
+        <div className={heroClassName} style={{maxHeight:'100vh'}}>
+            <img src={heroSliderImages[currentHeroImage]} alt='heroImg' style={{width:'100%', maxHeight:'100vh', objectFit:'cover'}}/>
             <div className='hero-txt' ref={textRef}>
                 <h1>{heroHeading}</h1> 
                 <p>{heroParagraph}</p> 
