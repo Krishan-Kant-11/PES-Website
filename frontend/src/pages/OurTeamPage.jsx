@@ -5,7 +5,8 @@ import profilepic from "../assets/sample-image.jpg"
 
 function OurTeamPage(){
     return(
-        <>
+        <>  
+            <h1>Our team page</h1>
             <div className="TeamPage">
                 <section className="PatronAndMentor OurTeam">
                     <h1>Patron and Mentors</h1>

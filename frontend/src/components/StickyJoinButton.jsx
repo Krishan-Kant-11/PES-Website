@@ -5,7 +5,7 @@ function StickyJoinButton(props){
     return(
         <>
         <div className="StickyJoinButton">
-            <Link to="/joinus" className="StickyButtonText"><p>Join Us</p></Link>
+            <Link to="/joinus" className="StickyButtonText"><p>&#10022; Join Us</p></Link>
         </div>
         </>
     )

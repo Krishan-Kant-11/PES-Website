@@ -1,6 +1,27 @@
+.footer-container {
+	margin:auto;
+}
 
-.site-footer{
-  width: 100%;
+.row{
+	display: flex;
+  flex-wrap: wrap;
+}
+
+.row-first{
+  justify-content: space-evenly;
+}
+
+.row-last{
+  justify-content: space-between;
+}
+.site-footer
+{
+  background-color:#0c0c0e;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#999797;
+
   position: sticky;
   bottom: 0;
   background:#202124;
@@ -156,4 +177,3 @@
       position: unset;
     }
 }
-
