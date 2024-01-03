@@ -22,7 +22,7 @@ nav {
     width: 100%;
     z-index: 100;
     margin-top: 0px;
-    background: transparent;
+    /* background: transparent; */
 }
  
 .navbar {
@@ -137,6 +137,7 @@ nav {
   padding-right: 1.25rem;
   font-size: 16px;
   margin-bottom: 0px;
+  font-weight: 500;
 }
 
 
@@ -195,7 +196,7 @@ nav {
 /* mobile-sublink-heading */
 .mobile-sublink-heading {
   padding: 1.5rem 1.25rem 1.5rem 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -225,7 +226,7 @@ nav {
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .parent-link:hover {
       .child-link  {
         display: block;
@@ -260,7 +261,7 @@ nav {
 }
 
 
-@media (min-width: 1036px) { 
+@media (min-width: 1000px) { 
   .navbar-logo {
       width: auto;
   }   
@@ -284,5 +285,22 @@ nav {
   .mobile-nav-links {
       display: none; 
   }
+
+  /* blur effect */
+  .nav-div {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+  }
 }
 
+@media screen and (max-width: 1000px) {
+  /* blur effect */
+  .navbar-logo {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}

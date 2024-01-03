@@ -88,8 +88,8 @@ function HomePage() {
         heroParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       />
 
-      <h1>This is Home page</h1>
-      <h1>This is Home page</h1>
+      {/* <h1>This is Home page</h1>
+      <h1>This is Home page</h1> */}
 
       <section className="AboutUs">
         <h1>ABOUT US</h1>
