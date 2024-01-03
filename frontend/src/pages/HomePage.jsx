@@ -81,12 +81,12 @@ function HomePage() {
   };
   return (
     <>
-      {/* <Hero
+      <Hero
         heroClassName="hero"
         heroSliderImages={heroSliderImages}
         heroHeading="Education for underpriviledged"
         heroParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      /> */}
+      />
 
       <h1>This is Home page</h1>
       <h1>This is Home page</h1>
