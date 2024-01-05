@@ -51,12 +51,11 @@ function Navbar(){
               <li><NavLink to="/home" className="nav-item" activeClassName='active'>Home</NavLink></li>
               <li><NavLink to="/ourteam" className="nav-item" activeClassName='active'>Our Team</NavLink></li>
               <li><NavLink to="/contact" className="nav-item" activeClassName='active'>Contact Us</NavLink></li>
-              <li><NavLink to="/donate" className="nav-item" activeClassName='active'>Donate</NavLink></li>
-              <li><NavLink to="/joinus" className="nav-item" activeClassName='active'>Join Us</NavLink></li>
-              <li><NavLink to="/login" className="nav-item" activeClassName='active'>Login</NavLink></li>
             
               {/* Navsublinks */}
               <NavSubLinks />
+
+              <li><NavLink to="/login" className="nav-item" activeClassName='active'>Login</NavLink></li>
             </ul>
 
             {/* Mobile Nav */}
@@ -68,12 +67,11 @@ function Navbar(){
               <li><NavLink to="/home" className="mobile-nav-item" activeClassName='active'>Home</NavLink></li>
               <li><NavLink to="/ourteam" className="mobile-nav-item" activeClassName='active'>Our Team</NavLink></li>
               <li><NavLink to="/contact" className="mobile-nav-item" activeClassName='active'>Contact Us</NavLink></li>
-              <li><NavLink to="/donate" className="mobile-nav-item" activeClassName='active'>Donate</NavLink></li>
-              <li><NavLink to="/joinus" className="mobile-nav-item" activeClassName='active'>Join Us</NavLink></li>
-              <li><NavLink to="/login" className="mobile-nav-item" activeClassName='active'>Login</NavLink></li>
             
               {/* Navsublinks */}
               <NavSubLinks />
+
+              <li><NavLink to="/login" className="mobile-nav-item" activeClassName='active'>Login</NavLink></li>
             </ul>
           </div>
         </nav>
