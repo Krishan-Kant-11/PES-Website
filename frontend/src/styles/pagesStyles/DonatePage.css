@@ -1,0 +1,167 @@
+.dImage_1
+{
+    display: flex;
+    /* justify-content: center; */
+    height:62rem;
+   
+}
+.dImage_2
+{
+    display: flex;
+
+    height: 25rem;
+    padding-right:4rem;
+    padding-left: 5rem;
+    
+
+      
+}
+.dImage_3
+{
+    display: flex;
+    height: 15rem;
+    /* justify-content: center; */
+    /* width: 50%; */
+    
+}
+.donateMain_1
+{
+    display: flex;
+ 
+    margin-left: 5rem; 
+     margin-right: 5rem; 
+    margin-bottom: 2rem;
+    justify-content: center;
+  
+}
+
+.donateMain_2
+{
+    display:flex;
+    /* place-items: center; */
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+
+
+    
+    
+}
+.donateMain_3
+{
+    display:flex;
+    /* place-items: center; */
+    margin-left: 5rem;
+    /* margin-right: 1rem; */
+    margin-bottom: 2rem;
+
+    
+
+}
+
+.donateBox
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: 2rem; */
+
+    
+}
+.donateHeading
+{
+       color: #262261;
+     
+}
+
+
+.payButton
+{
+    background-color : rgb(255,102,0);
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none; /* Remove button border */
+    cursor: pointer; 
+    border-radius: 25rem;
+    width:9rem;
+}
+
+.donateViaBox
+{
+    display:flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.donateVia
+{
+    color: #262261;
+    font-size: 3rem;
+ 
+
+}
+.donateInfo_1{
+    text-align: justify;
+}
+.donateInfo_2{
+    text-align: justify;
+}
+.donateInfo_3{
+    text-align: justify;
+  
+}
+
+.infoBox_1
+{
+    display: flex;
+    width: 50%;
+    padding: 2rem;
+    justify-content: center;
+}
+.infoBox_2
+{
+    display: flex;
+    width: 50%;
+ padding: 2rem;
+ /* justify-content: center; */
+    
+}
+.infoBox_3
+{
+    display: flex;
+    width: 50%;
+    padding-right:4rem;
+    padding-left: 4rem;
+    /* justify-content: center; */
+ 
+    
+}
+
+.boxbuttons
+{
+    display:flex;
+    justify-content: center;
+}
+.b1{
+    margin-left: 2rem;
+}
+
+.dImage_4{
+
+    display: flex;
+    /* flex-direction: column;*/
+    justify-content: center; 
+    height:20rem;
+    
+
+}
+.carousel
+{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+

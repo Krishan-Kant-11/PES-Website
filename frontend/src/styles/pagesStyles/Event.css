@@ -1,0 +1,18 @@
+html{
+  overflow-x: hidden;
+}
+
+.event{
+  display: flex;
+  flex-direction: column;
+}
+
+.event .content{
+  padding: 1rem 10rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .event .content{
+    padding: 1rem;
+  }
+}
