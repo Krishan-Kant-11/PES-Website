@@ -16,7 +16,7 @@ export default function Footer(){
       
 
         <div className="col-md-2 col-sm-6 col-xs-12" > 
-          <h6 >Office</h6> 
+          <h3>Office</h3> 
          
           <p className="text-justify">
           Technology Business Incubator Foundation <br />
@@ -28,7 +28,7 @@ export default function Footer(){
   
 
         <div className="col-md-2 col-sm-6 col-xs-12">
-          <h6>Info</h6>
+          <h3>Info</h3>
           <ul className="footer-links">
             <li><a href="/src/docs/privacyPolicy.pdf">Privacy Policy</a></li>
             <li><a href="/src/docs/Social_Media_Policy.pdf">Social Media Policy</a></li>
@@ -38,7 +38,7 @@ export default function Footer(){
         </div>
 
         <div className="col-md-2 col-sm-6 col-xs-12" >
-          <h6>Quick Links</h6>
+          <h3>Quick Links</h3>
           <ul className="footer-links">
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
@@ -52,12 +52,6 @@ export default function Footer(){
 
 
     <div className="footer-container" style={{marginTop:'1%'}}>
-      <div className="row row-last">
-        <div className="col-md-8 col-sm-6 col-xs-12" style={{marginLeft:'3%'}}>
-          <p className="copyright-text">&copy; 2023 Copyright &nbsp; 
-            <a href="https://www.iitrpr.ac.in/pehchaanes">www.iitrpr.ac.in/pehchaanes</a>
-          </p>
-        </div>
 
         <div className="col-md-4 col-sm-6 col-xs-12" style={{marginRight:'3%'}}>
           <ul className="social-icons">
@@ -69,6 +63,13 @@ export default function Footer(){
             <li><a className="email" href="mailto: pehchaanes@iitrpr.ac.in"><i className="fas fa-envelope"></i></a></li>   
           </ul>
         </div> 
+
+        <div className="row row-last">
+          <div className="col-md-8 col-sm-6 col-xs-12" style={{marginLeft:'3%'}}>
+            <p className="copyright-text">&copy; 2023 Copyright &nbsp; 
+              <a href="https://www.iitrpr.ac.in/pehchaanes">Pehchaan Ek Safar</a>
+            </p>
+          </div>
       </div>
     </div>
 

@@ -55,7 +55,7 @@ function Navbar(){
               {/* Navsublinks */}
               <NavSubLinks />
 
-              <li><NavLink to="/login" className="nav-item" activeClassName='active'>Login</NavLink></li>
+              <li><NavLink to="/login" className="nav-item login-button" activeClassName='active'>Login</NavLink></li>
             </ul>
 
             {/* Mobile Nav */}
