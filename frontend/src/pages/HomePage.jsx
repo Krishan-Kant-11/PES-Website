@@ -12,7 +12,6 @@ import StickyJoinButton from "../components/StickyJoinButton";
 import StickyDonateButton from "../components/StickyDonateButton";
 import WeDoCard from "../components/WhatWeDoCard";
 import Hero from "../components/Hero";
-import FooterPES from "../components/Footer";
 import Testimonial from "../components/Testimonial";
 import Testimonial2 from "../components/Testimonial2";
 
@@ -177,7 +176,6 @@ function HomePage() {
       <StickyJoinButton />
       <StickyDonateButton />
 
-      <FooterPES />
     </>
   );
 }

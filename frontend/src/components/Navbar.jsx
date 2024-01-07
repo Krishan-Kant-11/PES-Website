@@ -33,8 +33,9 @@ function Navbar(){
       <div className='nav-div'>
         <nav 
           style={{ 
-            "backgroundColor": navbarBackground && !open ? "" : "rgb(255, 102, 0)", 
-            "transition": !open && "background-color 0.5s ease-in-out"
+            "backgroundColor": navbarBackground && !open ? "" : "rgb(255, 255, 255)", 
+            "transition": !open && "background-color 0.5s ease-in-out",
+            "boxShadow":"0 2px 4px 0 rgba(0,0,0,.3)"
           }} 
         >
           <div className='navbar'>

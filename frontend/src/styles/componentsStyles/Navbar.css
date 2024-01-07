@@ -29,7 +29,7 @@ nav {
     display: flex; 
     justify-content: space-around; 
     align-items: center; 
-    font-weight: 500; 
+    font-weight: 300; 
 }
 
 
@@ -80,7 +80,7 @@ nav {
 }
 
 .login-button {
-  background-color: rgb(255, 102, 0);
+  /* background-color: rgb(255, 102, 0); */
   background-color: black;
   border-radius: 50px;
   padding: 8px 20px;
@@ -147,24 +147,26 @@ nav {
   padding-right: 1.25rem;
   font-size: 16px;
   margin-bottom: 0px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 
 /* nested-link-icon-1 */
 .nested-link-icon-1 {
   font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: 1rem;
   display: inline;
+  transition: 0.5s ease-in-out;
 }
 
 
 
 /* nested-link-icon-2 */
 .nested-link-icon-2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1rem;
   display: none;
+  transition: 0.5s ease-in-out;
 }
 
 
@@ -177,23 +179,30 @@ nav {
 /* sublink-section */
 .sublink-section {
   position: absolute;
-  top: 5rem;
-  display: none;
+  top: 4.2rem;
+  max-height: auto;
+  width: auto;
 }
+
 
 /* sublinks */
 .sublinks {
   display: grid; 
-  padding: 1.25rem; 
-  grid-template-columns: repeat(3, minmax(0, 1fr)); 
-  gap: 2.5rem; 
+  padding: 0.8rem; 
+  grid-template-columns: repeat(1, minmax(0, 1fr)); 
+  margin-bottom: 2px;
+  /* gap: 2.5rem;  */
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 /* sublink-heading */
 .sublink-heading {
   font-size: 16px;
   line-height: 1rem;
-  font-weight: 500; 
+  font-weight: 300; 
   text-decoration: none;
   color: #000;
 }
@@ -227,11 +236,17 @@ nav {
   .parent-link-icon {
     rotate: 180deg;
     /* margin-top: -0.5rem; */
+    transition: 0.5s ease-in-out;
   } 
 }
 
 .child-link {
-  display: none;
+  opacity: 0;
+  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s, transform 0.3s, max-height 0.5s;
+  text-align: center;
 }
 
 
@@ -239,7 +254,9 @@ nav {
 @media (min-width: 1000px) {
   .parent-link:hover {
       .child-link  {
-        display: block;
+        opacity: 1;
+        max-height: auto; /* Adjust as needed */
+        transform: scaleY(1);
       }  
   }
 

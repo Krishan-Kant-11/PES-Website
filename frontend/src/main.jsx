@@ -46,6 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/pastteams" element={<PastTeams />} />
         <Route path='/event/:eventid' element={<Event />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
