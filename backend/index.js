@@ -2,15 +2,26 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const express = require('express');
+const cors = require('cors');
+
+//connectDB 
+const connectDB = require('./src/db/connectDB.js');
+
 const app = express();
+
+//database connection 
+connectDB();
+
+//port 
 const port = process.env.PORT;
 
-const cors = require('cors');
+
 const logger = require('./src/middlewares/logger.js');
-app.use(cors());
-app.use(logger);
 
 const events_routes = require('./src/routes/events.js');
+
+app.use(cors());
+app.use(logger);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
