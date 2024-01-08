@@ -45,6 +45,11 @@ const userSchema = new mongoose.Schema({
         },
         required: true
     },
+    privileges: {
+        type: String,
+        enum: ["volunteer", "admin"],
+        required: true
+    }
 });
 
 module.exports = mongoose.model('User', userSchema);

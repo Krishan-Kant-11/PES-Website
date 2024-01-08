@@ -23,6 +23,7 @@ const pendingRequestSchema = new mongoose.Schema({
     },
     privileges: {
         type: String,
+        enum: ["volunteer", "admin"],
         required: true
     }
 }, {timestamps: true});
