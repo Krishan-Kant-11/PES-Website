@@ -20,11 +20,7 @@ const links = [
         {
           Head: "School Outreach",
           Link: "/schooloutreach"
-        },
-        {
-          Head: "KV IIT Ropar",
-          Link: "/kviitropar"
-        },
+        }
       ],
     },
     {
@@ -95,7 +91,7 @@ const NavSubLinks = () => {
                     </h1>
                 
                     {/* sublinks */}
-                    <div className="sublink-section child-link">
+                    <div className={`sublink-section child-link ${heading === link.name ? "show" : ""}`}>
                         {link.sublinks.map((sublink, index) => (
                             <div key={index} className="sublinks dropdown">
                                 <div><NavLink to={sublink.Link} className="sublink-heading">{sublink.Head}</NavLink></div>

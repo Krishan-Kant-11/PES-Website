@@ -2,10 +2,17 @@ import { Link } from 'react-router-dom';
 import "../styles/pagesStyles/OurTeamPage.css"
 import TeamsCard from "../components/TeamsCard"
 import profilepic from "../assets/sample-image.jpg"
+import PageHeader from '../components/PageHeader';
+import HeaderImage from "../assets/header-testing.jpg"
 
 function OurTeamPage(){
     return(
-        <>
+        <>  
+            <PageHeader
+            title = "Our Team"
+            image = {HeaderImage}
+             />
+
             <div className="TeamPage">
                 <section className="PatronAndMentor OurTeam">
                     <h1>Patron and Mentors</h1>
