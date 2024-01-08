@@ -1,7 +1,8 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import "../styles/pagesStyles/JoinUs.css"
-
+import PageHeader from '../components/PageHeader';
+import HeaderImage from "../assets/joinuspage.jpg"
 
 export default function JoinUsPage(){
 
@@ -9,6 +10,10 @@ export default function JoinUsPage(){
     <div> 
          {/* <Navbar />
           <h1>this is join us page</h1> */}
+          <PageHeader
+            title = "Join Us"
+            image = {HeaderImage}
+            />
           <div class="joinus-container">
           <form>
           <div className="joinus-div">
