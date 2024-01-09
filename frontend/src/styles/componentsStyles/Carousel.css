@@ -21,10 +21,3 @@
     z-index: -1;
 }
 }
-@media only screen and (min-width: 2000px) {
-    .hero img {
-        width: 800px;
-        height: 300px;
-        padding-top: 30px;
-    }
-}

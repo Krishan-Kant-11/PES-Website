@@ -1,16 +1,8 @@
 import Navbar from "../components/Navbar"
 import "../styles/pagesStyles/DonatePage.css"
 import React, { useState } from 'react';
-function Image()
-{
-  return(
-     <div className="dImage_1">
-       <img src="./images/pes3.jpg"/>
-       
-     </div>
-  )
-
-}
+import PageHeader from '../components/PageHeader';
+import HeaderImage from "../assets/donateus.jpg"
 
 function MainContent_1()
 {
@@ -126,7 +118,10 @@ function DonatePage(){
     return(
         <>
         <Navbar />
-        <Image />
+        <PageHeader
+            title = "DONATE US"
+            image = {HeaderImage}
+        />
         <MainContent_1 /> 
         <MainContent_2/>
         <MainContent_3/>
