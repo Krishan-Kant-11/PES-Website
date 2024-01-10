@@ -1,5 +1,17 @@
 const mongoose = require('mongoose');
 
+//attendance schema 
+const attendanceSchema = new mongoose.Schema({
+    date: { 
+        type: Date, 
+        required: true 
+    },
+    present: { 
+        type: Boolean, 
+        required: true 
+    }
+});
+
 //user schema
 const userSchema = new mongoose.Schema({
     photo: {
@@ -32,19 +44,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    attendance: {
-        type: {
-            date: {
-                type: Date,
-                required: true
-            },
-            present: {
-                type: Boolean,
-                required: true 
-            }
-        },
-        required: true
-    },
+    attendance: [attendanceSchema],
     privileges: {
         type: String,
         enum: ["volunteer", "admin"],

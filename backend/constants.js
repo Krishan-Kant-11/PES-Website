@@ -1,3 +1,3 @@
-const DB_NAME = "pes_database";
+const DB_NAME = "pesDatabase";
 
 module.exports = { DB_NAME };
