@@ -4,7 +4,7 @@
   padding: 10px;
   /* margin: 10px; */
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
  
 }
@@ -50,8 +50,8 @@
   max-width: 100%;
   /* color: #525252; */
   color: #0A0A0A;
-  font-family: 'Times New Roman', Times, serif;
-  text-decoration-thickness: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 10px;
 }
 
 .text-input{
