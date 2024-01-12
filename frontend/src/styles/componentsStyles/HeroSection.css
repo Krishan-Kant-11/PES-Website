@@ -1,0 +1,87 @@
+.hero-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 3%;
+}
+
+.hero-section-text {
+  color: white;
+  width: 50%;
+  margin-left: 10%;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px red solid; */
+}
+
+.hero-section-text > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 600%;
+  margin-bottom: -2%;
+}
+
+.hero-subheading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 300%;
+}
+
+.hero-para {
+  font-family: "Montserrat", sans-serif;
+  font-size: 90%;
+  font-weight: 400;
+  text-align: justify;
+  margin: 3% 0%;
+} 
+
+.hero-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3%;
+  margin: 3% 0%;
+}
+
+.hero-donate-btn {
+  text-decoration: none;
+  font-size: 90%;
+  color: white;
+  padding: 2% 5%;
+  border-radius: 30px;
+  background-color: orangered;
+  border: 1.8px orangered solid;
+  transition: 0.3s ease-in-out;
+}
+
+.hero-donate-btn:hover {
+  background: transparent;
+  transition: 0.3s ease-in-out;
+
+}
+
+.hero-rdm-btn {
+  text-decoration: none;
+  font-size: 90%;
+  color: white;
+  padding: 2% 5%;
+  border-radius: 30px;
+  border: 1.8px orangered solid;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.hero-rdm-btn:hover {
+  background-color: orangered;
+  transition: 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 1030px) {
+  .hero-section-text {
+    margin-bottom: 40%;
+  }
+}

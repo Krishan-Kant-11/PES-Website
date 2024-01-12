@@ -2,8 +2,6 @@ import "../styles/pagesStyles/HomePage.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import "~slick-carousel/slick/slick.css";
-// import "~slick-carousel/slick/slick-theme.css";
 
 {
   /* Importing different components to be used on homepage*/
@@ -12,6 +10,7 @@ import StickyJoinButton from "../components/StickyJoinButton";
 import StickyDonateButton from "../components/StickyDonateButton";
 import WeDoCard from "../components/WhatWeDoCard";
 import Hero from "../components/Hero";
+import HeroSection from "../components/HeroSection";
 import Testimonial from "../components/Testimonial";
 import Testimonial2 from "../components/Testimonial2";
 
@@ -29,6 +28,7 @@ import homepage_others_2 from "../assets/home-page-our-work-others-2.jpg";
 import about_1 from "../assets/about-1.jpg";
 import about_2 from "../assets/about-2.jpg";
 import about_3 from "../assets/about-3.jpg";
+import HeaderImage from "../assets/header-testing.jpg";
 
 {
   /* Images for testimonial */
@@ -49,9 +49,32 @@ import hero_image4 from "../assets/hero_image4.jpg";
 }
 const heroSliderImages = [hero_image1, hero_image2, hero_image3, hero_image4];
 
-{
-  /* Arrray for Testimonial section*/
-}
+// Data for Hero section
+const heroData = [
+  {
+    img: HeaderImage,
+    heading: "Education",
+    subheading: "4 underpriviledged",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
+  },
+  {
+    img: HeaderImage,
+    heading: "Education",
+    subheading: "4 underpriviledged",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
+  },
+  {
+    img: HeaderImage,
+    heading: "Education",
+    subheading: "4 underpriviledged",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
+  },
+];
+
+// Data for Testimonial section
 const testimonialData = [
   {
     name: "Mrs Mohini",
@@ -68,7 +91,7 @@ const testimonialData = [
 ];
 
 function HomePage() {
-  const settings = {
+  const settingsTestimonial = {
     dots: true,
     lazyLoad: true,
     infinite: true,
@@ -78,17 +101,33 @@ function HomePage() {
     autoplay: true,
     autoplaySpeed: 3000,
   };
+
+  const settingsHero = {
+    customPaging: function (i) {
+      return <div className="dot">{i + 1}</div>;
+    },
+    dots: true,
+    lazyLoad: true,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    pauseOnHover: false,
+  };
+
   return (
     <>
-      <Hero
-        heroClassName="hero"
-        heroSliderImages={heroSliderImages}
-        heroHeading="Education for underpriviledged"
-        heroParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      />
-
-      {/* <h1>This is Home page</h1>
-      <h1>This is Home page</h1> */}
+      <section className="hero">
+        <Slider {...settingsHero}>
+          {heroData.map((item, index) => (
+            <div key={index}>
+              <HeroSection {...item} />
+            </div>
+          ))}
+        </Slider>
+      </section>
 
       <section className="AboutUs">
         <h1>ABOUT US</h1>
@@ -129,7 +168,6 @@ function HomePage() {
                 <img src={about_3} className="about-img-3"></img>
               </div>
             </div>
-            
           </div>
         </div>
       </section>
@@ -160,11 +198,11 @@ function HomePage() {
       </section>
 
       <section className="Testimonials">
-        <h1>Testimonials</h1>
+        <h1>TESTIMONIALS</h1>
       </section>
 
       <div className="testing">
-        <Slider {...settings} className="Testimonial-cards">
+        <Slider {...settingsTestimonial} className="Testimonial-cards">
           {testimonialData.map((item, index) => (
             <div key={index}>
               <Testimonial2 {...item} />
@@ -173,9 +211,12 @@ function HomePage() {
         </Slider>
       </div>
 
+      <section className="achievements">
+        <h1>ACHIEVEMENTS</h1>
+      </section>
+
       <StickyJoinButton />
       <StickyDonateButton />
-
     </>
   );
 }

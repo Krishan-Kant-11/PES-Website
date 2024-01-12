@@ -1,7 +1,7 @@
 .StickyDonateButton {
     position: fixed;
     color: white;
-    background-color: rgb(255,102,0);
+    background-color: orangered;
     font-size: 90%;
     font-weight: 400;
     /* height: 2%; */
