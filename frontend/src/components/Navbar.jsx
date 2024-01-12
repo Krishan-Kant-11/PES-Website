@@ -39,7 +39,7 @@ function Navbar(){
           }} 
         >
           <div className='navbar'>
-            <div style={{"backgroundColor": open ? "rgb(255, 102, 0)" : ""}} className="navbar-logo">
+            <div style={{"backgroundColor": open ? "rgb(255, 255, 255)" : ""}} className="navbar-logo">
               <img src={Logo} alt="logo" className="logo" />
               <div className="hamburger-menu" onClick={() => setOpen(!open)}>
                 {

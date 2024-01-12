@@ -148,7 +148,7 @@
 }
 .social-icons a:active,
 .social-icons a:focus,
-.social-icons a:hover {
+.social-icons a{
   color: #fff;
   /* background-color: #29aafe; */
 }
@@ -181,33 +181,33 @@
 
 
 
-.social-icons .facebook i {
-  color: #3b5998;
+.social-icons a.facebook  {
+  background-color: #3b5998;
 
 }
-.social-icons .twitter i {
-  color: #0c0c0e; /* Twitter blue */
+.social-icons a.twitter  {
+  background-color: #0c0c0e; /* Twitter blue */
 }
 
 
-.social-icons .instagram i {
-  color: rgb(171, 0, 171); /* Instagram gradient */
+.social-icons a.instagram {
+  background-color: rgb(171, 0, 171); /* Instagram gradient */
 }
 
 /* LinkedIn icon color */
-.social-icons .linkedin i {
-  color: #007bb6;
+.social-icons a.linkedin  {
+  background-color: #007bb6;
     /* LinkedIn blue */
 }
 
 /* YouTube icon color */
-.social-icons .youtube i {
-  color: #ff0000; /* YouTube red */
+.social-icons a.youtube  {
+  background-color: #ff0000; /* YouTube red */
 }
 
 /* Email icon color */
-.social-icons .email i {
-  color: rgb(0, 70, 0); /* Dark gray for email */
+.social-icons a.email  {
+  background-color: rgb(0, 70, 0); /* Dark gray for email */
 }
 
 .col-md-4 {

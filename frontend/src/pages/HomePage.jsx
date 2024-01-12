@@ -197,22 +197,41 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="Testimonials">
+      <section className="testimonials">
         <h1>TESTIMONIALS</h1>
       </section>
 
-      <div className="testing">
-        <Slider {...settingsTestimonial} className="Testimonial-cards">
-          {testimonialData.map((item, index) => (
-            <div key={index}>
-              <Testimonial2 {...item} />
-            </div>
-          ))}
-        </Slider>
-      </div>
+      {/* Due to some bug the testimonial-carousel is not inside testimonial section and its has been keep seprate */}
+      <div className="testimonial-carousel">
+          <Slider {...settingsTestimonial} className="Testimonial-cards">
+            {testimonialData.map((item, index) => (
+              <div key={index}>
+                <Testimonial2 {...item} />
+              </div>
+            ))}
+          </Slider>
+        </div>
 
       <section className="achievements">
         <h1>ACHIEVEMENTS</h1>
+        <div className="achievements-content">
+          <div className="achievement-text">
+            <h2>
+              We love to help all the children that have problems in the world.
+              After 6 years we have many goals achieved.
+            </h2>
+            <div className="achievement-underline"></div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Laboriosam aperiam dolorem fugit ipsam est neque debitis. Fuga
+              nemo, tempora vitae maiores deleniti natus obcaecati beatae
+              officiis earum perferendis, pariatur aliquid.
+            </p>
+          </div>
+          <div className="achievement-icons">
+            <h2>icons goes here</h2>
+          </div>
+        </div>
       </section>
 
       <StickyJoinButton />

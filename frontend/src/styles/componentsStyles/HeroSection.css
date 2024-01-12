@@ -1,5 +1,6 @@
 .hero-section {
   height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -81,7 +82,26 @@
 }
 
 @media only screen and (max-width: 1030px) {
+  .hero-section {
+    width: 100vw;
+  }
+
   .hero-section-text {
     margin-bottom: 40%;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .hero-section-text > h2 {
+    font-size: 300%;
+  }
+
+  .hero-subheading {
+    font-size: 200%;
+    margin-bottom: 3%;
+  }
+
+  .hero-btns {
+    margin-top: 8%;
   }
 }

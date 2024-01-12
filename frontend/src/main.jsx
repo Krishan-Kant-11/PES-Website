@@ -23,6 +23,7 @@ import PastTeams from "./pages/PastTeams"
 import SchoolOutreachPage from "./pages/SchoolOutreachPage"
 import Kviitroparpage from "./pages/kviitroparpage"
 import Event from "./pages/Event";
+import AchievementPage from "./pages/AchievementPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -45,6 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/login" element={<LoginPage />} />
         <Route path="/pastteams" element={<PastTeams />} />
         <Route path='/event/:eventid' element={<Event />} />
+        <Route path='/achievement' element={<AchievementPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
