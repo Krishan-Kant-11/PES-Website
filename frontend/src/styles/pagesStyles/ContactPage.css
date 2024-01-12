@@ -57,7 +57,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 120%;
-    font-family: Baskerville old face;
+    font-family: Montserrat classic;
 }
 .quote2{
     text-transform: uppercase;
@@ -67,15 +67,14 @@
     font-size: 100%;
 }
 .form{
-    padding-top: 5% ;
+    padding-top: 3% ;
     padding-left: 16%;
 }
 input[type=text], select {
     width: 36%;
     padding:1% 2%;   
     margin-right: 12%;
-    margin-bottom: 5%;
-    display: inline-block;
+    margin-bottom: 3%;
     border: 1px solid black;
     border-radius: 5px;
     box-sizing: border-box;
@@ -87,7 +86,7 @@ input[type=text2], select {
     width: 85%;
     padding:2% 2%;   
     margin-right: 12%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     display: inline-block;
     border: 1px solid black;
     box-sizing: border-box;
@@ -100,7 +99,6 @@ input[type=submit] {
     width: 30%;
     padding:2% 2%;   
     margin-left: 28%;
-    margin-bottom: 5%;
     background-color: rgb(255,102,0);
     color: white;
     border: none;
@@ -108,3 +106,17 @@ input[type=submit] {
     cursor: pointer;
 }
 
+@media (min-width:767px)
+{
+  .quote1 {
+    font-size: 180%;
+    font-family: Montserrat classic;
+    font-style: italic;
+    text-decoration: underline;
+    color: orangered;
+}
+    .quote2{
+        font-size: 140%;
+        color: orange;
+    }
+}

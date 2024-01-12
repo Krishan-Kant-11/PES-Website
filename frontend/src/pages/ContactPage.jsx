@@ -26,11 +26,10 @@ function ContactPage(){
                 <br/>
                 <input type="text2" name="name" placeholder="WHAT CAN WE DO FOR YOU??"/>
                 <br/>
-                <input type="submit" value="SUBMIT"/>
+                <input type="submit"  value="SUBMIT"/>
 
             </form>
             </div>
-            <br/> <br/> <br/>FOOTER 
         </div>
     )
 }
