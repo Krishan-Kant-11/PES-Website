@@ -146,9 +146,15 @@
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.social-icons a:active,
+/* .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
+  color: #fff;
+  background-color: #29aafe;
+} */
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a{
   color: #fff;
   /* background-color: #29aafe; */
 }
@@ -157,10 +163,12 @@
   line-height: 34px;
   height: 34px;
   width: 34px;
-
   font-size: 14px;
 }
-/* .social-icons a.facebook:hover {
+
+  
+/* 
+.social-icons a.facebook:hover {
   background-color: #3b5998;
 }
 .social-icons a.twitter:hover {
@@ -177,38 +185,68 @@
 }
 .social-icons a.email:hover {
   background-color: rgb(0, 70, 0);
-} */
+}  */
 
-
-
-.social-icons .facebook i {
-  color: #3b5998;
-
+.social-icons a.facebook:hover {
+   color: #3b5998;
+   background-color: white;
+  
 }
-.social-icons .twitter i {
-  color: #0c0c0e; /* Twitter blue */
+.social-icons a.twitter:hover {
+  color:  #0c0c0e;
+  background-color: white;
+ 
+}
+.social-icons a.instagram:hover {
+  color: rgb(171, 0, 171);
+  background-color: white;
 }
 
-
-.social-icons .instagram i {
-  color: rgb(171, 0, 171); /* Instagram gradient */
-}
-
-/* LinkedIn icon color */
-.social-icons .linkedin i {
+.social-icons a.linkedin:hover {
   color: #007bb6;
-    /* LinkedIn blue */
+  background-color: white;
 }
 
-/* YouTube icon color */
-.social-icons .youtube i {
-  color: #ff0000; /* YouTube red */
+.social-icons a.youtube:hover {
+  color: red;
+  background-color: white;
 }
 
-/* Email icon color */
-.social-icons .email i {
-  color: rgb(0, 70, 0); /* Dark gray for email */
+.social-icons a.email:hover {
+color: rgb(0, 70, 0);
+  background-color: white;
 }
+
+
+/* Default Background Colors */
+.social-icons a.facebook {
+  background-color: #3b5998;
+}
+
+.social-icons a.twitter {
+  background-color: #0c0c0e;
+}
+
+.social-icons a.instagram {
+  background-color: rgb(171, 0, 171);
+}
+
+.social-icons a.linkedin {
+  background-color: #007bb6;
+}
+
+.social-icons a.youtube {
+  background-color: red;
+}
+
+.social-icons a.email {
+  background-color: rgb(0, 70, 0);
+}
+
+
+
+
+
 
 .col-md-4 {
   width: 100%;
