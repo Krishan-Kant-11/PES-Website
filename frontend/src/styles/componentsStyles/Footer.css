@@ -146,12 +146,13 @@
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-/* .social-icons a:active,
+.social-icons a:active,
 .social-icons a:focus,
 .social-icons a{
   color: #fff;
-  /* background-color: #29aafe; */
 }
+
+
 
 .social-icons.size-sm a {
   line-height: 34px;
@@ -159,27 +160,6 @@
   width: 34px;
   font-size: 14px;
 }
-
-  
-/* 
-.social-icons a.facebook:hover {
-  background-color: #3b5998;
-}
-.social-icons a.twitter:hover {
-  background-color: #0c0c0e;
-}
-.social-icons a.instagram:hover {
-  background-color: rgb(171, 0, 171);
-}
-.social-icons a.linkedin:hover {
-  background-color: #007bb6;
-}
-.social-icons a.youtube:hover {
-  background-color: red;
-}
-.social-icons a.email:hover {
-  background-color: rgb(0, 70, 0);
-}  */
 
 
 
@@ -212,6 +192,31 @@
   background-color: rgb(0, 70, 0); /* Dark gray for email */
 }
 
+.social-icons a.facebook:hover {
+  color: #3b5998;
+  background-color: white;
+}
+.social-icons a.twitter:hover {
+  color: #0c0c0e;
+  background-color: white;
+}
+.social-icons a.instagram:hover {
+  color: rgb(171, 0, 171);
+  background-color: white;
+}
+.social-icons a.linkedin:hover {
+  color: #007bb6;
+  background-color: white;
+
+}
+.social-icons a.youtube:hover {
+color: red;
+background-color: white;
+}
+.social-icons a.email:hover {
+color: rgb(0, 70, 0);
+background-color: white;
+}
 .col-md-4 {
   width: 100%;
 }
