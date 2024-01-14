@@ -1,5 +1,6 @@
 :root {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Montserrat', sans-serif;
 
   color-scheme: light dark;
   color: black;
@@ -17,9 +18,11 @@
 
 body {
   margin: 0px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #root {
   margin: 0 auto;
   color: black;
+  font-family: 'Montserrat', sans-serif;
 }

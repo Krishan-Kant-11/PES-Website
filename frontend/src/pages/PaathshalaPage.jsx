@@ -11,6 +11,8 @@ const heroSliderImages = [img1, img2, img3, img4];
 function PaathshalaPage(){
     return(
         <div class="main">
+            <h1>Paathshala Page</h1>
+            <h1>Paathshala Page</h1>
             <div class="body1"> 
                 <div class="heading"> PAATHSHALA </div>
                 <div class="body1text">

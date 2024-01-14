@@ -24,6 +24,12 @@
     text-decoration: underline;
     color: rgb(255,102,0);
 }
+.carousel {
+    width : 90%;
+    margin-top : 2%;
+    padding-bottom: 0%;
+    margin-left: 10%;
+}
 .body1text{
     width:90%;
     font-size: 16px;
@@ -33,7 +39,6 @@
 }
 /*padding : top-left-right-bottom*/
 .body2{ 
-    margin-top: 20px;
     margin-left:20px ;
     background-color: aliceblue;
 }
@@ -65,10 +70,10 @@
 }
 .location{
     width: 95%;
-    height: 400px;
+    height: 300px;
 }
 .text2{
-    width: 90%;
+    width: 90%;    
     font-size: 19px;
     padding : 15px 15px;
     font-family:josefin sans std ;
@@ -79,8 +84,14 @@
 /* *********************************************** LAPTOP KE LIYE ****************************************************************/
 @media only screen and (min-width: 1000px) {
     .body1 {
-        width:100%px;
+        width:100%;
         margin-left: 5px;
+    }
+    .carousel {
+        width : 45%;
+        float: right;
+        padding-right: 0.5%;
+        height: 400px;
     }
     .heading {
         font-size: 45px;
@@ -93,14 +104,11 @@
         text-align: left;
     }
     .body1text{
-        width:44%;
+        width:100%;
         font-size: 20px;
         padding: 0px 50px;
         text-align: justify;
     }
-    /*padding : top-left-right-bottom*/
-    /*Bradley Hand ITC - another font that can be used */
-        /* body 2- subbutton(button) - location */
      
     .subbutton{
         width : 100%;
@@ -129,7 +137,7 @@
         color:white;
     }
     .text2{
-        width: 45%;
+        width: 40%;
         font-size: 25px;
         padding : 15px 30px;
         font-family:josefin sans std ;
@@ -140,12 +148,61 @@
         margin-top: 20px;
         background-color:#E0FAFC;
         margin-left:20px;   
-        height:540px;
+        height:400px;
     }
     .location{
-        width: 47%;
+        width: 50%;
         float:left;
         padding-top: 1.5%;
     }
     
+}
+
+/****************************************************************PROEJCTOR ************************************************/
+@media only screen and (min-width: 2000px) {
+    .body1 {
+        width:100%;
+        margin-left: 5px;
+    }
+    .carousel {
+        width : 45%;
+        float: right;
+        padding-right: 0.5%;
+    }
+    .body1text{
+        width:70%;
+        font-size: 30px;
+        padding: 0px 39px;
+        margin-left: 30px;
+        /*font-family:segoe script ;*/
+        text-align: justify;
+    }
+    .img{
+        width: 500px;
+        height: 500px;
+    }
+    .text2{
+        width: 40%;
+        font-size: 35px;
+        padding : 15px 30px;
+        font-family:josefin sans std ;
+        text-align: justify;
+        float:left;
+    }
+    .location{
+        width: 40%;
+        float:left;
+        margin-left: 4%;
+
+    }
+    .heading {
+        font-size: 65px;
+        font-family:edo;
+        padding-left: 160px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        text-shadow: 5px;
+        text-decoration: underline;
+        text-align: left;
+    }
 }

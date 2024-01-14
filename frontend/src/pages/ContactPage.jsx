@@ -1,9 +1,14 @@
 import "../styles/pagesStyles/ContactPage.css"
+import PageHeader from '../components/PageHeader';
+import ContactusImage from "../assets/contactus.jpg"
 
 function ContactPage(){
     return(
         <div class="main">
-            <div class="image"> <p>CONTACTT US</p>  </div>
+            <PageHeader
+            title = ""
+            image = {ContactusImage}
+             />
             <div class="text1s">
                 <div class="quote1"><b>"The best way to find yourself is to lose yourself in the     service of others"   </b></div>
                 <div class="quote2">       BY  Mahatma Gandhi</div>

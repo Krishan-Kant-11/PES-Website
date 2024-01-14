@@ -1,13 +1,40 @@
 const { Router } = require('express');
 const authMiddleware = require('../middlewares/auth');
 const router = Router();
+const {getEvents, 
+      getEvent, 
+      createEvent, 
+      deleteEvent, 
+      updateEvent
+    } = require('../controllers/eventController');
 
-router.get('/', (req, res) => {
-  res.send('Events API works!');
-});
+// Get all Events
+router.get('/', getEvents);
+
+// Get single Event
+router.get('/:id', getEvent);
+
+// Create Event
+router.post('/', createEvent);
+
+// Delete Event
+router.delete('/:id', deleteEvent);
+
+// Update Event
+router.patch('/:id', updateEvent);
 
 router.get('/list', (req, res) => {
-  res.send('Events list works!');
+  let events = [];
+  let type = req.params.type; // competitions, outreach, celebrations, other
+  for(let i=0; i<10; i++) {
+    events.push({
+      id: i,
+      title: 'Event Title',
+      date: '14 December, 2023',
+      image: `/src/assets/hero_image${i%4+1}.jpg`,
+    })
+  }
+  res.status(200).json(events);
 });
 
 router.get('/details', (req, res) => {
@@ -19,7 +46,7 @@ router.get('/details', (req, res) => {
       title: 'Event Title',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec tellus non lectus vestibulum lacinia bibendum eget eros. Proin leo metus, efficitur et gravida ac, placerat et metus. Fusce varius est eros. Curabitur imperdiet odio justo, efficitur egestas quam cursus eu. Vivamus mollis sem ac porta commodo. Nunc aliquam risus.',
       date: '14 December, 2023',
-      images: Array(10).fill("https://placehold.co/500x250/FF6600/993300?text=PES+Event"),
+      images: ['/src/assets/hero_image1.jpg', '/src/assets/hero_image2.jpg', '/src/assets/hero_image4.jpg'],
     });
   }
 });
@@ -35,5 +62,8 @@ router.get('/update', authMiddleware, (req, res) => {
 router.get('/delete', authMiddleware, (req, res) => {
   res.send('Events delete works!');
 });
+
+// Post a new event
+router.post('/', createEvent);
 
 module.exports = router;
