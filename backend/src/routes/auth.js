@@ -3,6 +3,7 @@ const { Router } = require('express');
 const pendingRequest = require('../models/pendingRequest');
 const user = require('../models/user');
 const authMiddleware = require('../middlewares/auth');
+const sendMail = require('../lib/sendMail');
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -11,8 +12,9 @@ router.get('/', (req, res) => {
 
 router.post('/signup', async (req, res) => {
   // get user data from request body
+  // console.log(req.file.buffer.toString('base64'));
   const _user = {
-    photo: req.body.photo,
+    photo: "data:image/jpeg;base64, "+req.file.buffer.toString('base64'),
     name: req.body.name,
     email: req.body.email,
     branch: req.body.branch,
@@ -38,7 +40,7 @@ router.post('/login', async (req, res) => {
     return res.status(404).send('User not found!');
   }
   // if user found, compare passwords
-  let passwordMatch = user.comparePassword(userFound, _user.password);
+  let passwordMatch = await user.comparePassword(userFound, _user.password);
   // if passwords don't match, return error
   if (!passwordMatch) {
     return res.status(401).send('Password does not match!');
@@ -47,7 +49,7 @@ router.post('/login', async (req, res) => {
   let token = await user.getToken(userFound);
   // console.log(token);
   res.cookie('token', token, { httpOnly: true });
-  res.status(200).send(token);
+  res.status(200).send({token: token});
 });
 
 router.post('/change_password', authMiddleware(false), async (req, res) => {
@@ -95,8 +97,8 @@ router.post('/approve_request', authMiddleware(true), async (req, res) => {
   _user.startDate = new Date();
   // console.log(_user);
   // console.log(password)
-  // TODO: send password to user email
   await user.create(_user);
+  await sendMail(_user.email, "Welcome to Pehchaan Ek Safar", `Welcome to Pehchaan Ek Safar.\n\nYour account has been approved. Your password is ${password}. Please change your password after logging in.\n\nRegards,\nTeam Pehchaan Ek Safar`);
   await pendingRequest.findByIdAndDelete(id);
   res.sendStatus(200);
 });

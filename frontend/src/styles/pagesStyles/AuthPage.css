@@ -1,0 +1,66 @@
+.form_container{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.form_container .image {
+  flex: 1;
+  margin: 0;
+}
+
+.form_container .image img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#signup_form .form_container .image img {
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+#login_form .form_container .image img {
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.form_container .fields {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.form_container .fields input,
+.form_container .fields select {
+  width: 100%;
+  padding: 2% 2%;
+  margin-bottom: 1%;
+}
+
+.form_container .fields input[type="submit"]{
+  margin: 0;
+}
+
+.form_container .fields input[type="password"] {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color:black;
+  box-shadow: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .form_container {
+    flex-direction: column;
+  }
+  .form_container .image {
+    margin-bottom: 1rem;
+  }
+  .form_container .fields {
+    padding: 0;
+    width: 100%;
+  }
+}

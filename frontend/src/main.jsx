@@ -15,6 +15,7 @@ import HomePage from "./pages/HomePage"
 import JoinUsPage from "./pages/JoinUsPage"
 import KV_IITRopar_Page from "./pages/KV_IITRopar_Page"
 import LoginPage from "./pages/LoginPage"
+import RegisterPage from "./pages/RegisterPage";
 import OtherEventsPage from "./pages/OtherEventsPage"
 import OurTeamPage from "./pages/OurTeamPage"
 import OutreachPage from "./pages/OutreachPage"
@@ -44,6 +45,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/kviitropar" element={<Kviitroparpage />} />
         <Route path="/otherevents" element={<OtherEventsPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/pastteams" element={<PastTeams />} />
         <Route path='/event/:eventid' element={<Event />} />
         <Route path='/achievement' element={<AchievementPage />} />

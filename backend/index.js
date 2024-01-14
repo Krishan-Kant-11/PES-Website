@@ -4,6 +4,7 @@ dotenv.config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const multer = require('multer');
 const cookieParser = require('cookie-parser');
 
 //connectDB 
@@ -12,25 +13,20 @@ const connectDB = require('./src/db/connectDB.js');
 const app = express();
 
 //express middlewares 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-//database connection 
-connectDB();
+const logger = require('./src/middlewares/logger.js');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(multer().single('photo'));
+app.use(cookieParser());
+app.use(cors({credentials: true, origin: 'http://localhost:5173'})); // TODO: update when deploying
+app.use(logger);
 
 //port 
 const port = process.env.PORT;
 
-const logger = require('./src/middlewares/logger.js');
 
 const events_routes = require('./src/routes/events.js');
 const auth_routes = require('./src/routes/auth.js');
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser());
-app.use(cors());
-app.use(logger);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -39,6 +35,13 @@ app.get('/', (req, res) => {
 app.use('/events', events_routes);
 app.use('/auth', auth_routes);
 
-app.listen(port, () => {
-  console.log(`PES Backend listening at http://localhost:${port}`);
+
+//database connection 
+connectDB().then(()=>{
+  app.listen(port, () => {
+    console.log(`PES Backend listening at http://localhost:${port}`);
+  });
+}).catch((err)=>{
+  console.log(err);
+  console.error("Couldn't start server because of database connection failure.")
 });
