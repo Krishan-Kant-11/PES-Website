@@ -4,9 +4,8 @@
   padding: 10px;
   /* margin: 10px; */
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  background: #D4D0A4;
  
 }
 
@@ -17,6 +16,19 @@
   flex: 1;
 }
 
+.quote {
+  text-align: center;
+  font-family: Montserrat classic;
+  font-size: 300%;
+  color: rgb(255, 102, 0);
+}
+.subquote {
+  text-align: justify;
+  padding-top:0.5%  ;
+  padding-right: 25%; 
+  padding-left: 25%; 
+  margin-bottom: 2%;
+}
 .joinus-div-single{
   width: 60%;
   margin: auto;
@@ -36,9 +48,10 @@
 
 .lbl{
   max-width: 100%;
-  font-weight: bold;
   /* color: #525252; */
   color: #0A0A0A;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 10px;
 }
 
 .text-input{
@@ -46,9 +59,9 @@
   margin-top: 10px;
   margin-bottom: 40px;
   padding: 20px;
-  height: 60px;
+  height: 40px;
   border: 1px solid #e5e5e5;
-  border-radius: 6px;
+  border-radius:3px;
   box-sizing: border-box;
   background-color: white;
   color: #525252;
@@ -69,7 +82,7 @@
   border: 1px solid white;
   border-radius: 6px;
   box-sizing: border-box;  
-  background-color: #0A0A0A;
+  background-color:orangered;
   color: white;
   cursor: pointer;
   font-size: medium;
