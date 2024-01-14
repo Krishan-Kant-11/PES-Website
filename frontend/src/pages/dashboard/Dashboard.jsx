@@ -144,20 +144,15 @@ function Dashboard(){
     setUser(_user);
     // get all users
     let _allUsers = await (await request.get(`${import.meta.env.VITE_API_BASE}/auth/users`)).json();
+    // sort all users, keeping admins on top and volunteers at bottom
+    _allUsers.sort((a, b) => {
+      if(a.privileges == "admin" && b.privileges == "volunteer") return -1;
+      if(a.privileges == "volunteer" && b.privileges == "admin") return 1;
+      return a.name.localeCompare(b.name);
+    });
     setAllUsers(_allUsers);
     // get pending requests
     let _pendingRequests = await (await request.get(`${import.meta.env.VITE_API_BASE}/auth/pending_requests`)).json();
-    // console.log(_pendingRequests);
-    // _pendingRequests = [];
-    // for(let i=0; i<10; i++){
-    //   _pendingRequests.push({
-    //     name: "User " + i,
-    //     email: "2023xxb100" + i + "@iitrpr.ac.in",
-    //     branch: "Computer Science and Engineering",
-    //     team: "Tech Team",
-    //     photo: "https://placehold.co/100x100?text=Photo"
-    //   });
-    // }
     setPendingRequests(_pendingRequests);
   }
 
