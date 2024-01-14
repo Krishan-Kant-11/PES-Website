@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
     }, 
     password: {
         type: String,
@@ -36,13 +36,12 @@ const userSchema = new mongoose.Schema({
     team: {
         type: String,
     },
-    workDuration: {
-        type: Number,
+    startDate: {
+        type: Date,
         required: true
     },
     certificate: {
         type: String,
-        required: true
     },
     attendance: [attendanceSchema],
     privileges: {
