@@ -1,61 +1,67 @@
 import React from "react";
-import Hero from "../components/Hero";
-import heroImg from '../assets/hero_image3.jpg';
+import { useNavigate } from "react-router-dom";
+import headerImg from '../assets/hero_image3.jpg';
 import "../styles/pagesStyles/AuthPage.css";
-
-
-function initiateUpload(e){
-  document.getElementById('photo').click();
-}
-
-function handleUpload(e){
-  let file = e.target.files[0];
-  try{
-    let url = URL.createObjectURL(file);
-    document.getElementById("photo_img").src = url || "https://placehold.co/600x400?text=Upload+your+photo";
-  }catch(err){
-    console.log(err);
-    document.getElementById("photo_img").src = "https://placehold.co/600x400?text=Upload+your+photo";
-  }
-}
-function handleForm(e){
-  e.preventDefault();
-  e.target.value = "Loading..."
-  let form = document.getElementById("register_form");
-  let formData = new FormData(form);
-  // check if all required fields are filled
-  let allFilled = true;
-  for(let i=0; i<form.length; i++){
-    if(form[i].required && form[i].value === ""){
-      allFilled = false;
-      break;
-    }
-  }
-  if(!allFilled){
-    alert("Please fill all the required fields!");
-    return;
-  }
-  fetch(`${import.meta.env.VITE_API_BASE}/auth/signup`, {
-    method: 'POST',
-    body: formData,
-  }).then(res => {
-    if(res.status === 200){
-      alert("Signup Successful! Please wait for admin approval.")
-    }else{
-      alert("Something went wrong! Please try again later.");
-    }
-  }).catch(err => {
-    console.log(err);
-    alert("Something went wrong! Please check your internet connection.");
-  });
-}
+import PageHeader from "../components/PageHeader";
 
 function RegisterPage() {
+  const navigate = useNavigate();
+
+  function initiateUpload(e){
+    document.getElementById('photo').click();
+  }
+
+  function handleUpload(e){
+    let file = e.target.files[0];
+    try{
+      let url = URL.createObjectURL(file);
+      document.getElementById("photo_img").src = url || "https://placehold.co/600x400?text=Upload+your+photo";
+    }catch(err){
+      console.log(err);
+      document.getElementById("photo_img").src = "https://placehold.co/600x400?text=Upload+your+photo";
+    }
+  }
+  function handleForm(e){
+    e.preventDefault();
+    e.target.value = "Loading..."
+    let form = document.getElementById("register_form");
+    let formData = new FormData(form);
+    // check if all required fields are filled
+    let allFilled = true;
+    for(let i=0; i<form.length; i++){
+      if(form[i].required && form[i].value === ""){
+        allFilled = false;
+        break;
+      }
+    }
+    if(!allFilled){
+      alert("Please fill all the required fields!");
+      e.target.value = "Signup"
+      return;
+    }
+    fetch(`${import.meta.env.VITE_API_BASE}/auth/signup`, {
+      method: 'POST',
+      body: formData,
+    }).then(res => {
+      if(res.status === 200){
+        alert("Signup Successful! Please wait for admin approval.")
+        navigate('/')
+      }else{
+        alert("Something went wrong! Please try again later.");
+        e.target.value = "Signup"
+      }
+    }).catch(err => {
+      console.log(err);
+      alert("Something went wrong! Please check your internet connection.");
+      e.target.value = "Signup"
+    });
+  }
+
   return (
     <div>
-      <Hero
-        heroSliderImages={[heroImg]}
-        heroHeading="Register to be a volunteer"
+      <PageHeader
+        title="Register to be a volunteer"
+        image={headerImg}
       />
       <form id="register_form">
         <div className="form_container">

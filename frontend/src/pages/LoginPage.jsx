@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import Hero from "../components/Hero";
-import heroImg from '../assets/hero_image3.jpg';
+import PageHeader from "../components/PageHeader";
+import headerImg from '../assets/hero_image3.jpg';
 import logoImg from '../assets/peslogo.png';
 import "../styles/pagesStyles/AuthPage.css";
 
@@ -23,6 +23,7 @@ function LoginPage() {
     }
     if(!allFilled){
       alert("Please fill all the required fields!");
+      e.target.value = "Login"
       return;
     }
     fetch(`${import.meta.env.VITE_API_BASE}/auth/login`, {
@@ -33,7 +34,7 @@ function LoginPage() {
         res.json().then(data => {
           alert("Login Successful!")
           localStorage.setItem('token', data.token);
-          navigate('/');
+          navigate('/dashboard');
         });
       }else if(res.status === 404){
         alert("No user found with the given email address.");
@@ -42,16 +43,18 @@ function LoginPage() {
       }else{
         alert("Something went wrong! Please try again later.");
       }
+      e.target.value = "Login"
     }).catch(err => {
       console.log(err);
       alert("Something went wrong! Please check your internet connection.");
+      e.target.value = "Login"
     });
   }
   return (
     <div>
-      <Hero
-        heroSliderImages={[heroImg]}
-        heroHeading="Login to your account"
+      <PageHeader
+        title="Login to your account"
+        image={headerImg}
       />
       <form id="login_form">
         <div className="form_container">
