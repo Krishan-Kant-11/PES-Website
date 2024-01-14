@@ -148,12 +148,6 @@
 }
 /* .social-icons a:active,
 .social-icons a:focus,
-.social-icons a:hover {
-  color: #fff;
-  background-color: #29aafe;
-} */
-.social-icons a:active,
-.social-icons a:focus,
 .social-icons a{
   color: #fff;
   /* background-color: #29aafe; */
@@ -187,66 +181,36 @@
   background-color: rgb(0, 70, 0);
 }  */
 
-.social-icons a.facebook:hover {
-   color: #3b5998;
-   background-color: white;
-  
-}
-.social-icons a.twitter:hover {
-  color:  #0c0c0e;
-  background-color: white;
- 
-}
-.social-icons a.instagram:hover {
-  color: rgb(171, 0, 171);
-  background-color: white;
-}
-
-.social-icons a.linkedin:hover {
-  color: #007bb6;
-  background-color: white;
-}
-
-.social-icons a.youtube:hover {
-  color: red;
-  background-color: white;
-}
-
-.social-icons a.email:hover {
-color: rgb(0, 70, 0);
-  background-color: white;
-}
 
 
-/* Default Background Colors */
-.social-icons a.facebook {
+.social-icons a.facebook  {
   background-color: #3b5998;
+
+}
+.social-icons a.twitter  {
+  background-color: #0c0c0e; /* Twitter blue */
 }
 
-.social-icons a.twitter {
-  background-color: #0c0c0e;
-}
 
 .social-icons a.instagram {
-  background-color: rgb(171, 0, 171);
+  background-color: rgb(171, 0, 171); /* Instagram gradient */
 }
 
-.social-icons a.linkedin {
+/* LinkedIn icon color */
+.social-icons a.linkedin  {
   background-color: #007bb6;
+    /* LinkedIn blue */
 }
 
-.social-icons a.youtube {
-  background-color: red;
+/* YouTube icon color */
+.social-icons a.youtube  {
+  background-color: #ff0000; /* YouTube red */
 }
 
-.social-icons a.email {
-  background-color: rgb(0, 70, 0);
+/* Email icon color */
+.social-icons a.email  {
+  background-color: rgb(0, 70, 0); /* Dark gray for email */
 }
-
-
-
-
-
 
 .col-md-4 {
   width: 100%;
