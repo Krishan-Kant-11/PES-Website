@@ -34,15 +34,15 @@ router.get('/details', (req, res) => {
   }
 });
 
-router.get('/create', authMiddleware, (req, res) => {
+router.get('/create', authMiddleware(true), (req, res) => {
   res.send('Events create works!');
 });
 
-router.get('/update', authMiddleware, (req, res) => {
+router.get('/update', authMiddleware(true), (req, res) => {
   res.send('Events update works!');
 });
 
-router.get('/delete', authMiddleware, (req, res) => {
+router.get('/delete', authMiddleware(true), (req, res) => {
   res.send('Events delete works!');
 });
 
