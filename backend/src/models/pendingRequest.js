@@ -19,7 +19,6 @@ const pendingRequestSchema = new mongoose.Schema({
     },
     team: {
         type: String,
-        required: true
     },
     privileges: {
         type: String,
