@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    background-color: rgb(255,102,0); 
+    height: 20rem;
+margin-bottom: 3rem;
+margin-top: 3rem;
+justify-content: center;
+color:white;
+
+}
+.dContent
+{
+    flex-direction: column;
+    padding: 2rem;
+}
+.dHeading
+{
+    padding-bottom: 2rem;
+    /* text-wrap: wrap; */
+}
+.sButton
+{
+    padding-top: 5rem;
+}
+
+.payButton
+{
+    background-color : black;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 25rem;
+    width:9rem;
+}
+
+@media only screen and (max-width: 600px)
+{
+ .container
+ {
+    flex-direction: column;
+    
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 30rem;
+    margin-bottom: 2rem;
+ }
+}
+.dContent
+{
+    /* flex-direction: row; */
+    padding: 0.5rem;
+
+}
+.dHeading
+{
+    padding-bottom: 1rem;
+    /* text-wrap: wrap; */
+}
+.sButton
+{
+    padding-top: 2rem;
+}
