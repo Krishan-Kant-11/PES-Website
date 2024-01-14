@@ -14,6 +14,7 @@ import Hero from "../components/Hero";
 import HeroSection from "../components/HeroSection";
 import Testimonial from "../components/Testimonial";
 import Testimonial2 from "../components/Testimonial2";
+import DonateCompo from "../components/DonateCompo";
 
 {
   /* Images for homepage*/
@@ -158,6 +159,7 @@ function HomePage() {
             </p>
           </div>
 
+
           <div>
             <img src={homepage_pathshala} className="AboutUs-img"></img>
           </div>
@@ -177,7 +179,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-
+      <DonateCompo/>
       <section className="OurWork">
         <h1>WHAT WE DO</h1>
         <div className="OurWork-Content">
