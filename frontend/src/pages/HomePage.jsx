@@ -1,5 +1,6 @@
 import "../styles/pagesStyles/HomePage.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -13,6 +14,7 @@ import Hero from "../components/Hero";
 import HeroSection from "../components/HeroSection";
 import Testimonial from "../components/Testimonial";
 import Testimonial2 from "../components/Testimonial2";
+import DonateCompo from "../components/DonateCompo";
 
 {
   /* Images for homepage*/
@@ -43,6 +45,11 @@ import hero_image1 from "../assets/hero_image1.jpg";
 import hero_image2 from "../assets/hero_image2.jpg";
 import hero_image3 from "../assets/hero_image3.jpg";
 import hero_image4 from "../assets/hero_image4.jpg";
+
+// Importing SVGs for Achievement section
+import holdingHand from "../assets/holding-hand.svg";
+import volunteerIcon from "../assets/dove-solid.svg";
+import personIcon from "../assets/person-solid.svg";
 
 {
   /* Array of images for the hero section */
@@ -152,6 +159,7 @@ function HomePage() {
             </p>
           </div>
 
+
           <div>
             <img src={homepage_pathshala} className="AboutUs-img"></img>
           </div>
@@ -171,7 +179,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-
+      <DonateCompo/>
       <section className="OurWork">
         <h1>WHAT WE DO</h1>
         <div className="OurWork-Content">
@@ -198,22 +206,22 @@ function HomePage() {
       </section>
 
       <section className="testimonials">
-        <h1>TESTIMONIALS</h1>
+        <h1>MONIAL</h1>
       </section>
 
       {/* Due to some bug the testimonial-carousel is not inside testimonial section and its has been keep seprate */}
       <div className="testimonial-carousel">
-          <Slider {...settingsTestimonial} className="Testimonial-cards">
-            {testimonialData.map((item, index) => (
-              <div key={index}>
-                <Testimonial2 {...item} />
-              </div>
-            ))}
-          </Slider>
-        </div>
+        <Slider {...settingsTestimonial} className="Testimonial-cards">
+          {testimonialData.map((item, index) => (
+            <div key={index}>
+              <Testimonial2 {...item} />
+            </div>
+          ))}
+        </Slider>
+      </div>
 
       <section className="achievements">
-        <h1>ACHIEVEMENTS</h1>
+        <h1>ACHIEVE</h1>
         <div className="achievements-content">
           <div className="achievement-text">
             <h2>
@@ -228,8 +236,27 @@ function HomePage() {
               officiis earum perferendis, pariatur aliquid.
             </p>
           </div>
-          <div className="achievement-icons">
-            <h2>icons goes here</h2>
+          <div className="achievement-stats">
+            <div className="achievement-icons">
+              <div className="lives-affected">
+                <img src={personIcon} className="lives-affected-icon"></img>
+                <h3>3K+</h3>
+                <p>Lives affected</p>
+              </div>
+              <div className="volunteer">
+                <img src={volunteerIcon} className="volunteer-icon"></img>
+                <h3>950</h3>
+                <p>volunteeres so far</p>
+              </div>
+              <div className="children-helped">
+                <img src={holdingHand} className="children-helped-icon"></img>
+                <h3>1K+</h3>
+                <p>Children helped</p>
+              </div>
+            </div>
+            <Link className="achievement-rdm-btn" to="/achievement">
+              Read More
+            </Link>
           </div>
         </div>
       </section>
