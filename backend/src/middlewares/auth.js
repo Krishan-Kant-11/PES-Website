@@ -6,7 +6,7 @@ module.exports = (admin) => {
     // console.log('Auth middleware');
     const token = req.headers.authorization || req.cookies.token; // get token from request headers/cookies
     const _user = await user.getUser(token);
-    console.log(_user);
+    // console.log(_user);
     if (!_user) {
       return res.status(401).send('Unauthorized');
     }

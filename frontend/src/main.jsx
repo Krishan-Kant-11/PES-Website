@@ -26,6 +26,8 @@ import Kviitroparpage from "./pages/kviitroparpage"
 import Event from "./pages/Event";
 import AchievementPage from "./pages/AchievementPage";
 
+import Dashboard from "./pages/dashboard/Dashboard";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -49,6 +51,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/pastteams" element={<PastTeams />} />
         <Route path='/event/:eventid' element={<Event />} />
         <Route path='/achievement' element={<AchievementPage />} />
+        
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -16,14 +16,8 @@
   cursor: pointer;
 }
 
-#signup_form .form_container .image img {
-  object-fit: cover;
-  border-radius: 1rem;
-}
-
-#login_form .form_container .image img {
+.form_container .image img {
   object-fit: contain;
-  border-radius: 0;
 }
 
 .form_container .fields {

@@ -83,12 +83,14 @@ router.get('/pending_requests', authMiddleware(true), async (req, res) => {
 
 router.post('/approve_request', authMiddleware(true), async (req, res) => {
   let id = req.body.id;
+  if(id==undefined) return res.sendStatus(400);
   // await pendingRequest.findByIdAndDelete(id);
   let userDoc = await pendingRequest.findById(id);
   // console.log(userDoc);
   if(!userDoc){
     res.sendStatus(404);
   }
+  // console.log(id, userDoc);
   let _user = userDoc.toObject();
   _user._id = undefined;
   _user.__v = undefined;
@@ -105,12 +107,15 @@ router.post('/approve_request', authMiddleware(true), async (req, res) => {
 
 router.post('/reject_request', authMiddleware(true), async (req, res) => {
   let id = req.body.id;
+  if(id==undefined) return res.sendStatus(400);
   await pendingRequest.findByIdAndDelete(id);
   res.sendStatus(200);
 });
 
 router.post('/promote', authMiddleware(true), async (req, res) => {
   let id = req.body.id;
+  if(id == undefined) return res.sendStatus(400);
+  if(id == req.user._id) return res.sendStatus(400); // cannot promote self
   let _user = await user.findById(id);
   // console.log(_user);
   if(!_user){
@@ -123,6 +128,8 @@ router.post('/promote', authMiddleware(true), async (req, res) => {
 
 router.post('/demote', authMiddleware(true), async (req, res) => {
   let id = req.body.id;
+  if(id==undefined) return res.sendStatus(400);
+  if(id == req.user._id) return res.sendStatus(400); // cannot demote self
   let _user = await user.findById(id);
   // console.log(_user);
   if(!_user){
@@ -131,6 +138,31 @@ router.post('/demote', authMiddleware(true), async (req, res) => {
   _user.privileges = "volunteer";
   await user.updateOne({ _id: _user._id }, _user);
   res.sendStatus(200);
+});
+
+router.get('/users', authMiddleware(true), async (req, res) => {
+  let users = await user.find({});
+  let userList = [];
+  users.map(user => {
+    userList.push({
+      _id: user._id,
+      photo: user.photo,
+      name: user.name,
+      email: user.email,
+      team: user.team,
+      privileges: user.privileges
+    });
+  });
+  res.status(200).send(userList);
+});
+
+router.get('/user', authMiddleware(false), async (req, res) => {
+  let _user = req.user;
+  _user.password = undefined;
+  _user.token = undefined;
+  _user.__v = undefined;
+  _user.attendance = undefined;
+  res.status(200).send(_user);
 });
 
 module.exports = router;
