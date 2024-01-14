@@ -81,8 +81,9 @@ nav {
 .login-button {
   /* background-color: rgb(255, 102, 0); */
   background-color: black;
+  /* background-color: orangered; */
   border-radius: 50px;
-  padding: 10px 22px;
+  padding: 12px 22px;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
