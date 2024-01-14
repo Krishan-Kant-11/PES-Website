@@ -18,8 +18,10 @@ color:white;
 .dHeading
 {
     padding-bottom: 2rem;
+    text-align: center;
     /* text-wrap: wrap; */
 }
+
 .sButton
 {
     padding-top: 5rem;
@@ -65,3 +67,19 @@ color:white;
 {
     padding-top: 2rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for tablets go here */
+    .container{
+        height: 25rem;
+        flex-direction: column;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .dHeading{
+        text-align: center;
+    }
+    .dPara
+    {
+        text-align: center;
+    }
+  }
