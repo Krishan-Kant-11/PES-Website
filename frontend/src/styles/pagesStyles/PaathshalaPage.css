@@ -14,16 +14,6 @@
     ::-webkit-scrollbar-thumb:hover {
     Background: #E5cdbc
 }
-.heading {
-    width: 100%;
-    font-size: 30px;
-    font-family:edo;
-    padding: 5px 5px;
-    text-align: center;
-    text-shadow: 5px;
-    text-decoration: underline;
-    color: rgb(255,102,0);
-}
 .carousel {
     width : 90%;
     margin-top : 2%;
@@ -34,7 +24,7 @@
     width:90%;
     font-size: 16px;
     padding: 0px 23px;
-    /*font-family:segoe script ;*/
+    font-family: "Montserrat", sans-serif;
     text-align: justify;
 }
 /*padding : top-left-right-bottom*/
@@ -76,7 +66,7 @@
     width: 90%;    
     font-size: 19px;
     padding : 15px 15px;
-    font-family:josefin sans std ;
+    font-family: "Montserrat", sans-serif;
     float:left;
     text-align: justify;
 }
@@ -108,6 +98,7 @@
         font-size: 20px;
         padding: 0px 50px;
         text-align: justify;
+        font-family: "Montserrat", sans-serif;
     }
      
     .subbutton{
@@ -127,7 +118,7 @@
         float: left;
         height: 35px;
         width: 170px;
-        font-family: Algerian;
+        font-family: "Montserrat", sans-serif;
         font-size: 20px;
         margin-top: 7px;
         margin-left: 25px;   
@@ -140,7 +131,7 @@
         width: 40%;
         font-size: 25px;
         padding : 15px 30px;
-        font-family:josefin sans std ;
+        font-family: "Montserrat", sans-serif;
         text-align: justify;
         float:left;
     }

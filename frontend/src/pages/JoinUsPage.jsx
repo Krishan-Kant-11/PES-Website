@@ -14,6 +14,8 @@ export default function JoinUsPage(){
             title = "Join Us"
             image = {HeaderImage}
             />
+          <div class="quote"><b>Together, we can help the world rise.</b> </div>
+          <div class="subquote"> Most problems we deal with are too complex to be solved by one person. It takes passion to accelerate progress. It takes commitment to create change. But, it takes our collective efforts to transform lives and communities.</div>
           <div class="joinus-container">
           <form>
           <div className="joinus-div">
@@ -103,7 +105,6 @@ export default function JoinUsPage(){
               </div>
               </form>
           </div>
-          <Footer/>
     </div>
   )
         

@@ -3,22 +3,22 @@
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items:flex-end;
+    align-items:center;
     justify-content: center;
     margin-bottom: 3%;
 }
 
 .page-header-title {
     text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
     font-size: 100px;
-    font-weight: 400;
     color: white;
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 15px;
     text-decoration-color: orangered;
     text-decoration-thickness: 2px;
-    margin-bottom: 28%;
 }
 
 @media only screen  and (max-width:1030px){

@@ -1,5 +1,6 @@
 import "../styles/pagesStyles/HomePage.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -43,6 +44,11 @@ import hero_image1 from "../assets/hero_image1.jpg";
 import hero_image2 from "../assets/hero_image2.jpg";
 import hero_image3 from "../assets/hero_image3.jpg";
 import hero_image4 from "../assets/hero_image4.jpg";
+
+// Importing SVGs for Achievement section
+import holdingHand from "../assets/holding-hand.svg";
+import volunteerIcon from "../assets/dove-solid.svg";
+import personIcon from "../assets/person-solid.svg";
 
 {
   /* Array of images for the hero section */
@@ -197,11 +203,12 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="Testimonials">
-        <h1>TESTIMONIALS</h1>
+      <section className="testimonials">
+        <h1>MONIAL</h1>
       </section>
 
-      <div className="testing">
+      {/* Due to some bug the testimonial-carousel is not inside testimonial section and its has been keep seprate */}
+      <div className="testimonial-carousel">
         <Slider {...settingsTestimonial} className="Testimonial-cards">
           {testimonialData.map((item, index) => (
             <div key={index}>
@@ -212,7 +219,44 @@ function HomePage() {
       </div>
 
       <section className="achievements">
-        <h1>ACHIEVEMENTS</h1>
+        <h1>ACHIEVE</h1>
+        <div className="achievements-content">
+          <div className="achievement-text">
+            <h2>
+              We love to help all the children that have problems in the world.
+              After 6 years we have many goals achieved.
+            </h2>
+            <div className="achievement-underline"></div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Laboriosam aperiam dolorem fugit ipsam est neque debitis. Fuga
+              nemo, tempora vitae maiores deleniti natus obcaecati beatae
+              officiis earum perferendis, pariatur aliquid.
+            </p>
+          </div>
+          <div className="achievement-stats">
+            <div className="achievement-icons">
+              <div className="lives-affected">
+                <img src={personIcon} className="lives-affected-icon"></img>
+                <h3>3K+</h3>
+                <p>Lives affected</p>
+              </div>
+              <div className="volunteer">
+                <img src={volunteerIcon} className="volunteer-icon"></img>
+                <h3>950</h3>
+                <p>volunteeres so far</p>
+              </div>
+              <div className="children-helped">
+                <img src={holdingHand} className="children-helped-icon"></img>
+                <h3>1K+</h3>
+                <p>Children helped</p>
+              </div>
+            </div>
+            <Link className="achievement-rdm-btn" to="/achievement">
+              Read More
+            </Link>
+          </div>
+        </div>
       </section>
 
       <StickyJoinButton />

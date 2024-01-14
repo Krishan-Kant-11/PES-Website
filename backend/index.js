@@ -11,12 +11,15 @@ const connectDB = require('./src/db/connectDB.js');
 
 const app = express();
 
+//express middlewares 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 //database connection 
 connectDB();
 
 //port 
 const port = process.env.PORT;
-
 
 const logger = require('./src/middlewares/logger.js');
 

@@ -1,12 +1,16 @@
+.hero {
+  width: 100vw;
+}
+
 .AboutUs > h1,
 .OurWork > h1,
 .Achievements > h1,
-.Testimonials > h1,
+.testimonials > h1,
 .JoinUs > h1,
 .achievements > h1 {
   margin-bottom: 3%;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 380%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
   font-weight: 400;
   padding: 3px;
   text-align: center;
@@ -15,6 +19,9 @@
   color: rgb(255, 102, 0);
   text-decoration-color: black;
   text-underline-offset: 0.3em;
+  max-width: 80%;
+  /* border: 2px red solid; */
+  text-align: center;
 }
 
 .AboutUs {
@@ -55,7 +62,9 @@
   gap: 20px;
 }
 
-.about-img-1, .about-img-2, .about-img-3 {
+.about-img-1,
+.about-img-2,
+.about-img-3 {
   width: 250px;
   border-radius: 10px;
 }
@@ -72,10 +81,153 @@
   justify-content: space-evenly;
 }
 
+.OurWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .OurWork-Content {
   display: flex;
   gap: 2%;
   justify-content: center;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+}
+
+.testimonial-carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 50px;
+  margin-top: 1%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-top: 8%;
+  /* border: 2px red solid; */
+}
+
+.achievements-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78%;
+  margin-top: 2%;
+  /* border: 2px black solid; */
+}
+
+.achievement-text {
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+  /* border: 2px blue solid; */
+}
+
+.achievement-text > h2 {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(40, 40, 40);
+  font-weight: 600;
+  font-size: 250%;
+  line-height: 1.4;
+}
+
+.achievement-underline {
+  width: 100px;
+  height: 5px;
+  border-radius: 50px;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  background-color: orangered;
+}
+
+.achievement-text > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80%;
+  font-weight: 300;
+  margin-top: 3%;
+  /* text-align: justify; */
+}
+
+.achievement-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 50px;
+}
+
+.achievement-icons {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.children-helped,
+.volunteer,
+.lives-affected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.children-helped > h3,
+.volunteer > h3,
+.lives-affected > h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  margin: 8% 0%;
+}
+
+.children-helped > p,
+.volunteer > p,
+.lives-affected > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.children-helped-icon,
+.volunteer-icon,
+.lives-affected-icon {
+  height: 65px;
+}
+
+.achievement-rdm-btn {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: black;
+  padding: 2.5% 5%;
+  border-radius: 30px;
+  border: 1.8px rgb(255, 102, 0) solid;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.achievement-rdm-btn:hover {
+  color: white;
+  background-color: orangered;
+  transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 1100px) {
@@ -86,6 +238,25 @@
     width: 78%;
     margin-left: 11%;
     /* border: 2px red solid; */
+  }
+
+  .achievements-content {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .achievement-text {
+    width: 80%;
+    margin-bottom: 5%;
+  }
+
+  .achievement-text > p {
+    text-align: justify;
+  }
+
+  .achievement-stats {
+    margin: 3% 0%;
+    width: 100%;
   }
 }
 
@@ -116,12 +287,48 @@
   }
 }
 
-.testing {
-  /* border: 2px red solid; */
-  margin: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media screen and (max-width: 500px) {
+  .achievement-icons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .children-helped,
+  .volunteer,
+  .lives-affected {
+    width: 78%;
+    background-color: aliceblue;
+    padding: 5% 0%;
+    border-radius: 20px;
+  }
+
+  .children-helped-icon,
+  .volunteer-icon,
+  .lives-affected-icon {
+    height: 120px;
+  }
+
+  .children-helped > h3,
+  .volunteer > h3,
+  .lives-affected > h3 {
+    font-size: 80px;
+    font-weight: 400;
+  }
+
+  .children-helped > p,
+  .volunteer > p,
+  .lives-affected > p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .achievement-rdm-btn {
+    font-size: 25px;
+    font-weight: 500;
+    border-width: 3px;
+  }
 }
 
 .dot {
@@ -137,4 +344,3 @@
   color: orangered;
   border: 1px orangered solid;
 }
-

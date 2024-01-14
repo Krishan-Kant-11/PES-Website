@@ -39,11 +39,6 @@ const userSchema = new mongoose.Schema({
     team: {
         type: String,
     },
-    // TODO: Update database to replace workDuration with startDate
-    workDuration: {
-        type: Number,
-        required: false
-    },
     startDate: {
         type: Date,
         required: true

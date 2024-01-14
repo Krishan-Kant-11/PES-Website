@@ -1,13 +1,30 @@
 const { Router } = require('express');
 const authMiddleware = require('../middlewares/auth');
 const router = Router();
+const {getEvents, 
+      getEvent, 
+      createEvent, 
+      deleteEvent, 
+      updateEvent
+    } = require('../controllers/eventController');
 
-router.get('/', (req, res) => {
-  res.send('Events API works!');
-});
+// Get all Events
+router.get('/', getEvents);
+
+// Get single Event
+router.get('/:id', getEvent);
+
+// Create Event
+router.post('/', createEvent);
+
+// Delete Event
+router.delete('/:id', deleteEvent);
+
+// Update Event
+router.patch('/:id', updateEvent);
 
 router.get('/list', (req, res) => {
-  let events = []
+  let events = [];
   let type = req.params.type; // competitions, outreach, celebrations, other
   for(let i=0; i<10; i++) {
     events.push({
@@ -45,5 +62,8 @@ router.get('/update', authMiddleware(true), (req, res) => {
 router.get('/delete', authMiddleware(true), (req, res) => {
   res.send('Events delete works!');
 });
+
+// Post a new event
+router.post('/', createEvent);
 
 module.exports = router;
