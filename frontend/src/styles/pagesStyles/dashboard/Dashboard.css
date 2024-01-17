@@ -1,0 +1,156 @@
+.navgap{
+  display: block;
+  height: 70px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: calc(90vh - 80px);
+  padding: 1rem;
+  /* overflow-y: auto; */
+}
+
+.dashboard .topPanel {
+  grid-column: 1/3;
+  grid-row: 1 / 2;
+  /* background-color: aqua;
+  border: 5px solid red; */
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+}
+
+.dashboard .bottomPanel {
+  grid-column: 1/3;
+  grid-row: 2 / 4;
+  /* background-color: blue;
+  border: 5px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard .sidePanel {
+  grid-column: 3/4;
+  grid-row: 1 / 4;
+  /* background-color: green;
+  border: 5px solid red; */
+}
+
+.dashboard .bottomPanel .items,
+.dashboard .sidePanel .items {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.dashboard .items .item {
+  width: 100%;
+  padding: 0.1rem;
+}
+
+.dashboard .items .item .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* .dashboard .items .item .title * {
+  padding: 1rem;
+} */
+
+.dashboard .items .item .title img{
+  width: 4rem;
+  height: 4rem;
+  /* padding: 0 0 0 1rem; */
+}
+
+.dashboard .items .item .title img.glow{
+  box-shadow: 0 0 10px #FFD700;
+}
+
+.dashboard .items .item .title p{
+  flex: 1;
+  padding: 0 0 0 1rem;
+}
+
+.dashboard .items .item .title span{
+  flex: 1;
+}
+
+.dashboard .items .item .title button {
+  border: none;
+  background-color: rgb(0, 0, 0, 0.1);
+  margin-right: 1px;
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.dashboard .items .item .title button:hover {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.dashboard .items .item .title svg{
+  padding: 0;
+}
+
+.dashboard .items .item .title .approve svg{
+  fill: #0f0;
+}
+
+.dashboard .items .item .title .reject svg{
+  fill: #f00;
+}
+
+.dashboard .items .item .title button:disabled {
+  background-color: rgb(0, 0, 0, 0.4);
+  cursor: not-allowed;
+}
+
+.dashboard .items .item .title button:disabled svg{
+  fill: #000;
+}
+
+.dashboard .items .item .details{
+  /* display: none; */
+  width: 100%;
+  background-color: #ddd;
+  color: #777;
+  padding: 1rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: auto;
+  }
+
+  .dashboard .topPanel {
+    grid-column: 1/2;
+    grid-row: 1 / 2;
+  }
+
+  .dashboard .bottomPanel {
+    grid-column: 1/2;
+    grid-row: 2 / 3;
+  }
+
+  .dashboard .sidePanel {
+    grid-column: 1/2;
+    grid-row: 3 / 4;
+  }
+  
+}
