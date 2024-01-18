@@ -136,7 +136,7 @@ function HomePage() {
         </Slider>
       </section>
 
-      <section className="AboutUs">
+      <section className="AboutUs" id="about-us">
         <h1>ABOUT US</h1>
         <div className="AboutUs-content">
           <div className="AboutUs-p">
@@ -159,7 +159,6 @@ function HomePage() {
             </p>
           </div>
 
-
           <div>
             <img src={homepage_pathshala} className="AboutUs-img"></img>
           </div>
@@ -179,7 +178,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <DonateCompo/>
+      
       <section className="OurWork">
         <h1>WHAT WE DO</h1>
         <div className="OurWork-Content">
@@ -205,20 +204,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="testimonials">
-        <h1>MONIAL</h1>
-      </section>
-
-      {/* Due to some bug the testimonial-carousel is not inside testimonial section and its has been keep seprate */}
-      <div className="testimonial-carousel">
-        <Slider {...settingsTestimonial} className="Testimonial-cards">
-          {testimonialData.map((item, index) => (
-            <div key={index}>
-              <Testimonial2 {...item} />
-            </div>
-          ))}
-        </Slider>
-      </div>
+      <DonateCompo />
 
       <section className="achievements">
         <h1>ACHIEVE</h1>
@@ -260,6 +246,23 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      <section className="testimonials">
+        <h1>MONIAL</h1>
+      </section>
+
+      {/* Due to some bug the testimonial-carousel is not inside testimonial section and its has been keep seprate */}
+      <div className="testimonial-carousel">
+        <Slider {...settingsTestimonial} className="Testimonial-cards">
+          {testimonialData.map((item, index) => (
+            <div key={index}>
+              <Testimonial2 {...item} />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      
 
       <StickyJoinButton />
       <StickyDonateButton />

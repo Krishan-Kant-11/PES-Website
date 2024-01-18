@@ -1,5 +1,6 @@
 import "../styles/componentsStyles/HeroSection.css";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 function HeroSection(props) {
   return (
@@ -13,8 +14,8 @@ function HeroSection(props) {
           <p className="hero-subheading">{props.subheading}</p>
           <p className="hero-para">{props.description}</p>
           <div className="hero-btns">
-            <Link className="hero-donate-btn" to="/donate">Donate Now</Link>
-            <Link className="hero-rdm-btn" to="/donate">Read More</Link>
+            <RouterLink className="hero-donate-btn" to="/donate">Donate Now</RouterLink>
+            <ScrollLink className="hero-rdm-btn" to="about-us" smooth={true} duration={1000} >Read More</ScrollLink>
           </div>
         </div>
       </div>
