@@ -1,167 +1,137 @@
-.dImage_1
-{
+.payment-methods {
+    /* border: 2px red solid; */
     display: flex;
-    /* justify-content: center; */
-    height:62rem;
-   
-}
-.dImage_2
-{
-    display: flex;
-
-    height: 25rem;
-    padding-right:4rem;
-    padding-left: 5rem;
-    
-
-      
-}
-.dImage_3
-{
-    display: flex;
-    height: 15rem;
-    /* justify-content: center; */
-    /* width: 50%; */
-    
-}
-.donateMain_1
-{
-    display: flex;
- 
-    margin-left: 5rem; 
-     margin-right: 5rem; 
-    margin-bottom: 2rem;
-    justify-content: center;
-  
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 0%;
 }
 
-.donateMain_2
-{
-    display:flex;
-    /* place-items: center; */
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 3rem;
-
-
-    
-    
-}
-.donateMain_3
-{
-    display:flex;
-    /* place-items: center; */
-    margin-left: 5rem;
-    /* margin-right: 1rem; */
-    margin-bottom: 2rem;
-
-    
-
-}
-
-.donateBox
-{
+.upi, .bank {
+    /* border: 2px green solid; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* margin: 2rem; */
-
-    
+    align-items: center;
+    justify-content: space-evenly;
+    width: 28%;
+    padding: 2% 6%;
+    text-align: center;
+    background-color:whitesmoke;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    height: 500px;
 }
-.donateHeading
-{
-       color: #262261;
-     
-}
 
-
-.payButton
-{
-    background-color : rgb(255,102,0);
-    font-size: 1rem;
-    color: white;
+.upi > h3, .bank>h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
     font-weight: 400;
-    padding: 10px 20px; /* Adjust padding as needed */
-    border: none; /* Remove button border */
-    cursor: pointer; 
-    border-radius: 25rem;
-    width:9rem;
+    margin-bottom: 15%;
+    text-decoration: underline;
+    text-decoration-color: orangered;
+    text-underline-offset: 10px;
 }
 
-.donateViaBox
-{
-    display:flex;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+.upi > p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 5% 0%;
 }
 
-.donateVia
-{
-    color: #262261;
-    font-size: 3rem;
- 
+.bank>p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 5% 0%;
+    line-height: 1.6;
+}
 
+.upi > img, .bank>img {
+    width: 150px;
 }
-.donateInfo_1{
-    text-align: justify;
+
+.razorpay-icon {
+    background-color: rgb(195, 225, 252);
+    padding: 15px 20px;
+    border-radius: 5px;
 }
-.donateInfo_2{
-    text-align: justify;
+
+.razor-btn{
+    text-align: center;
+    color: white;
+    border-radius: 50px;
+    border: 2.5px orangered solid;
+    background-color: orangered;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 22px;
+    margin: 3% 0%;
 }
-.donateInfo_3{
-    text-align: justify;
+
+
+/* css for modal or Pop up */
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+    border: 2.5px orangered solid;
+    background-color: orangered;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5% 10%;
+    margin: 3% 0%;
+}
+
+.btn-modal:hover {
+    background-color: black;
+    border-color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.3);
+}
+.modal-content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background-color: aliceblue;
+    padding: 1% 2%;
+    border-radius: 20px;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: 995;
+}
+.modal-content > img {
+    width: 65%;
+    border-radius: 20px;
+}
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+}
   
-}
-
-.infoBox_1
-{
-    display: flex;
-    width: 50%;
-    padding: 2rem;
-    justify-content: center;
-}
-.infoBox_2
-{
-    display: flex;
-    width: 50%;
- padding: 2rem;
- /* justify-content: center; */
-    
-}
-.infoBox_3
-{
-    display: flex;
-    width: 50%;
-    padding-right:4rem;
-    padding-left: 4rem;
-    /* justify-content: center; */
- 
-    
-}
-
-.boxbuttons
-{
-    display:flex;
-    justify-content: center;
-}
-.b1{
-    margin-left: 2rem;
-}
-
-.dImage_4{
-
-    display: flex;
-    /* flex-direction: column;*/
-    justify-content: center; 
-    height:20rem;
-    
-
-}
-.carousel
-{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-}
-

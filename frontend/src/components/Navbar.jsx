@@ -33,12 +33,13 @@ function Navbar(){
       <div className='nav-div'>
         <nav 
           style={{ 
-            "backgroundColor": navbarBackground && !open ? "" : "rgb(255, 102, 0)", 
-            "transition": !open && "background-color 0.5s ease-in-out"
+            "backgroundColor": navbarBackground && !open ? "" : "rgb(255, 255, 255)", 
+            "transition": !open && "background-color 0.5s ease-in-out",
+            "boxShadow":"0 2px 4px 0 rgba(0,0,0,.3)"
           }} 
         >
           <div className='navbar'>
-            <div style={{"backgroundColor": open ? "rgb(255, 102, 0)" : ""}} className="navbar-logo">
+            <div style={{"backgroundColor": open ? "rgb(255, 255, 255)" : ""}} className="navbar-logo">
               <img src={Logo} alt="logo" className="logo" />
               <div className="hamburger-menu" onClick={() => setOpen(!open)}>
                 {
@@ -51,11 +52,12 @@ function Navbar(){
               <li><NavLink to="/home" className="nav-item" activeClassName='active'>Home</NavLink></li>
               <li><NavLink to="/ourteam" className="nav-item" activeClassName='active'>Our Team</NavLink></li>
               <li><NavLink to="/contact" className="nav-item" activeClassName='active'>Contact Us</NavLink></li>
+              <li><NavLink to="/achievement" className="nav-item" activeClassName='active'>Achievements</NavLink></li>
             
               {/* Navsublinks */}
               <NavSubLinks />
 
-              <li><NavLink to="/login" className="nav-item" activeClassName='active'>Login</NavLink></li>
+              <li><NavLink to="/login" className="nav-item login-button" activeClassName='active'>Login</NavLink></li>
             </ul>
 
             {/* Mobile Nav */}

@@ -29,10 +29,11 @@
 .testimonial2-p {
     font-style: italic;
     text-align: justify;
+    font-weight: 300;
 }
 
 .testimonial2-name {
-    font-weight: 400;
+    font-weight: 300;
     padding: 10px 0px;
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
