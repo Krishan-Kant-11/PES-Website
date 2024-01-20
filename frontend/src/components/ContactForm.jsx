@@ -1,34 +1,92 @@
 import "../styles/componentsStyles/ContactForm.css";
 import { useState } from "react";
 
+// const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
+
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    query: "",
     message: "",
   });
 
   const [submitMessage, setSubmitMessage] = useState("");
 
+  // Handling the change in the input field
   const handleChange = (e) => {
     //Changing values in realtime
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (!formData.query) {
+      newErrors.query = 'Please select an option';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Logic for handling after clicking the submit button
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Showing message to the user for sucessfull submission
-    setSubmitMessage("✓ Form Submitted sucessfully!!");
+    if (validateForm()) {
+      try {
+        // Message for user
+        setSubmitMessage("Sending Email to Pehchaan Ek Safar...")
 
-    // Reseting form value to null
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+        // Send form data to the backend and mailing to PES
+        const respone = await fetch(`http://localhost:5000/contact/send-email`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+
+        // Showing message to the user for sucessfull submission
+        setSubmitMessage("✓ Form Submitted sucessfully!!");
+
+        // Reseting form value to null
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          query: "",
+          message: "",
+        });
+
+      } catch (error) {
+        console.error("Error sending email:", error);
+      }
+    }else {
+      setSubmitMessage("Please complete all the fields");
+      setErrors({});
+    }
   };
 
   return (
@@ -58,8 +116,25 @@ function ContactForm() {
             id=""
             value={formData.phone}
             onChange={handleChange}
-            placeholder="+91 9876543210"
+            placeholder="Phone"
           />
+
+          <select name="query" value={formData.query} onChange={handleChange}>
+            <option
+              className="form-option-btn"
+              value=""
+              selected
+              disabled
+              hidden
+            >
+              Query related to
+            </option>
+            <option className="form-option-btn">Donation</option>
+            <option className="form-option-btn">Carrer</option>
+            <option className="form-option-btn">Volunteering</option>
+            <option className="form-option-btn">Others</option>
+          </select>
+
           <textarea
             type="text"
             name="message"

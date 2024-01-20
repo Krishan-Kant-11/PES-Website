@@ -27,6 +27,9 @@ const port = process.env.PORT;
 
 const events_routes = require('./src/routes/events.js');
 const auth_routes = require('./src/routes/auth.js');
+const contactForm_routes = require('./src/routes/contactForm.js');
+
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -34,6 +37,7 @@ app.get('/', (req, res) => {
 
 app.use('/events', events_routes);
 app.use('/auth', auth_routes);
+app.use('/contact', contactForm_routes);
 
 
 //database connection 
