@@ -74,6 +74,8 @@ function Navbar(){
               <NavSubLinks />
 
               <li><NavLink to="/login" className="mobile-nav-item" activeClassName='active'>Login</NavLink></li>
+              <li><NavLink to="/manage-events" className="nav-item" activeClassName='active'>Manage Events</NavLink></li>
+                         
             </ul>
           </div>
         </nav>

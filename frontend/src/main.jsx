@@ -27,6 +27,7 @@ import Event from "./pages/Event";
 import AchievementPage from "./pages/AchievementPage";
 
 import Dashboard from "./pages/dashboard/Dashboard";
+import ManageEventsPage from "./pages/ManageEventsPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -53,6 +54,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path='/achievement' element={<AchievementPage />} />
         
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path="/manage-events" element={<ManageEventsPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
