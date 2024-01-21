@@ -41,7 +41,7 @@ router.post("/send-email", async (req, res) => {
     // Create email message
     const mailOptions = {
       from: emailConfig.user,
-      to: "2021meb1293@iitrpr.ac.in", // Replace with your email address
+      to: "pehchaanes@iitrpr.ac.in", // Replace with your email address
       subject: "Join Us Form Filled via PES Website",
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}
       \nCurrent Profession: ${profession}\nCampus: ${campus}\nProject wants to join: ${project}

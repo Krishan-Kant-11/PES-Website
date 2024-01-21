@@ -34,13 +34,13 @@ function ContactForm() {
       newErrors.email = "Invalid email format";
     }
 
-    // Phone number validation
-    const phoneRegex = /^\d{10}$/; // Adjust the regex based on your validation criteria
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
-    } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = "Invalid phone number format";
-    }
+    // // Phone number validation
+    // const phoneRegex = /^\d{10}$/; // Adjust the regex based on your validation criteria
+    // if (!formData.phone.trim()) {
+    //   newErrors.phone = "Phone number is required";
+    // } else if (!phoneRegex.test(formData.phone)) {
+    //   newErrors.phone = "Invalid phone number format";
+    // }
 
     if (!formData.query) {
       newErrors.query = "Please select an option";

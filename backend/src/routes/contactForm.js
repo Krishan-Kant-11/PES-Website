@@ -30,7 +30,7 @@ router.post("/send-email", async (req, res) => {
     // Create email message
     const mailOptions = {
       from: emailConfig.user,
-      to: "2021meb1293@iitrpr.ac.in", // Replace with your email address
+      to: "pehchaanes@iitrpr.ac.in", // Replace with your email address
       subject: "Message From PES Website",
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nQuery related to: ${query}\nMessage: ${message}`,
     };
