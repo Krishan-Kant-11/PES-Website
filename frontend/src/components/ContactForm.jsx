@@ -3,7 +3,6 @@ import { useState } from "react";
 
 // const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
-
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,8 +16,7 @@ function ContactForm() {
 
   // Handling the change in the input field
   const handleChange = (e) => {
-    //Changing values in realtime
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value }); //Changing values in realtime
   };
 
   const [errors, setErrors] = useState({});
@@ -36,8 +34,16 @@ function ContactForm() {
       newErrors.email = "Invalid email format";
     }
 
+    // Phone number validation
+    const phoneRegex = /^\d{10}$/; // Adjust the regex based on your validation criteria
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = "Invalid phone number format";
+    }
+
     if (!formData.query) {
-      newErrors.query = 'Please select an option';
+      newErrors.query = "Please select an option";
     }
 
     if (!formData.message.trim()) {
@@ -56,17 +62,19 @@ function ContactForm() {
     if (validateForm()) {
       try {
         // Message for user
-        setSubmitMessage("Sending Email to Pehchaan Ek Safar...")
+        setSubmitMessage("Sending Email to Pehchaan Ek Safar...");
 
         // Send form data to the backend and mailing to PES
-        const respone = await fetch(`http://localhost:5000/contact/send-email`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-
+        const respone = await fetch(
+          `http://localhost:5000/contact/send-email`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         // Showing message to the user for sucessfull submission
         setSubmitMessage("✓ Form Submitted sucessfully!!");
@@ -79,11 +87,10 @@ function ContactForm() {
           query: "",
           message: "",
         });
-
       } catch (error) {
         console.error("Error sending email:", error);
       }
-    }else {
+    } else {
       setSubmitMessage("Please complete all the fields");
       setErrors({});
     }
