@@ -26,7 +26,7 @@ const ProfilePage = () => {
 
   //user not logged in trying to access Profile Page 
   useEffect(() => {
-    let loggedInUser = localStorage.getItem("token"); ;
+    let loggedInUser = localStorage.getItem("token");
     if (!loggedInUser) {
       navigate("/login");
     }

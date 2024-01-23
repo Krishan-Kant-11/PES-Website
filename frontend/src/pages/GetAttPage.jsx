@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import "../styles/pagesStyles/GetAttPage.css";
 import peslogo from "../assets/peslogo.png";
 
 import request from "../request.js";
 
+import { useNavigate } from "react-router-dom";
+
 const GetAttendancePage = () => {
+    const navigate = useNavigate();
+
     const [month, setMonth] = useState("");
     const [year, setYear] = useState("");
 
@@ -13,6 +17,16 @@ const GetAttendancePage = () => {
     const [msgColor, setMsgColor] = useState("#000");
 
     const [loading, setLoading] = useState(false);
+
+    //TODO: Add proctection for getAttendance page from volunteers 
+
+    //user not logged in trying to access Profile Page 
+    useEffect(() => {
+        let loggedInUser = localStorage.getItem("token");
+        if (!loggedInUser) {
+            navigate("/login");
+        }
+    }, []);
 
     const handleValidation = (month, year) => {
         const regex = /^[0-9]{4}$/;
