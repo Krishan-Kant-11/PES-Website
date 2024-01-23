@@ -1,40 +1,63 @@
 const { Router } = require('express');
 const authMiddleware = require('../middlewares/auth');
+const Event = require('../models/EventModel');
 const router = Router();
-const {getEvents, 
-      getEvent, 
-      createEvent, 
-      deleteEvent, 
-      updateEvent
-    } = require('../controllers/eventController');
 
-// Get all Events
-router.get('/', getEvents);
-
-// Get single Event
-router.get('/:id', getEvent);
-
-// Create Event
-router.post('/', createEvent);
-
-// Delete Event
-router.delete('/:id', deleteEvent);
-
-// Update Event
-router.patch('/:id', updateEvent);
-
-router.get('/list', (req, res) => {
-  let events = [];
+router.get('/list', async (req, res) => {
   let type = req.params.type; // competitions, outreach, celebrations, other
-  for(let i=0; i<10; i++) {
-    events.push({
-      id: i,
-      title: 'Event Title',
-      date: '14 December, 2023',
-      image: `/src/assets/hero_image${i%4+1}.jpg`,
-    })
-  }
+  const events = await Event.find({}).sort({createdAt: -1});
   res.status(200).json(events);
+});
+
+router.get('/delete', authMiddleware(true), async (req, res) => {
+  let id = req.query.id;
+  if(id == undefined) {
+    res.sendStatus(404);
+  }
+  const event = await Event.findByIdAndDelete(id);
+  res.status(200).json(event);
+});
+
+router.post('/update', authMiddleware(true), async (req, res) => {
+  let id = req.body.id;
+  let title = req.body.title;
+  let description = req.body.description;
+  let date = req.body.date;
+  let images = req.files;
+  let type = req.body.type || 'others';
+  for(let i=0; i<images.length; i++){
+    images[i] = "data:image/jpeg;base64, "+req.files[i].buffer.toString('base64');
+  }
+  if(id == undefined) {
+    res.sendStatus(404);
+  }
+  const event = await Event.findByIdAndUpdate(id, {
+    title: title,
+    description: description,
+    date: date,
+    images: images,
+    type: type
+  });
+  res.status(200).json(event);
+});
+
+router.post('/create', authMiddleware(true), async (req, res) => {
+  let title = req.body.title;
+  let description = req.body.description;
+  let date = req.body.date;
+  let images = req.files;
+  let type = req.body.type || 'others';
+  for(let i=0; i<images.length; i++){
+    images[i] = "data:image/jpeg;base64, "+req.files[i].buffer.toString('base64');
+  }
+  const event = await Event.create({
+    title: title,
+    description: description,
+    date: date,
+    images: images,
+    type: type
+  });
+  res.status(200).json(event);
 });
 
 router.get('/details', (req, res) => {
@@ -50,20 +73,5 @@ router.get('/details', (req, res) => {
     });
   }
 });
-
-router.get('/create', authMiddleware(true), (req, res) => {
-  res.send('Events create works!');
-});
-
-router.get('/update', authMiddleware(true), (req, res) => {
-  res.send('Events update works!');
-});
-
-router.get('/delete', authMiddleware(true), (req, res) => {
-  res.send('Events delete works!');
-});
-
-// Post a new event
-router.post('/', createEvent);
 
 module.exports = router;

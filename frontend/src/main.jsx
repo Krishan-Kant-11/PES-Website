@@ -13,7 +13,6 @@ import ContactPage from "./pages/ContactPage"
 import DonatePage from "./pages/DonatePage"
 import HomePage from "./pages/HomePage"
 import JoinUsPage from "./pages/JoinUsPage"
-import KV_IITRopar_Page from "./pages/KV_IITRopar_Page"
 import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage";
 import OtherEventsPage from "./pages/OtherEventsPage"
@@ -27,7 +26,7 @@ import Event from "./pages/Event";
 import AchievementPage from "./pages/AchievementPage";
 
 import Dashboard from "./pages/dashboard/Dashboard";
-import ManageEventsPage from "./pages/ManageEventsPage";
+import ManageEventsPage from "./pages/dashboard/ManageEventsPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -54,7 +53,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path='/achievement' element={<AchievementPage />} />
         
         <Route path='/dashboard' element={<Dashboard />} />
-        <Route path="/manage-events" element={<ManageEventsPage />} />
+        <Route path="/dashboard/events" element={<ManageEventsPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

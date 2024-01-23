@@ -5,7 +5,7 @@ const eventSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    dated: {
+    date: {
         type: String,
         required: true
     }
@@ -13,19 +13,16 @@ const eventSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true
+    },
+    type: {
+        type: String,
+        required: true,
+        enum: ["celebrations", "outreach", "competitions", "others"],
+    },
+    images: {
+        type: [String],
+        required: true
     }
-    // ,
-    // photo:
-    // {
-    //     type: String,
-    //     // data: Buffer,
-    //     // contentType: String,
-    //     required: true
-    // },
-    // type:    // Events, Outreach, Achievements
-    // {
-    //    
-    // }
 }, { timestamps: true }
 );
 

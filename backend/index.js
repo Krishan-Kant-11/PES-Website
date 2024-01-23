@@ -16,7 +16,7 @@ const app = express();
 const logger = require('./src/middlewares/logger.js');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(multer().single('photo'));
+app.use(multer().any());
 app.use(cookieParser());
 app.use(cors({credentials: true, origin: 'http://localhost:5173'})); // TODO: update when deploying
 app.use(logger);

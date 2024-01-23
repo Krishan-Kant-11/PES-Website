@@ -1,88 +1,62 @@
 import { useState } from "react"
+import request from "../request"
 
-const EventForm = ()=>{
-    
-    const [title, setTitle] = useState("")
-    const [dated, setDated] = useState("")
-    const [description, setDescription] = useState("")
+const EventForm = ({ onUpdate })=>{
     // const [image, setImage] = useState("")
     const [error, setError] = useState(null)
+    const [images, setImages] = useState([])
 
     const handleSubmit = async(e) => {
         e.preventDefault()
         
-        const event = {title, dated, description}
-        const response = await fetch("http://localhost:3000/events/", {
-            method: "post",
-            body: JSON.stringify(event),
-            headers: {
-                "Content-type": "application/json"
-            }
-        })
+        let form = document.getElementById("createEvent");
+        let formData = new FormData(form);
+        const response = await request.post(`${import.meta.env.VITE_API_BASE}/events/create`, formData)
         const json = await response.json()
 
         if(!response.ok){
             setError(json.error)
-        }
-        if(response.ok){
-            setTitle("")
-            setDated("")
-            setDescription("")
-            // setImage("")
-            setError(null)
-            alert("New Event Added!")
-            console.log("New Event Added!", json)
+        }else{
+          onUpdate()
         }
     }
-
-    // const handleChange= async(e) =>{
-    //     let reader = new FileReader()
-    //     reader.readAsDataURL(e.target.files[0])
-    //     reader.onload = () => {
-    //         console.log(reader.result)
-    //         setImage(reader.result)
-    //     }
-    //     reader.onerror = error => {
-    //         console.log("Error: ", error)
-    //     }
-    // }
-
-    // function initiateUpload(e){
-    //     document.getElementById('photo').click();
-    //   }
     
-    //   function handleUpload(e){
-    //     let file = e.target.files[0];
-    //     try{
-    //       let url = URL.createObjectURL(file);
-    //       document.getElementById("photo_img").src = url || "https://placehold.co/600x400?text=Upload+your+photo";
-    //     }catch(err){
-    //       console.log(err);
-    //       document.getElementById("photo_img").src = "https://placehold.co/600x400?text=Upload+your+photo";
-    //     }
-    //   }
-
+    function handleImageSelect(e){
+      // let file = e.target.files[0];
+      let imgs = []
+      for(let i=0; i< e.target.files.length; i++){
+        console.log(e.target.files[i])
+        imgs.push(URL.createObjectURL(e.target.files[i]));
+      }
+      setImages(imgs)
+      // try{
+      //   let url = URL.createObjectURL(file);
+      //   document.getElementById("photo_img").src = url || "https://placehold.co/600x400?text=Upload+your+photo";
+      // }catch(err){
+      //   console.log(err);
+      //   document.getElementById("photo_img").src = "https://placehold.co/600x400?text=Upload+your+photo";
+      // }
+    }
 
     return (
-        <form className="create-event" onSubmit={handleSubmit}>
+        <form className="create-event" onSubmit={handleSubmit} id="createEvent">
             <h3>Add a new Event</h3>
             <label>Title: </label>
-            <input type="text" onChange={(e)=>{setTitle(e.target.value)}} value={title} required />
+            <input name="title" type="text" required />
 
             <label>Date: </label>
-            <input type="date" onChange={(e)=>{setDated(e.target.value)}} value={dated} required />
+            <input name="date" type="date" required />
 
             <label>Description: </label>
-            <input type="text" onChange={(e)=>{setDescription(e.target.value)}} value={description} required />
+            <input name="description" type="text" required />
 
-            {/* <label>Upload Photo: </label>
-            <input type="file" onChange={handleChange(e)} value={image} accept="image/png, image/jpeg, image/jpg" required /> 
-             */}
+            <label>Upload Photo: </label>
+            <input type="file" name="images" onChange={handleImageSelect} accept="image/jpeg, image/jpg" multiple={true} required />
 
-            {/* <div className="image">
-                <img src="https://placehold.co/600x400?text=Upload+your+photo" onClick={initiateUpload} id="photo_img" />
-                <input type="file" name="photo" id="photo" onChange={handleUpload} style={{display:'none'}} required />
-            </div> */}
+            {images.map((image, index) => {
+              // This is the preview image, we have to set proper css for this
+              return <img key={index} src={image} alt="preview" style={{maxWidth:'100px'}} />
+            })}
 
             <button>Add Event</button>
             {error && <div className="error">{error}</div>}

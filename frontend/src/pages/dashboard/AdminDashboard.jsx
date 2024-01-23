@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from 'react-router-dom';
 import request from '../../request';
 import "../../styles/pagesStyles/dashboard/Dashboard.css";
 
@@ -173,6 +174,9 @@ function Dashboard(){
       <div className="dashboard">
         <div className="topPanel">
           <h1>Welcome {user.name}</h1>
+          <div>
+            <Link to="/dashboard/events">Manage events</Link>
+          </div>
         </div>
 
 

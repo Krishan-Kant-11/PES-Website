@@ -1,16 +1,17 @@
 import "../styles/componentsStyles/Events.css"
+import request from "../request"
 
-const EventDetails = ({event}) => {
+const EventDetails = ({event, onDelete}) => {
 
     const handleClick = async ()=>{
-        const response = await fetch("http://localhost:3000/events/" + event._id, {
-            method: 'delete'
-        })
+        const response = await request.get(`${import.meta.env.VITE_API_BASE}/events/delete?id=${event._id}`)
         const json = await response.json()
 
         if(response.ok){
             alert("Event Deleted!")
             console.log("Event Deleted", json)
+
+            onDelete()
         }
 
         if(!response.ok){
@@ -22,7 +23,7 @@ const EventDetails = ({event}) => {
     return(
         <div className="event-details">
         <h4>{event.title}</h4>
-        <p><strong>Dated: </strong>{event.dated}</p>
+        <p><strong>Dated: </strong>{event.date}</p>
         <p><strong>Description: </strong>{event.description}</p>
         {/* <img
             src={event.img}
