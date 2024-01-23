@@ -11,6 +11,9 @@ const calculateDistance = require('../utils/calculateDistance.js');
 const { timeInRange } = require('../utils/timeInRange.js');
 const { getMonthWorksheetColumn, getDateStringLE, getDateStringBE, daysInMonth } = require('../utils/getMonthWorksheetColumn.js');
 
+// @desc    Get Attendance
+// route    POST /attendance/getAtt
+// @access  Private (Admin) 
 const getAttendance = async(req, res, next) => {
     const { month, year } = req.body;
     try {
@@ -78,7 +81,9 @@ const getAttendance = async(req, res, next) => {
     }
 };
 
-
+// @desc    Mark Attendance
+// route    POST /attendance/markAtt
+// @access  Private (Admin/Volunteer) 
 const markAttendance = async(req, res, next) => {
     const { email } = req.user;
     const { lat, lon, time } = req.body;
