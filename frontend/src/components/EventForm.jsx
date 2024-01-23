@@ -40,25 +40,50 @@ const EventForm = ({ onUpdate })=>{
 
     return (
         <form className="create-event" onSubmit={handleSubmit} id="createEvent">
+            <div className="event-field">
             <h3>Add a new Event</h3>
             <label>Title: </label>
-            <input name="title" type="text" required />
+            <input className="event-text-input" name="title" type="text" required />
+            </div>
 
-            <label>Date: </label>
+            <div className="event-field">
+            <label className="event-lbl">Date: </label>
             <input name="date" type="date" required />
+            </div>
 
-            <label>Description: </label>
-            <input name="description" type="text" required />
+            <div className="event-field">
+            <label className="event-lbl">Description: </label>
+            <input className="event-text-input" name="description" type="text" required />
+            </div>
 
-            <label>Upload Photo: </label>
+            <div className="event-field">
+            <label className="event-lbl">Upload Photo: </label>
             <input type="file" name="images" onChange={handleImageSelect} accept="image/jpeg, image/jpg" multiple={true} required />
 
             {images.map((image, index) => {
               // This is the preview image, we have to set proper css for this
               return <img key={index} src={image} alt="preview" style={{maxWidth:'100px'}} />
             })}
+            </div>
 
-            <button>Add Event</button>
+            <div className="event-field">
+             {/* ["celebrations", "outreach", "competitions", "others"], */}
+             <label className="event-lbl">Select Page: </label>
+             <select name="type" placeholder="Select Page" required>
+             <option value="" disabled={true} selected={true}>Select</option>
+             <option value="outreach">Outreach</option>
+             <option value="celebrations">Celebrations</option>
+             <option value="competitions">Competitions</option>
+             <option value="others">Others</option> 
+             </select> 
+
+            </div> 
+
+
+            <div className="event-field">
+            <button className="event-submit">Add Event</button>
+            </div>
+
             {error && <div className="error">{error}</div>}
         </form>
 
