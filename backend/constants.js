@@ -12,7 +12,6 @@ const ATTENDANCE_END_TIME = "12:00:00";
 
 module.exports = { 
     DB_NAME, 
-    ATTENDANCE_START_HOUR, 
     LATITUDE, 
     LONGITUDE,
     DISTANCE_ALLOWED,

@@ -4,20 +4,35 @@ import "../styles/pagesStyles/ProfilePage.css";
 
 import profile_image from '../assets/sample-image.jpg';
 import request from '../request';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
+  const navigate = useNavigate();
+  
+  //fetched user
   const [user, setUser] = useState(null); 
   
+  //messages for responses 
   const [msg, setMsg] = useState("");
   const [msgColor, setMsgColor] = useState("#000");
   const [loading, setLoading] = useState(false);
 
+  //editing the profile
   const [edit, setEdit] = useState(false);
 
+  //image upload 
   const [profileImg, setProfileImg] = useState(profile_image);
   const [file, setFile] = useState(null);
 
+  //user not logged in trying to access Profile Page 
+  useEffect(() => {
+    let loggedInUser = localStorage.getItem("token"); ;
+    if (!loggedInUser) {
+      navigate("/login");
+    }
+  }, []);
+
+  //fetching user profile
   useEffect(() => {
     const fetchData = () => {
       setLoading(true);    
@@ -50,10 +65,9 @@ const ProfilePage = () => {
     fetchData();
   }, []);
 
+  //marking the attendance 
   const fetchData = async (latitude, longitude) => {
     if (latitude !== 0 && longitude !== 0) {
-
-      // console.log('Location fetched successfully', latitude, longitude);
 
       const data = {
         lat: latitude,
@@ -85,8 +99,7 @@ const ProfilePage = () => {
     }
   };
 
-
-
+  //accessing the location of user's device 
   const getLocation = () => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
@@ -112,6 +125,7 @@ const ProfilePage = () => {
     }
   };
 
+
   const handleMarkAttendance = () => {
     setMsgColor("#000");
     setMsg("Fetching Location information...");
@@ -120,6 +134,7 @@ const ProfilePage = () => {
     setLoading(false);
   };
 
+  //handler to save the updated profile 
   const handleSave = async() => {
     setEdit(false);
     setLoading(true);
@@ -158,6 +173,7 @@ const ProfilePage = () => {
     setLoading(false);
   };
 
+  //for images upload
   const handleUpload = (e) => {
     const file = e.target.files[0];
     const imageURL = URL.createObjectURL(file);

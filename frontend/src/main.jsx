@@ -26,6 +26,9 @@ import Kviitroparpage from "./pages/kviitroparpage"
 import Event from "./pages/Event";
 import AchievementPage from "./pages/AchievementPage";
 
+import ProfilePage from "./pages/ProfilePage";
+import GetAttPage from "./pages/GetAttPage";
+
 import Dashboard from "./pages/dashboard/Dashboard";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

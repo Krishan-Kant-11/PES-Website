@@ -2,7 +2,6 @@ const User = require('../models/user.js');
 
 const getUserProfile = async(req, res, next) => {
     const { email } = req.user;
-    // console.log(email);
     try {
         const user = await User.findOne({ email });
         

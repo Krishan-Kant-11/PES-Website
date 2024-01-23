@@ -13,7 +13,6 @@ const { getMonthWorksheetColumn, getDateStringLE, getDateStringBE, daysInMonth }
 
 const getAttendance = async(req, res, next) => {
     const { month, year } = req.body;
-    console.log(req.body);
     try {
         const workbook = new exceljs.Workbook();
         const worksheet = workbook.addWorksheet('sheet');
@@ -24,7 +23,6 @@ const getAttendance = async(req, res, next) => {
         const data = [];
 
         const days = daysInMonth(month, year);
-        // console.log("DAYS : ", days);
         
         let attendanceArray = [];
         for (let i=0; i<days; i++) {
@@ -115,9 +113,6 @@ const markAttendance = async(req, res, next) => {
             return res.status(409).json({ ok: false, message: 'Attendance is already marked.' });
         }
 
-        // const hour = attendanceDate.getHours();
-        // const timeLimitCheck = hour === ATTENDANCE_START_HOUR;
-
         const timeLimitCheck = timeInRange(attendanceDate);
         
         if (!timeLimitCheck) {
@@ -128,7 +123,7 @@ const markAttendance = async(req, res, next) => {
         const distance = calculateDistance(lat, lon, LATITUDE, LONGITUDE);
         const distanceLimitCheck = distance <= DISTANCE_ALLOWED; 
 
-        console.log('distance : ', distance); 
+        // console.log('distance : ', distance); 
         if (!distanceLimitCheck) {
             return res.status(400).json({ ok: false, message: 'Attendance location is too far from the KV IIT Ropar.' });
         } 

@@ -25,7 +25,7 @@
 .profile-items-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     padding: 1rem;
 }
 
@@ -92,51 +92,6 @@
 .profile-get-att-btn a:hover {
     color: #000;
 }
-
-
-/* 
-
-.profile-att-btn {
-    text-align: center;
-    padding:  2rem 2rem 1rem;
-}
-
-.profile-edit-btn {
-    text-align: center;
-    padding: 0rem 2rem 2rem;
-}
-
-.profile-att-btn button, .profile-edit-btn button, .profile-get-att-btn a {
-    background-color: black;
-    border-radius: 50px;
-    padding: 8px 20px;
-    color: white;
-    font-weight: 400;
-    margin: 10px;
-    width: 200px;
-    font-size: 15px;
-}
-
-.profile-att-btn button:hover, .profile-edit-btn button:hover {
-    background-color: rgb(255, 102, 0);
-    color: #000;
-    font-weight: 600;
-}
-
-
-.profile-get-att-btn {
-    text-align: center;
-    text-decoration: none;
-    width: 200px;
-    display: flex;
-
-}
-
-.profile-get-att-btn a {
-    text-decoration: none;
-}
- */
-
 
 .profile-file-input-container {
     position: relative;
