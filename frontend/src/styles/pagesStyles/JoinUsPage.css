@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+
+.joinus-container {
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.quote {
+  text-align: center;
+  font-family: Montserrat classic;
+  font-size: 300%;
+  color: rgb(255, 102, 0);
+}
+.subquote {
+  text-align: justify;
+  padding-top: 0.5%;
+  padding-right: 25%;
+  padding-left: 25%;
+  margin-bottom: 2%;
+}
+
+.join-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: auto;
+  margin-bottom: 3%;
+  max-width: 80%;
+}
+
+.join-instructions > h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: orangered;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 2.5px;
+}
+
+.join-instructions > p {
+  text-align: justify;
+  max-width: 50%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.join-instructions > p > span {
+  color: orangered;
+  font-weight: 600;
+}
+
+
+@media (max-width: 767px) {
+  .join-instructions > p {
+    max-width: 78%;
+  }
+}

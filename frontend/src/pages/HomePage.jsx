@@ -207,7 +207,7 @@ function HomePage() {
       <DonateCompo />
 
       <section className="achievements">
-        <h1>ACHIEVE</h1>
+        <h1>ACHIEVEMENTS</h1>
         <div className="achievements-content">
           <div className="achievement-text">
             <h2>
@@ -248,7 +248,7 @@ function HomePage() {
       </section>
 
       <section className="testimonials">
-        <h1>MONIAL</h1>
+        <h1>TESTIMONIAL</h1>
       </section>
 
       {/* Due to some bug the testimonial-carousel is not inside testimonial section and its has been keep seprate */}

@@ -1,0 +1,48 @@
+.att-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.att-div-logo {
+    margin-top: 100px;
+}
+
+.att-pes-logo {
+    height: 6rem;
+}
+
+.att-heading {
+    margin-top: 20px;
+}
+
+.att-input input {
+    width: 100%;
+    margin: 10px 0px; 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.att-btn {
+    color: #000;
+    background-color: rgb(255,102,0);
+    font-size: 90%;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10% 10%;
+    width: 160%;
+    translate: -19%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.1s all ease-in-out;
+    margin: 10px 0px;
+}
+
+.att-btn:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.005);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4); 
+}
+

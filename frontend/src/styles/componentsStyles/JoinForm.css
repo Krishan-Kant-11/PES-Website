@@ -1,0 +1,138 @@
+/* .join-form-container {
+  border: 2px red solid;
+} */
+
+.testing {
+  color: red;
+}
+
+.joinus-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+
+.joinus-div-single {
+  width: 60%;
+  margin: auto;
+}
+
+.joinus-div-left {
+  width: 25%;
+  margin-right: 5%;
+  margin-left: 0%;
+}
+
+.joinus-div-right {
+  width: 25%;
+  margin-left: 5%;
+}
+
+.lbl {
+  max-width: 100%;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.text-input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+  height: 40px;
+  border: 1px solid #9d9d9d;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #525252;
+}
+
+.text-input:hover {
+  box-shadow: 1px 1px 2px orangered;
+}
+
+.select-input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #9d9d9d;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #525252;
+}
+
+.select-input:hover {
+  box-shadow: 1px 1px 2px orangered;
+}
+
+.select-input-placeholder {
+  color: red;
+  /* color: rgba(0, 0, 0, 0.1); */
+}
+
+.text-area {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+  height: 100%;
+  border: 1px solid #9d9d9d;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #525252;
+}
+
+.text-area:hover {
+  box-shadow: 1px 1px 2px orangered;
+}
+
+.join-form-message {
+  font-family: "Montserrat", sans-serif;
+  color: green;
+  margin-top: 0%;
+  margin-bottom: 1%;
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.joinus-submit {
+  text-decoration: none;
+  width: 20%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 0px white;
+  /* box-sizing: border-box; */
+  border-color: white;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.joinus-submit:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .joinus-div,
+  .joinus-div-left,
+  .joinus-div-right {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
