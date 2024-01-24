@@ -25,11 +25,11 @@ import Kviitroparpage from "./pages/kviitroparpage"
 import Event from "./pages/Event";
 import AchievementPage from "./pages/AchievementPage";
 
-import ProfilePage from "./pages/ProfilePage";
-import GetAttPage from "./pages/GetAttPage";
 
 import Dashboard from "./pages/dashboard/Dashboard";
 import ManageEventsPage from "./pages/dashboard/ManageEventsPage";
+import ProfilePage from "./pages/dashboard/ProfilePage";
+import GetAttPage from "./pages/dashboard/GetAttPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -54,11 +54,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/pastteams" element={<PastTeams />} />
         <Route path='/event/:eventid' element={<Event />} />
         <Route path='/achievement' element={<AchievementPage />} />
-
-        <Route path='/profile' element={<ProfilePage />} />
         
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/dashboard/profile' element={<ProfilePage />} />
         <Route path="/dashboard/events" element={<ManageEventsPage />} />
+        <Route path="/dashboard/get-attendance" element={<GetAttPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

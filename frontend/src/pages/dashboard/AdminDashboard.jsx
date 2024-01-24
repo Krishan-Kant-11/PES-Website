@@ -176,6 +176,8 @@ function Dashboard(){
           <h1>Welcome {user.name}</h1>
           <div>
             <Link to="/dashboard/events">Manage events</Link>
+            <Link to="/dashboard/profile">My Profile</Link>
+            <Link to="/dashboard/get-attendance">Get Attendance</Link>
           </div>
         </div>
 
