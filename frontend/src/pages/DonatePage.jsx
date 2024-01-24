@@ -2,9 +2,11 @@ import "../styles/pagesStyles/DonatePage.css";
 import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
 import donateHeaderImage from "../assets/donateus.jpg";
+import donateMsgImg from "../assets/joinuspage.jpg";
 import qr from "../assets/upi.jpg";
 import pes_qr from "../assets/pes_qr.jpeg";
 import razorpayIcon from "../assets/razorpay.svg";
+import bookReaderSVG from "../assets/book-reader-solid.svg";
 
 function DonatePage() {
   const [modal, setModal] = useState(false);
@@ -21,7 +23,26 @@ function DonatePage() {
 
   return (
     <>
-      <PageHeader title="Donate Us" image={donateHeaderImage} />
+      <PageHeader title="Donate" image={donateHeaderImage} />
+
+      <div className="donation-text">
+        <img src={donateMsgImg} className="donation-text-img"></img>
+        <div className="donation-msg">
+          <img src={bookReaderSVG} className="book-reader-svg"></img>
+          <div className="donation-underline-1"></div>
+          <h2>You Can Make a Difference Right Now!!</h2>
+          <div className="donation-underline-2"></div>
+          <p>
+            Every donation, regardless of size, brings us one step closer to
+            creating positive change. Your support is invaluable, and we are
+            grateful for your consideration. Thank you for being a part of our
+            mission. Together, we can make a lasting difference.
+          </p>
+        </div>
+      </div>
+      <div className="donation-method-heading">
+        <h1>Donation Methods</h1>
+      </div>
 
       <div className="payment-methods">
         <div className="upi">
@@ -80,6 +101,39 @@ function DonatePage() {
           <a href="https://razorpay.com/payment-button/pl_K9P2tcsWaKFJNo/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button">
             <button className="razor-btn">Click Here</button>
           </a>
+        </div>
+      </div>
+
+      <div className="donation-method-heading">
+        <h1>Privacy Policy</h1>
+      </div>
+
+      <div className="privacy-policy">
+        <div className="privacy-policy-card">
+          <h3>Privacy Statement</h3>
+          <p>
+            Pehcaan Ek Safar is committed to protect the privacy of users of
+            this website. The information received is kept confidential and is
+            disclosed to such third parties as may be necessary to process the
+            donation.
+          </p>
+        </div>
+        <div className="privacy-policy-card">
+          <h3>Personal Information</h3>
+          <p>
+            All rights, personal data and privacy are maintained by Pehchaan Ek
+            Safar. No information or data is shared. All rights are secured and
+            safe.
+          </p>
+        </div>
+        <div className="privacy-policy-card">
+          <h3>Our words</h3>
+          <p>
+            Pehcaan Ek Safar is committed to protect the privacy of users of
+            this website. The information received is kept confidential and is
+            disclosed to such third parties as may be necessary to process the
+            donation.
+          </p>
         </div>
       </div>
     </>

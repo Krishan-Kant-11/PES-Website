@@ -1,137 +1,321 @@
+.donation-text {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding-top: 8%;
+  padding-bottom: 3%;
+  /* border: 2px red solid; */
+}
+
+.donation-text-img {
+  width: 650px;
+  border-radius: 10px;
+  /* margin: auto; */
+  /* border: 2px red solid; */
+}
+
+.donation-msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  /* margin: auto; */
+  max-width: 35%;
+  /* border: 2px blue solid; */
+}
+
+.donation-msg > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgb(255, 90, 0);
+  color: orangered;
+  /* text-decoration: underline;
+  text-underline-offset: 15px;
+  text-decoration-thickness: 2.5px;
+  text-decoration-color: black; */
+}
+
+.donation-msg > p {
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+}
+
+.book-reader-svg {
+  width: 130px;
+}
+
+.achievement-text {
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+  /* border: 2px blue solid; */
+}
+
+.achievement-text > h2 {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(40, 40, 40);
+  font-weight: 600;
+  font-size: 250%;
+  line-height: 1.4;
+}
+
+.donation-underline-1 {
+  width: 200px;
+  height: 5px;
+  border-radius: 50px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: black;
+}
+
+.donation-underline-2 {
+  width: 200px;
+  height: 5px;
+  border-radius: 50px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  background-color: black;
+}
+
+.donation-method-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donation-method-heading > h1 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+  color: orangered;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-underline-offset: 20px;
+  text-decoration-thickness: 2.5px;
+}
+
 .payment-methods {
-    /* border: 2px red solid; */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 5% 0%;
+  /* border: 2px red solid; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  margin: 3% 0%;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  /* background-color: rgba(255, 102, 0, 0.3); */
+  /* background-color: rgba(150, 131, 236, 0.3); */
 }
 
-.upi, .bank {
-    /* border: 2px green solid; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 28%;
-    padding: 2% 6%;
-    text-align: center;
-    background-color:whitesmoke;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    height: 500px;
+.upi,
+.bank {
+  /* border: 2px green solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25%;
+  max-width: 450px;
+  padding: 2% 6%;
+  text-align: center;
+  /* background-color: rgba(161, 202, 241, 0.1); */
+  /* background-color: rgba(150, 131, 236, 0.1); */
+  background-color: white;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  height: 500px;
 }
 
-.upi > h3, .bank>h3 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    margin-bottom: 15%;
-    text-decoration: underline;
-    text-decoration-color: orangered;
-    text-underline-offset: 10px;
+.upi > h3,
+.bank > h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 15%;
+  text-decoration: underline;
+  text-decoration-thickness: 2.3px;
+  text-decoration-color: orangered;
+  text-underline-offset: 13px;
 }
 
 .upi > p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    text-align: center;
-    margin: 5% 0%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin: 5% 0%;
 }
 
-.bank>p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    text-align: center;
-    margin: 5% 0%;
-    line-height: 1.6;
+.bank > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin: 5% 0%;
+  line-height: 1.6;
 }
 
-.upi > img, .bank>img {
-    width: 150px;
+.upi > img,
+.bank > img {
+  width: 150px;
 }
 
 .razorpay-icon {
-    background-color: rgb(195, 225, 252);
-    padding: 15px 20px;
-    border-radius: 5px;
+  background-color: rgb(195, 225, 252);
+  padding: 15px 20px;
+  border-radius: 5px;
 }
 
-.razor-btn{
-    text-align: center;
-    color: white;
-    border-radius: 50px;
-    border: 2.5px orangered solid;
-    background-color: orangered;
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 12px 22px;
-    margin: 3% 0%;
+.razor-btn {
+  text-align: center;
+  color: white;
+  border-radius: 50px;
+  border: 2.5px orangered solid;
+  background-color: orangered;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 22px;
+  margin: 3% 0%;
 }
 
+.privacy-policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 3%;
+}
+
+.privacy-policy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 450px;
+  width: 400px;
+  height: 250px;
+  padding: 2%;
+  background-color: rgba(255, 102, 0, 1);
+  border-radius: 20px;
+}
+
+.privacy-policy-card > h3 {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.privacy-policy-card > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  text-align: justify;
+}
 
 /* css for modal or Pop up */
 body.active-modal {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .btn-modal {
-    display: block;
-    text-decoration: none;
-    color: white;
-    border-radius: 50px;
-    border: 2.5px orangered solid;
-    background-color: orangered;
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 5% 10%;
-    margin: 3% 0%;
+  display: block;
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+  border: 2.5px orangered solid;
+  background-color: orangered;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5% 10%;
+  margin: 3% 0%;
 }
 
 .btn-modal:hover {
-    background-color: black;
-    border-color: black;
-    transition: 0.3s ease-in-out;
+  background-color: black;
+  border-color: black;
+  transition: 0.3s ease-in-out;
 }
 
-.modal, .overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
 }
 
 .overlay {
-    background: rgba(49,49,49,0.3);
+  background: rgba(49, 49, 49, 0.3);
 }
 .modal-content {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 1.4;
-    background-color: aliceblue;
-    padding: 1% 2%;
-    border-radius: 20px;
-    max-width: 600px;
-    min-width: 300px;
-    z-index: 995;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background-color: aliceblue;
+  padding: 1% 2%;
+  border-radius: 20px;
+  max-width: 600px;
+  min-width: 300px;
+  z-index: 995;
 }
 .modal-content > img {
-    width: 65%;
-    border-radius: 20px;
+  width: 65%;
+  border-radius: 20px;
 }
 .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 7px;
-    border: none;
-    border-radius: 20px;
-    background-color: black;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+  border: none;
+  border-radius: 20px;
+  background-color: black;
 }
-  
+
+@media screen and (max-width: 500px) {
+  .donation-text-img {
+    display: none;
+  }
+
+  .donation-msg {
+    max-width: 85%;
+    /* border: 2px red solid; */
+  }
+
+  .donation-method-heading {
+    margin-top: 5%;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .upi,
+  .bank {
+    width: 80%;
+  }
+
+  .privacy-policy {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
