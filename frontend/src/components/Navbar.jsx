@@ -1,15 +1,27 @@
 import React, {useEffect, useState} from 'react';
 import "../styles/componentsStyles/Navbar.css"
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 import Logo from '../assets/peslogo.png';
 
 import NavSubLinks from './NavSubLinks';
 
+import request from '../request';
+
 function Navbar(){
     const [navbarBackground, setNavbarBackground] = useState(true);
     const [open, setOpen] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
+    const loc = useLocation();
+
+    async function getLoginStatus() {
+      const response = await request.get(`${import.meta.env.VITE_API_BASE}/auth/user`);
+      const data = await response.json();
+      if (data._id) {
+        setLoggedIn(true);
+      }
+    }
 
     useEffect(() => {
       const handleScroll = () => {
@@ -22,11 +34,17 @@ function Navbar(){
       }     
       
       window.addEventListener('scroll', handleScroll);
+      getLoginStatus()
   
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
+
+    useEffect(() => {
+      setOpen(false);
+      getLoginStatus();
+    }, [loc]);
 
     return (
     <>
@@ -57,7 +75,7 @@ function Navbar(){
               {/* Navsublinks */}
               <NavSubLinks />
 
-              <li><NavLink to="/login" className="nav-item login-button" activeClassName='active'>Login</NavLink></li>
+              {!loggedIn ? <li><NavLink to="/login" className="nav-item login-button" activeClassName='active'>Login</NavLink></li> : <li><NavLink to="/dashboard" className="nav-item login-button" activeClassName='active'>Dashboard</NavLink></li>}
             </ul>
 
             {/* Mobile Nav */}
@@ -73,8 +91,7 @@ function Navbar(){
               {/* Navsublinks */}
               <NavSubLinks />
 
-              <li><NavLink to="/login" className="mobile-nav-item" activeClassName='active'>Login</NavLink></li>
-              <li><NavLink to="/manage-events" className="nav-item" activeClassName='active'>Manage Events</NavLink></li>
+                {loggedIn ? <li><NavLink to="/dashboard" className="mobile-nav-item" activeClassName='active'>Dashboard</NavLink></li> : <li><NavLink to="/login" className="mobile-nav-item" activeClassName='active'>Login</NavLink></li>}
                          
             </ul>
           </div>

@@ -37,6 +37,7 @@
   background-color: #f00;
   color: #fff;
   margin: 0 2px;
+  text-align: center;
 }
 
 .dashboard .bottomPanel {
@@ -150,19 +151,21 @@
 
 @media screen and (max-width: 768px) {
   .dashboard {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
     height: auto;
+    flex-direction: column;
   }
 
   .dashboard .topPanel {
     grid-column: 1/2;
     grid-row: 1 / 2;
+    height: 80vh;
   }
 
   .dashboard .bottomPanel {
     grid-column: 1/2;
     grid-row: 2 / 3;
+    height: 80vh;
   }
 
   .dashboard .sidePanel {
