@@ -63,7 +63,7 @@
 }
 
 
-.profile-att-btn button, .profile-edit-btn button, .profile-get-att-btn {
+.profile-att-btn button, .profile-edit-btn button, .profile-get-att-btn button {
     background-color: black;
     border-radius: 50px;
     padding: 8px 20px;
@@ -75,7 +75,7 @@
     text-decoration: none;
 }
 
-.profile-att-btn button:hover, .profile-edit-btn button:hover, .profile-get-att-btn:hover {
+.profile-att-btn button:hover, .profile-edit-btn button:hover, .profile-get-att-btn button:hover {
     background-color: rgb(255, 102, 0);
     color: #000;
     font-weight: 600;
@@ -91,13 +91,13 @@
     text-align: center;
 }
 
-.profile-get-att-btn a {
+/* .profile-get-att-btn a {
     text-decoration: none;
 }
 
 .profile-get-att-btn a:hover {
     color: #000;
-}
+} */
 
 .profile-file-input-container {
     position: relative;

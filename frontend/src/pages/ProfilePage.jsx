@@ -6,9 +6,14 @@ import profile_image from '../assets/sample-image.jpg';
 import request from '../request';
 import { NavLink, useNavigate } from 'react-router-dom';
 
+import GetAttPage from "../pages/GetAttPage.jsx";
+
 const ProfilePage = () => {
   const navigate = useNavigate();
-  
+
+  //show the getAtt page (only admins can toggle this state)
+  const [showGetAtt, setShowGetAtt] = useState(false);
+
   //fetched user
   const [user, setUser] = useState(null); 
   
@@ -182,10 +187,11 @@ const ProfilePage = () => {
   }
 
   return (<>
-    <div className='profile-container'>
+    {!showGetAtt ? (
+      <div className='profile-container'>
         <h1 className='profile-heading'>{user ? "PROFILE" : "Loading..." }</h1>
-        {user && 
-          <>
+        {user && !showGetAtt && 
+          (<>
           <div className='profile-content'>
             <div className='profile-items-list'>
                 <div className='profile-item'>
@@ -267,14 +273,16 @@ const ProfilePage = () => {
                 }
             </div>
             {user.privileges === "admin" && <div className="profile-get-att-btn">
-              <NavLink to="/getAtt">GET ATTENDANCE</NavLink>
+              <button onClick={() => setShowGetAtt(!showGetAtt)}>GET ATTENDANCE</button>
             </div>}
           </div>  
-          </>
+          {loading && !showGetAtt && <div className='profile-loading'>Loading ...</div>}
+          {msg && !showGetAtt && <div className='profile-msg' style={{ color: msgColor }}>{msg}</div>}
+          </>)
         }
-    </div>
-    {loading && <div className='profile-loading'>Loading ...</div>}
-    {msg && <div className='profile-msg' style={{ color: msgColor }}>{msg}</div>}
+      </div>)
+     : (<GetAttPage />)
+    }
     </>
   );
 };

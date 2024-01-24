@@ -56,7 +56,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path='/achievement' element={<AchievementPage />} />
 
         <Route path='/profile' element={<ProfilePage />} />
-        <Route path='/getAtt' element={<GetAttPage />}/>
         
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>

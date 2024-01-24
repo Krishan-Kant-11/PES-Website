@@ -5,10 +5,10 @@ import peslogo from "../assets/peslogo.png";
 
 import request from "../request.js";
 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const GetAttendancePage = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const [month, setMonth] = useState("");
     const [year, setYear] = useState("");
@@ -18,15 +18,15 @@ const GetAttendancePage = () => {
 
     const [loading, setLoading] = useState(false);
 
-    //TODO: Add proctection for getAttendance page from volunteers 
+    //TODO: Add protection for getAttendance page from volunteers 
 
-    //user not logged in trying to access Profile Page 
-    useEffect(() => {
-        let loggedInUser = localStorage.getItem("token");
-        if (!loggedInUser) {
-            navigate("/login");
-        }
-    }, []);
+    // //user not logged in trying to access Profile Page 
+    // useEffect(() => {
+    //     let loggedInUser = localStorage.getItem("token");
+    //     if (!loggedInUser) {
+    //         navigate("/login");
+    //     }
+    // }, []);
 
     const handleValidation = (month, year) => {
         const regex = /^[0-9]{4}$/;
