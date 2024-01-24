@@ -29,6 +29,8 @@ const events_routes = require('./src/routes/events.js');
 const auth_routes = require('./src/routes/auth.js');
 const contactForm_routes = require('./src/routes/contactForm.js');
 const joinForm_routes = require('./src/routes/joinForm.js')
+const attendance_routes = require('./src/routes/attendance.js');
+const profile_routes = require('./src/routes/profile.js');
 
 
 app.get('/', (req, res) => {
@@ -39,7 +41,8 @@ app.use('/events', events_routes);
 app.use('/auth', auth_routes);
 app.use('/contact', contactForm_routes);
 app.use('/join', joinForm_routes);
-
+app.use('/attendance', attendance_routes);
+app.use('/profile', profile_routes);
 
 //database connection 
 connectDB().then(()=>{
