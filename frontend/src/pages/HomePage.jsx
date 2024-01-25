@@ -141,21 +141,12 @@ function HomePage() {
         <div className="AboutUs-content">
           <div className="AboutUs-p">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-              totam eligendi sequi quia, ipsam excepturi laudantium nesciunt
-              vero id eaque nemo impedit commodi amet cupiditate voluptatum,
-              fuga perspiciatis fugiat error? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Possimus iure velit sed quas ipsum
-              sit soluta laudantium fugiat accusantium repellendus, minima nulla
-              ab ad eaque voluptates sint magni impedit vel molestias similique
-              placeat adipisci pariatur asperiores! At perferendis tenetur in
-              sapiente optio quaerat debitis neque deleniti cupiditate saepe
-              numquam totam quae ullam fugiat, quia quod odio, quo provident,
-              dignissimos facere et possimus! Nulla, quas. Reiciendis deserunt
-              omnis quibusdam animi ratione iste laborum sed adipisci nam
-              voluptas fuga maiores illo aut, odit ullam temporibus, ipsum ad
-              quasi? Error ex, enim vel commodi incidunt quas, beatae adipisci
-              dignissimos tempore eaque ab voluptas!
+            Pehchaan Ek Safar is a not-for-profit organisation founded and run by the students of IIT Ropar. We aim to counter illiteracy and realize the Right To Education of children from socio-economically challenged backgrounds. 
+
+Access to education is a privilege and quality education is a far dream for the underprivileged kids . As commodification of education keeps taking new forms widening the societal gap every day , there is an undeniable need for access to free and quality education in a healthy and nurturing environment so that these kids are at no disadvantage to their privileged counterparts. 
+
+With this mission , Pehchaan Ek Safar was found where we are striving to bridge this gap and empower our children so that they can create a better, brighter and happier future for themselves.
+
             </p>
           </div>
 
