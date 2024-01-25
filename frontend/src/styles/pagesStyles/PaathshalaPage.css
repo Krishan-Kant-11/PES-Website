@@ -1,7 +1,44 @@
-.main{
+.paathshala-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 3%;
+}
+
+.paathshala-content > img {
+    width: 450px;
+    border-radius: 10px;
+}
+
+.paathshala-content > p {
+    width: 40%;
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 500px) {
+    .paathshala-content {
+       flex-direction: column;
+       gap: 30px;
+       padding-top: 8%;
+       padding-bottom: 8%;
+    }
+
+    .paathshala-content > img {
+        width: 80%;
+    }
+    
+    .paathshala-content > p {
+        width: 80%;
+    }
+}
+
+/* .main{
     overflow:scroll;
 }
-/*would like to improvise the scrollbar ...?? */
+
 ::-webkit-scrollbar {
     width: 15px;
     }
@@ -14,6 +51,7 @@
     ::-webkit-scrollbar-thumb:hover {
     Background: #E5cdbc
 }
+
 .carousel {
     width : 90%;
     margin-top : 2%;
@@ -27,7 +65,7 @@
     font-family: "Montserrat", sans-serif;
     text-align: justify;
 }
-/*padding : top-left-right-bottom*/
+
 .body2{ 
     margin-left:20px ;
     background-color: aliceblue;
@@ -38,7 +76,6 @@
     background-color: #FDCD6F; 
 }
 .button {
-         /* Green */
     background-color: rgb(255,102,0);
     border-radius: 10px;
     border: 2px solid red;
@@ -71,7 +108,6 @@
     text-align: justify;
 }
 
-/* *********************************************** LAPTOP KE LIYE ****************************************************************/
 @media only screen and (min-width: 1000px) {
     .body1 {
         width:100%;
@@ -107,7 +143,6 @@
         background-color: #FDCD6F; 
     }
     .button {
-                 /* Green */
         background-color: rgb(255,102,0);
         border-radius: 10px;
         border: 2px solid red;
@@ -149,7 +184,6 @@
     
 }
 
-/****************************************************************PROEJCTOR ************************************************/
 @media only screen and (min-width: 2000px) {
     .body1 {
         width:100%;
@@ -165,7 +199,6 @@
         font-size: 30px;
         padding: 0px 39px;
         margin-left: 30px;
-        /*font-family:segoe script ;*/
         text-align: justify;
     }
     .img{
@@ -196,4 +229,4 @@
         text-decoration: underline;
         text-align: left;
     }
-}
+} */
