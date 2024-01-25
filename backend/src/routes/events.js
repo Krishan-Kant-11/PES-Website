@@ -9,19 +9,19 @@ const {getEvents,
     } = require('../controllers/eventController');
 
 // Get all Events
-router.get('/', getEvents);
+   router.get('/', getEvents);
 
 // Get single Event
-router.get('/:id', getEvent);
+   router.get('/:id', getEvent);
 
 // Create Event
-router.post('/', createEvent);
+   router.post('/', createEvent);
 
 // Delete Event
-router.delete('/:id', deleteEvent);
+   router.delete('/:id', deleteEvent);
 
 // Update Event
-router.patch('/:id', updateEvent);
+   router.patch('/:id', updateEvent);
 
 router.get('/list', (req, res) => {
   let events = [];

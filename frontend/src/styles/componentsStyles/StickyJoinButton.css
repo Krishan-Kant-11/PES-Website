@@ -2,20 +2,21 @@
     position: fixed;
     color: white;
     background-color: orangered;
+    font-family: "Montserrat", sans-serif;
     font-size: 90%;
     font-weight: 400;
     text-align: center;
     border-radius: 50px;
     padding: 0.7% 1%;
-    /* width: 7%; */
-    /* height: 7%; */
     bottom:1%;
     right: 10%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     transition: 0.1s all ease-in-out;
+    z-index: 999;
 }
 
 .StickyButtonText {
+    font-family: "Montserrat", sans-serif;
     text-decoration: none;
     color: white;
 }
@@ -34,6 +35,5 @@
         bottom: 53%;
         right: 1%;
         writing-mode: vertical-rl;
-        z-index: 999;
     }
 }
