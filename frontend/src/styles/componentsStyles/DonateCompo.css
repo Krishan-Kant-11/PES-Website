@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  background-color: rgb(255, 102, 0);
+  height: 15rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.dContent {
+  flex-direction: column;
+  width: 70%;
+  padding: 2rem;
+}
+
+.dHeading {
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 2rem;
+  text-align: left;
+}
+
+.dPara {
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+}
+
+.sButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.payButton {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  background-color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25rem;
+  width: 9rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 30rem;
+    margin-bottom: 2rem;
+  }
+}
+.dContent {
+  /* flex-direction: row; */
+  padding: 0.5rem;
+}
+.dHeading {
+  padding-bottom: 1rem;
+  /* text-wrap: wrap; */
+}
+.sButton {
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets go here */
+  .container {
+    height: 25rem;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .dHeading {
+    text-align: center;
+  }
+  .dPara {
+    text-align: center;
+  }
+}

@@ -46,16 +46,6 @@ const links = [
         }
       ],
     },
-    {
-      name: "Achievements",
-      submenu: true,
-      sublinks: [
-        {
-          Head: "KV IIT Ropar",
-          Link: "/kviitropar"
-        },
-      ],
-    },
   ];
   
 
