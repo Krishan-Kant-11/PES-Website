@@ -15,7 +15,7 @@ function CompetitionsPage() {
       .then(res => res.json())
       .then(data => {
         setEvents(data);
-        alert("Competitions events fetched successfully");
+        // alert("Competitions events fetched successfully");
         console.log("Competitions events fetched successfully");
       })
       .catch(err => console.log(err))

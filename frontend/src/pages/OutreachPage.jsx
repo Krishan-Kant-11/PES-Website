@@ -15,7 +15,7 @@ function OutreachPage() {
       .then(res => res.json())
       .then(data => {
         setEvents(data);
-        alert("Outreach events fetched successfully");
+        // alert("Outreach events fetched successfully");
         console.log("Outreach events fetched successfully");
       })
       .catch(err => console.log(err))

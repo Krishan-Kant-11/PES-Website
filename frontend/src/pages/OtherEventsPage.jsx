@@ -15,7 +15,7 @@ function OtherEventsPage() {
       .then(res => res.json())
       .then(data => {
         setEvents(data);
-        alert("Other events fetched successfully");
+        // alert("Other events fetched successfully");
         console.log("Other events fetched successfully");
       })
       .catch(err => console.log(err))

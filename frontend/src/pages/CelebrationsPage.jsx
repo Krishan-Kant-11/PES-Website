@@ -15,7 +15,7 @@ function CelebrationsPage() {
       .then(res => res.json())
       .then(data => {
         setEvents(data);
-        alert("Celebrations events fetched successfully");
+        // alert("Celebrations events fetched successfully");
         console.log("Celebrations events fetched successfully");
       })
       .catch(err => console.log(err))
