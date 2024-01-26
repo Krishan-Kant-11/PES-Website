@@ -33,24 +33,8 @@ function PaathshalaPage() {
         <div className="paathshala-content">
           <img src={paathshalaImage}></img>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
-            ipsa quibusdam tempore sapiente eligendi itaque earum harum?
-            Possimus ullam totam consectetur provident, cum esse rem, atque iste
-            libero fugiat suscipit recusandae incidunt nesciunt. Modi nesciunt
-            totam et sint inventore saepe voluptates culpa voluptatibus quos
-            sequi sed beatae, unde magni sunt eaque? Eius velit iste quod
-            voluptatibus nulla autem accusamus delectus impedit! Iste fugiat
-            maxime quibusdam distinctio quae sit laboriosam! Ea pariatur quod
-            quam ratione totam, tenetur necessitatibus voluptatum facilis libero
-            esse reiciendis rem sit ad, impedit earum deleniti quo quos!
-            Repellat, aliquid! Maiores tenetur id repellat maxime corrupti
-            consequatur repellendus eaque et blanditiis ipsum aliquid at eos
-            ullam quis iste asperiores, rem perferendis nisi, error hic
-            mollitia. Dolore nemo aliquid laborum consectetur natus, saepe
-            beatae accusamus nesciunt. Eos veritatis minima tenetur quo quod
-            debitis provident necessitatibus. Debitis, sunt. Corporis voluptates
-            temporibus inventore illo aliquid in iure aliquam sed? Voluptas,
-            error.
+          The Paathshala project is one of the earliest projects started by Pehchaan. The goal of Paathshala is to provide free and quality tuitions to the underprivileged students living in the vicinity of the IIT Ropar campus. This also includes encouraging the parents to enroll their children in schools, providing school transportation to students who live in inaccessible areas and making it a personal mission to watch our students transform into valuable assets for the nation. Apart from their regular school syllabus, we also give equal focus on sports and extracurricular activities to ensure an all-round development.
+          Paathshala  is located near the Main Campus of IIT Ropar. There are around 20 students living in that area and we have set up a small hut to serve as the classroom. Since their homes are very far from their schools, sometimes it would get difficult for them to attend their schools regularly. To make sure none of our students miss out on daily schooling, Pehchaan Ek Safar has arranged a regular transport from the homes of the students to their school. Several successful school enrollment drives are also held regularly to make sure no one, especially a girl child is deprived of their right to education.
           </p>
         </div>
       </div>
