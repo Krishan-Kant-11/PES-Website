@@ -177,20 +177,20 @@ With this mission , Pehchaan Ek Safar was found where we are striving to bridge 
           <WeDoCard
             img={homepage_pathshala_2}
             title="PAATHSHALA"
-            details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
+            details="Here at Paathshala we reach out to the underprivileged students, aiming to aid them in their education. Paathshala regularly provides free quality tuitions to the students, arrange sports and extracurricular activities for their all-round development, raising awareness among the parents on education and much more."
             link="/paathshala"
           />
           <WeDoCard
             img={homepage_outreach_2}
             title="OUTREACH"
-            details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
+            details="Expanding our circle, outreach program sends volunteers outside Paathshala for conducting sessions in schools in Ropar district. Through our outreach team, we conduct career counselling sessions, health related talks, science and technology information sessions and more."
             link="/outreach"
           />
           <WeDoCard
             img={homepage_others_2}
             title="EVENTS"
-            details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
-            link="/otherevents"
+            details="Apart from the outreach program, we also organize events for the students. We schedule events for important days of the year, celebrate festivals, organize competitions and other activities to boost enthusiasm."
+             link="/otherevents"
           />
         </div>
       </section>
