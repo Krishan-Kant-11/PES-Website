@@ -23,7 +23,7 @@ function Events({ children }) {
  * @param {{title: string, date: string, description: string, image: string}} {title, date, description, image} The event details. 
  * @returns {React.Component} The EventTile component. A tile that displays event details.
  */
-function EventTile({ title, date, description, image }) {
+function EventTile({ id, title, date, description, image }) {
   const navigate = useNavigate();
   return (
     <div className="EventTile">
@@ -35,7 +35,7 @@ function EventTile({ title, date, description, image }) {
         {
           description? <p>{description}</p> : <></>
         }
-        <button onClick={()=>navigate(`/event/${encodeURIComponent(title.toLowerCase())}`)}>View Details</button>
+        <button onClick={()=>navigate(`/event/${encodeURIComponent(id)}`)}>View Details</button>
       </div>
     </div>
   );

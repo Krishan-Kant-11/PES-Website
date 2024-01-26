@@ -4,8 +4,11 @@ const Event = require('../models/EventModel');
 const router = Router();
 
 router.get('/list', async (req, res) => {
-  let type = req.params.type; // competitions, outreach, celebrations, other
-  const events = await Event.find({}).sort({createdAt: -1});
+  let type = req.query.type; // competitions, outreach, celebrations, other
+  // console.log("list request : ", req.query.type);
+  let events = [];
+  if (type) events = await Event.find({ type }) 
+  else events = await Event.find({})
   res.status(200).json(events);
 });
 
@@ -60,17 +63,22 @@ router.post('/create', authMiddleware(true), async (req, res) => {
   res.status(200).json(event);
 });
 
-router.get('/details', (req, res) => {
-  if(req.query.eventid == undefined) {
+router.get('/details', async(req, res) => {
+  const { eventid } = req.query;
+  if(!eventid) {
     res.status(404).json({});
   }else{
-    res.status(200).json({
-      id: 1,
-      title: 'Event Title',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec tellus non lectus vestibulum lacinia bibendum eget eros. Proin leo metus, efficitur et gravida ac, placerat et metus. Fusce varius est eros. Curabitur imperdiet odio justo, efficitur egestas quam cursus eu. Vivamus mollis sem ac porta commodo. Nunc aliquam risus.',
-      date: '14 December, 2023',
-      images: ['/src/assets/hero_image1.jpg', '/src/assets/hero_image2.jpg', '/src/assets/hero_image4.jpg'],
-    });
+    const event = await Event.findById(eventid);
+    if (!event) return res.status(404).json({});
+    return res.status(200).json({ event });
+
+    // res.status(200).json({
+    //   id: 1,
+    //   title: 'Event Title',
+    //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec tellus non lectus vestibulum lacinia bibendum eget eros. Proin leo metus, efficitur et gravida ac, placerat et metus. Fusce varius est eros. Curabitur imperdiet odio justo, efficitur egestas quam cursus eu. Vivamus mollis sem ac porta commodo. Nunc aliquam risus.',
+    //   date: '14 December, 2023',
+    //   images: ['/src/assets/hero_image1.jpg', '/src/assets/hero_image2.jpg', '/src/assets/hero_image4.jpg'],
+    // });
   }
 });
 

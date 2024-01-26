@@ -17,6 +17,7 @@ const EventForm = ({ onUpdate })=>{
         if(!response.ok){
             setError(json.error)
         }else{
+          alert("Event created successfully");
           onUpdate()
         }
     }

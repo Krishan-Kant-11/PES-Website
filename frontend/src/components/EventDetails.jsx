@@ -28,7 +28,12 @@ const EventDetails = ({event, onDelete}) => {
         {/* <img
             src={event.img}
         />  */}
-        <p>{event.createdAt}</p>
+        { 
+            event.images.map((image, index) => (
+                <img key={index} src={image} alt="event_image" style={{ height: '100px', width: '100px', margin: '20px' }}/>
+            ))
+        }
+        <p><strong>Created At</strong> : {event.createdAt}</p>
         <span onClick={handleClick}>Delete</span>
         </div>
 
