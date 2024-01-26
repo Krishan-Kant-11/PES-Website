@@ -139,26 +139,79 @@
   scrollbar-width: none;
 }
 
-.event-text-input{
+.event-field{
+  display: flex;
+  justify-content: space-between;
   width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-form-title{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 20px;
+  height: 40px;
+}
+
+.event-text-input{
+  width: 90%;
   margin-top: 10px;
   margin-bottom: 40px;
   padding: 20px;
   height: 40px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #9d9d9d;
   border-radius:3px;
   box-sizing: border-box;
-  /* background-color: white; */
   color: #525252;
 }
 
+.event-select-input {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  height: 40px;
+  border: 1px solid #9d9d9d;  
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #525252;
+  cursor: pointer;
+}
+
+
+.event-date{
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding-left: 20px; 
+  padding-right: 5px;
+  height: 40px;
+  border: 1px solid #9d9d9d;
+  justify-content: left;
+  color: #525252;
+}
+
+.event-browse{
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  /* padding: 20px; */
+  height: 40px;
+  justify-content: left;
+  color: #525252;
+  cursor: pointer;
+}
+
+
 .event-submit{
-  width: 25%;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  height: 60px;
+  height: 50px;
   border: 1px solid white;
   border-radius: 6px;
   box-sizing: border-box;  
@@ -166,9 +219,38 @@
   color: white;
   cursor: pointer;
   font-size: medium;
+  
 }
 
 .event-lbl{
   width: 200px;
   text-align: left;
+  padding: 20px;
+}
+
+.event-text-input:hover {
+  box-shadow: 1px 1px 2px orangered;
+}
+
+.event-select-input:hover {
+  box-shadow: 1px 1px 2px orangered;
+}
+
+.event-date:hover {
+  box-shadow: 1px 1px 2px orangered;
+}
+
+.event-submit:hover {
+  box-shadow: 1px 1px 2px orangered;
+}
+
+
+@media (max-width: 767px) {
+  .event-field{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
 }

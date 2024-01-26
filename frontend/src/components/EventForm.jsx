@@ -41,15 +41,15 @@ const EventForm = ({ onUpdate })=>{
 
     return (
         <form className="create-event" onSubmit={handleSubmit} id="createEvent">
+            <h2 className="event-form-title">Add a new Event</h2>
             <div className="event-field">
-            <h3>Add a new Event</h3>
-            <label>Title: </label>
+            <label className="event-lbl">Title: </label>
             <input className="event-text-input" name="title" type="text" required />
             </div>
 
             <div className="event-field">
             <label className="event-lbl">Date: </label>
-            <input name="date" type="date" required />
+            <input className="event-date" name="date" type="date" required />
             </div>
 
             <div className="event-field">
@@ -59,7 +59,7 @@ const EventForm = ({ onUpdate })=>{
 
             <div className="event-field">
             <label className="event-lbl">Upload Photo: </label>
-            <input type="file" name="images" onChange={handleImageSelect} accept="image/jpeg, image/jpg" multiple={true} required />
+            <input className="event-browse" type="file" name="images" onChange={handleImageSelect} accept="image/jpeg, image/jpg" multiple={true} required />
 
             {images.map((image, index) => {
               // This is the preview image, we have to set proper css for this
@@ -70,7 +70,7 @@ const EventForm = ({ onUpdate })=>{
             <div className="event-field">
              {/* ["celebrations", "outreach", "competitions", "others"], */}
              <label className="event-lbl">Select Page: </label>
-             <select name="type" placeholder="Select Page" required>
+             <select className="event-select-input" name="type" placeholder="Select Page" required>
              <option value="" disabled={true} selected={true}>Select</option>
              <option value="outreach">Outreach</option>
              <option value="celebrations">Celebrations</option>
