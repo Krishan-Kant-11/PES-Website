@@ -7,8 +7,8 @@ router.get('/list', async (req, res) => {
   let type = req.query.type; // competitions, outreach, celebrations, other
   // console.log("list request : ", req.query.type);
   let events = [];
-  if (type) events = await Event.find({ type }) 
-  else events = await Event.find({})
+  if (type) events = await Event.find({ type }).sort({createdAt: -1}); 
+  else events = await Event.find({}).sort({createdAt: -1});
   res.status(200).json(events);
 });
 
