@@ -141,21 +141,12 @@ function HomePage() {
         <div className="AboutUs-content">
           <div className="AboutUs-p">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-              totam eligendi sequi quia, ipsam excepturi laudantium nesciunt
-              vero id eaque nemo impedit commodi amet cupiditate voluptatum,
-              fuga perspiciatis fugiat error? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Possimus iure velit sed quas ipsum
-              sit soluta laudantium fugiat accusantium repellendus, minima nulla
-              ab ad eaque voluptates sint magni impedit vel molestias similique
-              placeat adipisci pariatur asperiores! At perferendis tenetur in
-              sapiente optio quaerat debitis neque deleniti cupiditate saepe
-              numquam totam quae ullam fugiat, quia quod odio, quo provident,
-              dignissimos facere et possimus! Nulla, quas. Reiciendis deserunt
-              omnis quibusdam animi ratione iste laborum sed adipisci nam
-              voluptas fuga maiores illo aut, odit ullam temporibus, ipsum ad
-              quasi? Error ex, enim vel commodi incidunt quas, beatae adipisci
-              dignissimos tempore eaque ab voluptas!
+            Pehchaan Ek Safar is a not-for-profit organisation founded and run by the students of IIT Ropar. We aim to counter illiteracy and realize the Right To Education of children from socio-economically challenged backgrounds. 
+
+Access to education is a privilege and quality education is a far dream for the underprivileged kids . As commodification of education keeps taking new forms widening the societal gap every day , there is an undeniable need for access to free and quality education in a healthy and nurturing environment so that these kids are at no disadvantage to their privileged counterparts. 
+
+With this mission , Pehchaan Ek Safar was found where we are striving to bridge this gap and empower our children so that they can create a better, brighter and happier future for themselves.
+
             </p>
           </div>
 
@@ -186,20 +177,20 @@ function HomePage() {
           <WeDoCard
             img={homepage_pathshala_2}
             title="PAATHSHALA"
-            details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
+            details="Here at Paathshala we reach out to the underprivileged students, aiming to aid them in their education. Paathshala regularly provides free quality tuitions to the students, arrange sports and extracurricular activities for their all-round development, raising awareness among the parents on education and much more."
             link="/paathshala"
           />
           <WeDoCard
             img={homepage_outreach_2}
             title="OUTREACH"
-            details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
+            details="Expanding our circle, outreach program sends volunteers outside Paathshala for conducting sessions in schools in Ropar district. Through our outreach team, we conduct career counselling sessions, health related talks, science and technology information sessions and more."
             link="/outreach"
           />
           <WeDoCard
             img={homepage_others_2}
             title="EVENTS"
-            details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet nemo odio quos accusamus aliquid omnis, quam numquam temporibus, molestiae quasi sed mollitia, voluptas nesciunt sequi obcaecati soluta facere dolorem."
-            link="/otherevents"
+            details="Apart from the outreach program, we also organize events for the students. We schedule events for important days of the year, celebrate festivals, organize competitions and other activities to boost enthusiasm."
+             link="/otherevents"
           />
         </div>
       </section>
