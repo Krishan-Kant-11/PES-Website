@@ -255,9 +255,9 @@ function HomePage() {
                 <p>Children helped</p>
               </div>
             </div>
-            <Link className="achievement-rdm-btn" to="/achievement">
+            {/* <Link className="achievement-rdm-btn" to="/achievement">
               Read More
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

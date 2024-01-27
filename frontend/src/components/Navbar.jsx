@@ -70,7 +70,7 @@ function Navbar(){
               <li><NavLink to="/home" className="nav-item" activeClassName='active'>Home</NavLink></li>
               <li><NavLink to="/ourteam" className="nav-item" activeClassName='active'>Our Team</NavLink></li>
               <li><NavLink to="/contact" className="nav-item" activeClassName='active'>Contact Us</NavLink></li>
-              <li><NavLink to="/achievement" className="nav-item" activeClassName='active'>Achievements</NavLink></li>
+              {/* <li><NavLink to="/achievement" className="nav-item" activeClassName='active'>Achievements</NavLink></li> */}
             
               {/* Navsublinks */}
               <NavSubLinks />

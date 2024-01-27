@@ -12,6 +12,7 @@
   /* border: 2px red solid; */
   margin-right: 0px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .AboutUs > h1,
