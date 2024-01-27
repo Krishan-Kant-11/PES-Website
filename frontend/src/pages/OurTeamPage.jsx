@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import "../styles/pagesStyles/OurTeamPage.css"
 import TeamsCard from "../components/TeamsCard"
 import profilepic from "../assets/governingbody/president.png"
+import directorPic from "../assets/patronAndMentor/rajeev_sir.jpeg"
+import pps_sir from "../assets/patronAndMentor/pps_sir.jpeg"
+import harpreet_sir from "../assets/patronAndMentor/harpreet_sir.jpg"
 import webdev_1 from "../assets/webdevelopers/webdev_1.jpg"
 import webdev_2 from "../assets/webdevelopers/webdev_2.jpg"
 import webdev_3 from "../assets/webdevelopers/webdev_3.jpg"
@@ -25,33 +28,27 @@ function OurTeamPage(){
                     <h1>Patron and Mentors</h1>
                     <div className="Cards">
                         <TeamsCard
-                            img = {profilepic}
-                            name = "Shivam"
-                            designation = "President"
+                            img = {directorPic}
+                            name = "Prof. Rajeev Ahuja"
+                            designation = "Director, IIT Ropar"
                             email = "2021meb1322@iitrpr.ac.in"
                         />
                         <TeamsCard
-                            img = {profilepic}
-                            name = "Yashaswini Vajja"
-                            designation = "Vice-President"
+                            img = {pps_sir}
+                            name = "Dr. Pushpendra P. Singh"
+                            designation = "Associate Professor, IIT Ropar"
                             email = "2021csb1137@iitrpr.ac.in"
                         />
                         <TeamsCard
-                            img = {profilepic}
-                            name = "Reetika"
-                            designation = "Vice-President SI"
+                            img = {harpreet_sir}
+                            name = "Prof. Harpreet Singh"
+                            designation = "Professor, IIT Ropar"
                             email = "2021eeb1204@iitrpr.ac.in"
-                        />
-                        <TeamsCard
-                            img = {profilepic}
-                            name = "Nehal Sonkar"
-                            designation = "Secretary"
-                            email = "2021meb1304@iitrpr.ac.in"
                         />
                  
                     </div>
                 </section>
-                <section className="GoverningBody OurTeam">
+                {/* <section className="GoverningBody OurTeam">
                     <h1>Governing Body</h1>
                     <div className="Cards">
                         <TeamsCard
@@ -129,7 +126,7 @@ function OurTeamPage(){
                             email = "2022aim1002@iitrpr.ac.in"
                         />
                     </div>
-                </section>
+                </section> */}
                 <section className="Web-developer OurTeam">
                     <h1>Web Developers</h1>
                     <div className="Cards">
