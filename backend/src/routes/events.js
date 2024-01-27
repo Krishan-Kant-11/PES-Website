@@ -2,12 +2,12 @@ const { Router } = require('express');
 const authMiddleware = require('../middlewares/auth');
 const Event = require('../models/EventModel');
 const router = Router();
-const {getEvents, 
-      getEvent, 
-      createEvent, 
-      deleteEvent, 
-      updateEvent
-    } = require('../controllers/eventController');
+// const {getEvents, 
+//       getEvent, 
+//       createEvent, 
+//       deleteEvent, 
+//       updateEvent
+//     } = require('../controllers/eventController');
 
 // Get all Events
  //  router.get('/', getEvents);
