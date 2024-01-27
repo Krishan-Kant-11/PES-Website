@@ -1,4 +1,4 @@
-import { Component } from "react";
+ import { Component } from "react";
 import "../styles/componentsStyles/PageHeader.css";
 
 // Instruction to use this PageHeader Component:

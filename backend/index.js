@@ -6,6 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const cookieParser = require('cookie-parser');
+const path = require("path")
 
 //connectDB 
 const connectDB = require('./src/db/connectDB.js');
@@ -16,7 +17,7 @@ const app = express();
 const logger = require('./src/middlewares/logger.js');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(multer().single('photo'));
+app.use(multer().any());
 app.use(cookieParser());
 app.use(cors({credentials: true, origin: 'http://localhost:5173'})); // TODO: update when deploying
 app.use(logger);
@@ -32,6 +33,8 @@ const joinForm_routes = require('./src/routes/joinForm.js')
 const attendance_routes = require('./src/routes/attendance.js');
 const profile_routes = require('./src/routes/profile.js');
 
+// Serve the React app from the '../frontend/dist' directory
+app.use(express.static(path.join(__dirname, '..' ,'frontend', 'dist')));
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -43,6 +46,11 @@ app.use('/contact', contactForm_routes);
 app.use('/join', joinForm_routes);
 app.use('/attendance', attendance_routes);
 app.use('/profile', profile_routes);
+
+// // Handle all other routes and serve the React app
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, "..",'frontend', 'dist', 'index.html'));
+});
 
 //database connection 
 connectDB().then(()=>{

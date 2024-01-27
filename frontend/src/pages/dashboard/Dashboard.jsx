@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import VolunteerDashboard from './VolunteerDashboard';
+import { Navigate } from "react-router-dom";
 import AdminDashboard from './AdminDashboard';
 import request from "../../request";
 import "../../styles/pagesStyles/dashboard/Dashboard.css";
@@ -10,7 +10,7 @@ function Dashboard(){
   async function initialize(){
     setUser(undefined);
     // get user details
-    let _user = await (await request.get(`${import.meta.env.VITE_API_BASE}/auth/user`)).json();
+    let _user = await (await request.get(` http://localhost:5000/auth/user`)).json();
     setUser(_user);
   }
   
@@ -28,7 +28,7 @@ function Dashboard(){
   else if(user.privileges == "admin")
     return (<AdminDashboard user={user}/>);
   else
-    return (<VolunteerDashboard user={user} />);
+    return (<Navigate to={'/dashboard/profile'}/>);
 }
 
 export default Dashboard;
