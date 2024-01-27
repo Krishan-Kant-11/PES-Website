@@ -6,6 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const cookieParser = require('cookie-parser');
+const path = require("path")
 
 //connectDB 
 const connectDB = require('./src/db/connectDB.js');
@@ -32,6 +33,13 @@ const joinForm_routes = require('./src/routes/joinForm.js')
 const attendance_routes = require('./src/routes/attendance.js');
 const profile_routes = require('./src/routes/profile.js');
 
+// Serve the React app from the '../frontend/dist' directory
+app.use(express.static(path.join(__dirname, '..' ,'frontend', 'dist')));
+
+// Handle all other routes and serve the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+});
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
