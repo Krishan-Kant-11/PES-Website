@@ -10,7 +10,7 @@ function TeamsCard(props) {
       <div className="Card-info">
         <img src={mailIcon} />
         <p>
-          <a href={`mailto:${props.email}`}>{props.email}</a>
+          <a href={`mailto:${props.email}`}>Email</a>
         </p>
       </div>
     </div>

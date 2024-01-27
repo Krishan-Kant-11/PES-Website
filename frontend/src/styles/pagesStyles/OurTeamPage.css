@@ -31,6 +31,7 @@
   padding-right: 18%;
   justify-content: space-evenly;
   flex-flow: row wrap;
+  /* border: 2px red solid; */
 }
 
 .LinkForPastTeams {
@@ -63,4 +64,11 @@
   background-color: rgb(255, 102, 0);
   transform: scale(1.005);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 550px)  {
+  .Cards {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
 }
