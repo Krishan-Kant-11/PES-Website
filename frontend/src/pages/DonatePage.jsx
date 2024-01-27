@@ -95,7 +95,7 @@ function DonatePage() {
           <h3>Razor Pay</h3>
           <img src={razorpayIcon} className="razorpay-icon"></img>
           <p>
-            Pehchaan Ek Safar<br></br>9463737258@okbizaxis
+            Pehchaan Ek Safar<br></br>RazorPay
           </p>
           <p>Bank charges: Rs. 0.0</p>
           <a href="https://razorpay.com/payment-button/pl_K9P2tcsWaKFJNo/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button">

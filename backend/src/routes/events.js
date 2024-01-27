@@ -2,10 +2,29 @@ const { Router } = require('express');
 const authMiddleware = require('../middlewares/auth');
 const Event = require('../models/EventModel');
 const router = Router();
+const {getEvents, 
+      getEvent, 
+      createEvent, 
+      deleteEvent, 
+      updateEvent
+    } = require('../controllers/eventController');
 
-router.get('/list', async (req, res) => {
-  let type = req.query.type; // competitions, outreach, celebrations, other
-  // console.log("list request : ", req.query.type);
+// Get all Events
+ //  router.get('/', getEvents);
+
+// Get single Event
+   //router.get('/:id', getEvent);
+
+// Create Event
+   //router.post('/', createEvent);
+
+// Delete Event
+   //router.delete('/:id', deleteEvent);
+
+// Update Event
+//   router.patch('/:id', updateEvent);
+
+router.get('/list', (req, res) => {
   let events = [];
   if (type) events = await Event.find({ type }).sort({date: -1}); 
   else events = await Event.find({}).sort({date: -1});

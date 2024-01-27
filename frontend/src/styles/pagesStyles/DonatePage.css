@@ -4,7 +4,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 5%;
-  padding-top: 8%;
+  padding-top: 1%;
   padding-bottom: 3%;
   /* border: 2px red solid; */
 }
@@ -184,6 +184,12 @@
   margin: 3% 0%;
 }
 
+.razor-btn:hover {
+  background-color: black;
+  border-color: black;
+  transition: 0.5s ease-in-out;
+}
+
 .privacy-policy {
   display: flex;
   align-items: center;
@@ -288,6 +294,10 @@ body.active-modal {
 }
 
 @media screen and (max-width: 500px) {
+  .donation-text {
+    padding-top: 5%;
+  }
+
   .donation-text-img {
     display: none;
   }
@@ -295,6 +305,10 @@ body.active-modal {
   .donation-msg {
     max-width: 85%;
     /* border: 2px red solid; */
+  }
+
+  .donation-msg > p {
+    padding-top: 3%;
   }
 
   .donation-method-heading {
@@ -317,5 +331,12 @@ body.active-modal {
     margin-bottom: 8%;
     flex-direction: column;
     gap: 30px;
+  }
+
+  .privacy-policy-card {
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+    justify-content: center;
   }
 }

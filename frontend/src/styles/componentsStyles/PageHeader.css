@@ -26,3 +26,11 @@
         margin-bottom: 40%;
     }
 }
+
+@media only screen  and (max-width:500px){
+    .page-header-title {
+        text-wrap: wrap;
+        font-size: 40px;
+        max-width: 100%;
+    }
+}

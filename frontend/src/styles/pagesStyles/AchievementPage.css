@@ -1,0 +1,18 @@
+
+.Carousel
+{
+   display: flexbox;
+   background-color: blanchedalmond;
+   height: 27rem;
+}
+ th {
+   height: 60px;
+ }
+ thead{
+   height: 70px;
+   font-size: 25px;
+   font-family: Montesrrat Classic;
+ }
+ table{
+   margin-top: 2%;
+ }
