@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import VolunteerDashboard from './VolunteerDashboard';
+import { Navigate } from "react-router-dom";
 import AdminDashboard from './AdminDashboard';
 import request from "../../request";
 import "../../styles/pagesStyles/dashboard/Dashboard.css";
@@ -28,7 +28,7 @@ function Dashboard(){
   else if(user.privileges == "admin")
     return (<AdminDashboard user={user}/>);
   else
-    return (<VolunteerDashboard user={user} />);
+    return (<Navigate to={'/dashboard/profile'}/>);
 }
 
 export default Dashboard;

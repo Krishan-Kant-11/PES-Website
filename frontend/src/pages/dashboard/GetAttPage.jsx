@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
-import "../styles/pagesStyles/GetAttPage.css";
-import peslogo from "../assets/peslogo.png";
+import "../../styles/pagesStyles/dashboard/GetAttPage.css";
+import peslogo from "../../assets/peslogo.png";
 
-import request from "../request.js";
+import request from "../../request.js";
 
 // import { useNavigate } from "react-router-dom";
 
