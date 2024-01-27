@@ -24,7 +24,7 @@ const {getEvents,
 // Update Event
 //   router.patch('/:id', updateEvent);
 
-router.get('/list', (req, res) => {
+router.get('/list', async (req, res) => {
   let events = [];
   if (type) events = await Event.find({ type }).sort({date: -1}); 
   else events = await Event.find({}).sort({date: -1});
