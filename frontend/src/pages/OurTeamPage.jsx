@@ -5,9 +5,9 @@ import PageHeader from '../components/PageHeader';
 import HeaderImage from "../assets/header-testing.jpg"
 
 // Importing the images of patrons and members
-import PatronImage from  "../assets/Patrons and Members/rajeev_sir.jpeg"
-import MentorImage1 from "../assets/Patrons and Members/pps_sir.jpeg"
-import MentorImage2 from "../assets/Patrons and Members/harpreet_sir.jpg"
+import PatronImage from  "../assets/PatronsandMembers/rajeev_sir.jpeg"
+import MentorImage1 from "../assets/PatronsandMembers/pps_sir.jpeg"
+import MentorImage2 from "../assets/PatronsandMembers/harpreet_sir.jpg"
 
 //Importing the images of governing body
 import VicePresidentImage from "../assets/governingbody/vajja.jpg"

@@ -1,8 +1,9 @@
 import "../styles/pagesStyles/SchoolOutreachPage.css";
 import PageHeader from "../components/PageHeader";
-import HeaderImage from "../assets/header-testing.jpg";
-import outreachImage from "../assets/donation-msg.jpg";
-i
+import HeaderImage from "../assets/nakul2.jpg";
+
+import outreachImage from "../assets/neha.jpg";
+
 
 function SchoolOutreachPage() {
   return (
