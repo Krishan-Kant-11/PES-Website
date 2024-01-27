@@ -26,7 +26,7 @@ function LoginPage() {
       e.target.value = "Login"
       return;
     }
-    fetch(`${import.meta.env.VITE_API_BASE}/auth/login`, {
+    fetch(`http://localhost:5000/auth/login`, {
       method: 'POST',
       body: formData,
     }).then(res => {

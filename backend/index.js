@@ -36,11 +36,6 @@ const profile_routes = require('./src/routes/profile.js');
 // Serve the React app from the '../frontend/dist' directory
 app.use(express.static(path.join(__dirname, '..' ,'frontend', 'dist')));
 
-// Handle all other routes and serve the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
-});
-
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
@@ -51,6 +46,11 @@ app.use('/contact', contactForm_routes);
 app.use('/join', joinForm_routes);
 app.use('/attendance', attendance_routes);
 app.use('/profile', profile_routes);
+
+// // Handle all other routes and serve the React app
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, "..",'frontend', 'dist', 'index.html'));
+});
 
 //database connection 
 connectDB().then(()=>{

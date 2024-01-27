@@ -10,7 +10,7 @@ function Dashboard(){
   async function initialize(){
     setUser(undefined);
     // get user details
-    let _user = await (await request.get(`${import.meta.env.VITE_API_BASE}/auth/user`)).json();
+    let _user = await (await request.get(` http://localhost:5000/auth/user`)).json();
     setUser(_user);
   }
   
