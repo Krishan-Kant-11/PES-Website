@@ -33,13 +33,16 @@ import about_3 from "../assets/about-3.jpg";
 import Hero_5 from "../assets/home_hero_sss.jpg";
 import Hero_2 from "../assets/home_hero_paathshala.png";
 import Hero_3 from "../assets/home_hero_outreach.jpg";
-import HeaderImage from "../assets/header-testing.jpg";
+import Hero_4 from "../assets/home_hero_atl.jpg";
+import Hero_1 from "../assets/home_hero_director.png";
 
 {
   /* Images for testimonial */
 }
-import testimonial_1 from "../assets/testimonial-1.jpg";
-import testimonial_2 from "../assets/testimonial-2.jpg";
+import testimonial_1 from "../assets/home_testimonials/photo.png";
+import testimonial_2 from "../assets/home_testimonials/photo.png";
+import testimonial_3 from "../assets/home_testimonials/photo.png";
+import testimonial_4 from "../assets/home_testimonials/photo.png";
 import testimonial_5 from "../assets/home_testimonials/harpreet sir.jpg";
 
 {
@@ -63,7 +66,7 @@ const heroSliderImages = [hero_image1, hero_image2, hero_image3, hero_image4];
 // Data for Hero section
 const heroData = [
   {
-    img: HeaderImage,
+    img: Hero_1,
     heading: "Education",
     subheading: "4 underpriviledged",
     description: "Shaping Identities, Redefining Education: Pehchaan empowers young minds, nurturing their potential to build a brighter tomorrow. We strive to redefine education, fostering personal growth and creating a positive impact on the identities of the individuals we serve. "
@@ -79,7 +82,7 @@ const heroData = [
     subheading: "Sparking Curiosity",
     description: "Outreach: Fostering scientific temper and financial literacy in Ropar's students through career counseling sessions, seminars, and workshops. We engage with both private and government schools, empowering students for a knowledge-rich and financially informed future." },
   {
-    img: HeaderImage,
+    img: Hero_4,
     heading: "Raising",
     subheading: "The Bar",
     description:"Atal Tinkering Labs: Extending beyond classrooms, we empower through ATLs, training teachers and fostering innovation. Our commitment is to cultivate a culture of creativity, preparing students for a dynamic future." },
@@ -108,13 +111,13 @@ const testimonialData = [
     name: "Mahantesh Khetri",
     description:
       "(Founding Member) Proud to be a founding member of Pehchaan Ek Safar, an NGO focusing on educating underprivileged children. Our journey began with a few volunteers near IIT Ropar, and now we've expanded to support hundreds of kids, registering them in formal schooling with dedicated volunteers providing crucial assistance and skill training. Our ongoing mission embraces kindness and skilled volunteers to achieve even greater milestones ahead."
-       ,img: testimonial_2,
+       ,img: testimonial_3,
   },
   {
     name: "Atul Singh",
     description:
       "(Founding Member) In late 2017, as founding members wandering IIT Ropar, we discovered local children deprived of education. With support from fellow students and the institute, we formed PEHCHAAN EK SAFAR, an NGO aiming to bridge the gap between privileged and underprivileged, fostering identity and citizenship pride. Personally fulfilling, our work promotes light over darkness. The NGO rapidly expands, focusing on education and instilling scientific temper in youth. Best wishes to the Pehchaan family for ongoing contributions to a better tomorrow.",
-      img: testimonial_2,
+      img: testimonial_4,
   },
   {
     name: "Prof Harpreet Singh",
