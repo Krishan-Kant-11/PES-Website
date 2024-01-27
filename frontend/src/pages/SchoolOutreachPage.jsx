@@ -11,24 +11,8 @@ function SchoolOutreachPage() {
         <div className="outreach-content">
           <img src={outreachImage}></img>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
-            ipsa quibusdam tempore sapiente eligendi itaque earum harum?
-            Possimus ullam totam consectetur provident, cum esse rem, atque iste
-            libero fugiat suscipit recusandae incidunt nesciunt. Modi nesciunt
-            totam et sint inventore saepe voluptates culpa voluptatibus quos
-            sequi sed beatae, unde magni sunt eaque? Eius velit iste quod
-            voluptatibus nulla autem accusamus delectus impedit! Iste fugiat
-            maxime quibusdam distinctio quae sit laboriosam! Ea pariatur quod
-            quam ratione totam, tenetur necessitatibus voluptatum facilis libero
-            esse reiciendis rem sit ad, impedit earum deleniti quo quos!
-            Repellat, aliquid! Maiores tenetur id repellat maxime corrupti
-            consequatur repellendus eaque et blanditiis ipsum aliquid at eos
-            ullam quis iste asperiores, rem perferendis nisi, error hic
-            mollitia. Dolore nemo aliquid laborum consectetur natus, saepe
-            beatae accusamus nesciunt. Eos veritatis minima tenetur quo quod
-            debitis provident necessitatibus. Debitis, sunt. Corporis voluptates
-            temporibus inventore illo aliquid in iure aliquam sed? Voluptas,
-            error.
+          One of the key motivations for Pehchaan Ek Safar is to install the scientific temperament in the children. As a result, Pehchaan Ek Safar’s Outreach Project also conducts workshops and seminars in different schools all around Ropar. The Outreach Project has provided wonderful opportunities for the staff and students of IIT Ropar to share their wisdom and experience with the school children. 
+          In close association with the Government and private schools of Ropar, the Outreach Team has conducted several workshops and seminars ranging from topics like Medicine and Biology, The Working of Internet to Career Guidance for High School Students. Our team also regularly invites distinguished speakers from various backgrounds to have interactive and educative sessions with the students of IIT Ropar.
           </p>
         </div>
       </div>

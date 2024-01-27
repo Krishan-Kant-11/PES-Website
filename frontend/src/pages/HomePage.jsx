@@ -63,23 +63,28 @@ const heroData = [
     heading: "Education",
     subheading: "4 underpriviledged",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
+      "Shaping Identities , Redefining Education : Pehchaan , where we empower young minds to build a brighter tomorrow 									",
   },
   {
     img: HeaderImage,
     heading: "Education",
     subheading: "4 underpriviledged",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
+    "Pathshala : Daily tuition classes for kids from economically challenged backgrounds . We also help them in getting admissions to reputed schools like KV , JNV , Navodaya etc."  
   },
   {
     img: HeaderImage,
-    heading: "Education",
-    subheading: "4 underpriviledged",
+    heading: "Mentorship",
+    subheading: "Sparking Curiosity",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
-  },
-];
+   "Outreach :  Conducting career counselling sessions , seminars and workshops to nurture scientific temper and increase financial literacy in students of various private and government schools of Ropar .  "  },
+   {
+    img: HeaderImage,
+    heading: "Raising The Bar",
+    subheading: "Atal Tinkering Labs",
+    description:
+    "We extend our efforts beyond classrooms with ATLs, training teachers and fostering innovation.										"
+},  ];
 
 // Data for Testimonial section
 const testimonialData = [
