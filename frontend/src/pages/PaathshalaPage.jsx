@@ -1,8 +1,9 @@
 import "../styles/pagesStyles/PaathshalaPage.css";
 import Carousel from "../components/Carousel";
 import PageHeader from "../components/PageHeader";
-import HeaderImage from "../assets/paathshala.jpg";
+import HeaderImage from "../assets/paathshala1.jpg";
 import paathshalaImage from "../assets/donation-msg.jpg";
+
 
 
 function PaathshalaPage() {

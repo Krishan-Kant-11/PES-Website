@@ -212,10 +212,7 @@ With this mission , Pehchaan Ek Safar was found where we are striving to bridge 
             </h2>
             <div className="achievement-underline"></div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam aperiam dolorem fugit ipsam est neque debitis. Fuga
-              nemo, tempora vitae maiores deleniti natus obcaecati beatae
-              officiis earum perferendis, pariatur aliquid.
+            We don't just see potential, we nuture it. We don't just build futures, we weave them together. This is Pehchaan Ek Safarwhere lives transform, hand in hand, weaving a brighter tomorrow, for everyone.
             </p>
           </div>
           <div className="achievement-stats">

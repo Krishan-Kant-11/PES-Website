@@ -2,6 +2,7 @@ import "../styles/pagesStyles/SchoolOutreachPage.css";
 import PageHeader from "../components/PageHeader";
 import HeaderImage from "../assets/header-testing.jpg";
 import outreachImage from "../assets/donation-msg.jpg";
+i
 
 function SchoolOutreachPage() {
   return (
