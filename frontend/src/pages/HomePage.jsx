@@ -30,6 +30,9 @@ import homepage_others_2 from "../assets/home-page-our-work-others-2.jpg";
 import about_1 from "../assets/about-1.jpg";
 import about_2 from "../assets/about-2.jpg";
 import about_3 from "../assets/about-3.jpg";
+import Hero_5 from "../assets/home_hero_sss.jpg";
+import Hero_2 from "../assets/home_hero_paathshala.png";
+import Hero_3 from "../assets/home_hero_outreach.jpg";
 import HeaderImage from "../assets/header-testing.jpg";
 
 {
@@ -37,6 +40,7 @@ import HeaderImage from "../assets/header-testing.jpg";
 }
 import testimonial_1 from "../assets/testimonial-1.jpg";
 import testimonial_2 from "../assets/testimonial-2.jpg";
+import testimonial_5 from "../assets/home_testimonials/harpreet sir.jpg";
 
 {
   /* Images for Hero section*/
@@ -62,38 +66,61 @@ const heroData = [
     img: HeaderImage,
     heading: "Education",
     subheading: "4 underpriviledged",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
-  },
+    description: "Shaping Identities, Redefining Education: Pehchaan empowers young minds, nurturing their potential to build a brighter tomorrow. We strive to redefine education, fostering personal growth and creating a positive impact on the identities of the individuals we serve. "
+    },
   {
-    img: HeaderImage,
+    img: Hero_2,
     heading: "Education",
     subheading: "4 underpriviledged",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
-  },
+    description: "Paathshala provides daily tuition classes for economically challenged children. We also support their admission into esteemed institutions such as KV, JNV and Navodaya, ensuring access to quality education. Our mission is to empower every child and breaking barriers for a brighter future."    },
+  {
+    img: Hero_3,
+    heading: "Mentorship",
+    subheading: "Sparking Curiosity",
+    description: "Outreach: Fostering scientific temper and financial literacy in Ropar's students through career counseling sessions, seminars, and workshops. We engage with both private and government schools, empowering students for a knowledge-rich and financially informed future." },
   {
     img: HeaderImage,
-    heading: "Education",
-    subheading: "4 underpriviledged",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id.",
-  },
+    heading: "Raising",
+    subheading: "The Bar",
+    description:"Atal Tinkering Labs: Extending beyond classrooms, we empower through ATLs, training teachers and fostering innovation. Our commitment is to cultivate a culture of creativity, preparing students for a dynamic future." },
+  {
+    img: Hero_5,
+    heading: "School Safar",
+    subheading: "Saathi  (SSS) ",
+    description:"Empowering meritorious students in financial adversity through resources and mentorship. We conduct fair tests and interviews to ensure a transparent selection process, nurturing their academic journey and future success."},
 ];
 
 // Data for Testimonial section
 const testimonialData = [
   {
-    name: "Mrs Mohini",
+    name: "Sanyukta Marandi",
     description:
-      "I had always wanted to be a part of something that strived towards making this world a better place, and Pehchaan provided me just that. Everyday we get to learn from the kids as much as they learn from us. Also, we not only help the children with their education, but also try to guide them in any way possible. The team, the children, the mentors and guides, we are all a family now. It doesn't feel like we are working for anyone else, It's like we are working for ourselves. In this journey of spreading love and education we have come a long way, and I believe we've still got a long journey to cover.",
-    img: testimonial_1,
+    "(Volunteer) I had always wanted to be a part of something that strived towards making this world a better place, and Pehchaan provided me just that. Everyday we get to learn from the kids as much as they learn from us. Also, we not only help the children with their education, but also try to guide them in any way possible. The team, the children, the mentors and guides, we are all a family now. It doesn't feel like we are working for anyone else, It's like we are working for ourselves. In this journey of spreading love and education we have come a long way, and I believe we've still got a long journey to cover."
+    ,img: testimonial_1,
   },
   {
-    name: "Prof Sarojni",
+    name: "Versha Chaudhary",
     description:
-      "Pehchaan ek safar is an effort to help and uplift the needy, which eventually contributes to the Nation building. Every time I visited those kids I used to receive their long smiles and inner mental peace as a regular reward. This has been a continuous source of motivation for me and hence I was able to connect with new creative paths to help those kids. That amazing experience of those incredible smiles and self satisfaction beats in my heart even today. I feel lucky and proud of myself and my team to be able to initiate this noble cause. Initial phase is always a challenging part for every journey ",
+      "(Founding Member) Pehchaan ek safar is an effort to help and uplift the needy, which eventually contributes to the Nation building. Every time I visited those kids I used to receive their long smiles and inner mental peace as a regular reward. This has been a continuous source of motivation for me and hence I was able to connect with new creative paths to help those kids. That amazing experience of those incredible smiles and self satisfaction beats in my heart even today. I feel lucky and proud of myself and my team to be able to initiate this noble cause. Initial phase is always a challenging part for every journey ",
     img: testimonial_2,
+  },
+  {
+    name: "Mahantesh Khetri",
+    description:
+      "(Founding Member) Proud to be a founding member of Pehchaan Ek Safar, an NGO focusing on educating underprivileged children. Our journey began with a few volunteers near IIT Ropar, and now we've expanded to support hundreds of kids, registering them in formal schooling with dedicated volunteers providing crucial assistance and skill training. Our ongoing mission embraces kindness and skilled volunteers to achieve even greater milestones ahead."
+       ,img: testimonial_2,
+  },
+  {
+    name: "Atul Singh",
+    description:
+      "(Founding Member) In late 2017, as founding members wandering IIT Ropar, we discovered local children deprived of education. With support from fellow students and the institute, we formed PEHCHAAN EK SAFAR, an NGO aiming to bridge the gap between privileged and underprivileged, fostering identity and citizenship pride. Personally fulfilling, our work promotes light over darkness. The NGO rapidly expands, focusing on education and instilling scientific temper in youth. Best wishes to the Pehchaan family for ongoing contributions to a better tomorrow.",
+      img: testimonial_2,
+  },
+  {
+    name: "Prof Harpreet Singh",
+    description:
+      "(Mentor) As a mentor of Pehchaan Ek Safar,I feel privileged to witness volunteers dedicating time and resources to educate underprivileged children alongside their studies. Its heartening to see them not only teach but also incorporate the latest learning methods. Education is key for financial sustainability and fostering good citizenship. Congratulations to the volunteers for shaping the future of these children, guiding them out of the darkness of illiteracy. You are the real heroes, setting a beautiful example of service to humanity. Thank you for your inspiring work. Live Long, Pehchaan Ek Safar! "
+      ,img: testimonial_5,
   },
 ];
 
@@ -141,11 +168,7 @@ function HomePage() {
         <div className="AboutUs-content">
           <div className="AboutUs-p">
             <p>
-            Pehchaan Ek Safar is a not-for-profit organisation founded and run by the students of IIT Ropar. We aim to counter illiteracy and realize the Right To Education of children from socio-economically challenged backgrounds. 
-
-Access to education is a privilege and quality education is a far dream for the underprivileged kids . As commodification of education keeps taking new forms widening the societal gap every day , there is an undeniable need for access to free and quality education in a healthy and nurturing environment so that these kids are at no disadvantage to their privileged counterparts. 
-
-With this mission , Pehchaan Ek Safar was found where we are striving to bridge this gap and empower our children so that they can create a better, brighter and happier future for themselves.
+            Pehchaan Ek Safar, a non-profit organization initiated and managed by students of IIT Ropar, stands dedicated to eradicating illiteracy and championing the Right to Education for children from socio-economically disadvantaged backgrounds. In a landscape where access to education is a privilege and quality education remains elusive for underprivileged children, we recognize the urgency to counteract the widening societal gap exacerbated by the commodification of education. Pehchaan Ek Safar strives to fill this void by offering free, quality education in a nurturing environment. Through a mission of empowerment, we aim to equip these children with the tools and knowledge necessary to create a better, brighter, and happier future for themselves, ensuring they are not at a disadvantage compared to their more privileged counterparts.
 
             </p>
           </div>
@@ -207,10 +230,8 @@ With this mission , Pehchaan Ek Safar was found where we are striving to bridge 
             </h2>
             <div className="achievement-underline"></div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam aperiam dolorem fugit ipsam est neque debitis. Fuga
-              nemo, tempora vitae maiores deleniti natus obcaecati beatae
-              officiis earum perferendis, pariatur aliquid.
+            We don't just see potential, we nuture it. We don't just build futures, we weave them together. This is Pehchaan Ek Safa transforming lives, hand in hand, weaving a brighter tomorrow, for everyone.
+
             </p>
           </div>
           <div className="achievement-stats">
