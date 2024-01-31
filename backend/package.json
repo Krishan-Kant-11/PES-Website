@@ -1,5 +1,5 @@
 {
-  "proxy":"http://172.30.8.130/",
+  "proxy":"http://localhost:5173/",
   "name": "pes-backend",
   "version": "1.0.0",
   "description": "Backend for Pehchaan Ek Safar website",
