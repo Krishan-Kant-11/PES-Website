@@ -1,7 +1,7 @@
 {
   "name": "client",
   "private": true,
-  "home": "http://iitrpr.ac.in/pehchaanes",
+  "home": ".",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
