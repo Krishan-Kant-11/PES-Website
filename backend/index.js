@@ -48,8 +48,8 @@ app.use('/attendance', attendance_routes);
 app.use('/profile', profile_routes);
 
 // // Handle all other routes and serve the React app
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, "..",'frontend', 'dist', 'index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
 });
 
 //database connection 
