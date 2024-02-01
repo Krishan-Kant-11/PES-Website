@@ -66,7 +66,7 @@ function ContactForm() {
 
         // Send form data to the backend and mailing to PES
         const respone = await fetch(
-          `${import.meta.env.VITE_API_BASE}/contact/send-email`,
+          `${import.meta.env.VITE_API_BASE}/api/contact/send-email`,
           {
             method: "POST",
             headers: {

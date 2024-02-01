@@ -33,24 +33,16 @@ const joinForm_routes = require('./src/routes/joinForm.js')
 const attendance_routes = require('./src/routes/attendance.js');
 const profile_routes = require('./src/routes/profile.js');
 
-// Serve the React app from the '../frontend/dist' directory
-app.use(express.static(path.join(__dirname, '..' ,'frontend', 'dist')));
-
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Hello World!');
 });
 
-app.use('/events', events_routes);
-app.use('/auth', auth_routes);
-app.use('/contact', contactForm_routes);
-app.use('/join', joinForm_routes);
-app.use('/attendance', attendance_routes);
-app.use('/profile', profile_routes);
-
-// // Handle all other routes and serve the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
-});
+app.use('/api/events', events_routes);
+app.use('/api/auth', auth_routes);
+app.use('/api/contact', contactForm_routes);
+app.use('/api/join', joinForm_routes);
+app.use('/api/attendance', attendance_routes);
+app.use('/api/profile', profile_routes);
 
 //database connection 
 connectDB().then(()=>{
