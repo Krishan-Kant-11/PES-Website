@@ -146,7 +146,7 @@ function OurTeamPage(){
                             img = {webdev_3}
                             name = "Upasna"
                             designation = "Back-end Team"
-                            email = "2019csm1015@iitrpr.ac.in"
+                            email = "2021csz0002@iitrpr.ac.in"
                         />
                         <TeamsCard
                             img = {webdev_4}
