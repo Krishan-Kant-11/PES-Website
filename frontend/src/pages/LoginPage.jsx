@@ -26,8 +26,7 @@ function LoginPage() {
       e.target.value = "Login"
       return;
     }
-    // fetch(`http://localhost:5000/auth/login`, {
-    fetch(`http://172.30.8.130:5000/auth/login`, {  
+    fetch(`http://localhost:5000/auth/login`, {
       method: 'POST',
       body: formData,
     }).then(res => {
