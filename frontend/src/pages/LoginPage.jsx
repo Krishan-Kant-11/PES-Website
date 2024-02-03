@@ -27,7 +27,7 @@ function LoginPage() {
       return;
     }
     // fetch(`http://localhost:5000/auth/login`, {
-    fetch(`${process.env.VITE_API_BASE}/auth/login`, {  
+    fetch(`http://172.30.8.130:5000/auth/login`, {  
       method: 'POST',
       body: formData,
     }).then(res => {
