@@ -4,13 +4,15 @@ import AdminDashboard from './AdminDashboard';
 import request from "../../request";
 import "../../styles/pagesStyles/dashboard/Dashboard.css";
 
+import { API_BASE } from "../../../constants";
+
 function Dashboard(){
   const [user, setUser] = useState(undefined); // user object
 
   async function initialize(){
     setUser(undefined);
     // get user details
-    let _user = await (await request.get(` http://localhost:5000/auth/user`)).json();
+    let _user = await (await request.get(`${API_BASE}/auth/user`)).json();
     setUser(_user);
   }
   
