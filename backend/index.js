@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer().any());
 app.use(cookieParser());
-app.use(cors({credentials: true, origin: 'http://172.30.8.130'})); // TODO: update when deploying
+app.use(cors({credentials: true, origin: 'http://172.30.8.130:5000'})); // TODO: update when deploying
 app.use(logger);
 
 //port 
