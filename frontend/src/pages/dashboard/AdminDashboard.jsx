@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import request from '../../request';
 import "../../styles/pagesStyles/dashboard/Dashboard.css";
 
+import { API_BASE } from "../../../constants";
+
 function PendingRequest({ pendingRequest, reload }){
   const [viewDetails, setViewDetails] = useState(false);
   const rejectButton = useRef(null);
@@ -22,7 +24,7 @@ function PendingRequest({ pendingRequest, reload }){
   }
   function approve(e){
     onClick(e, approveButton);
-    request.post(`${import.meta.env.VITE_API_BASE}/auth/approve_request`, new URLSearchParams({id: pendingRequest._id})).then(res => {
+    request.post(`${API_BASE}/auth/approve_request`, new URLSearchParams({id: pendingRequest._id})).then(res => {
       if(res.status === 200){
         alert("Request approved!");
         reload();
@@ -36,7 +38,7 @@ function PendingRequest({ pendingRequest, reload }){
   }
   function reject(e){
     onClick(e, rejectButton);
-    request.post(`${import.meta.env.VITE_API_BASE}/auth/reject_request`, new URLSearchParams({id: pendingRequest._id})).then(res => {
+    request.post(`${API_BASE}/auth/reject_request`, new URLSearchParams({id: pendingRequest._id})).then(res => {
       if(res.status === 200){
         alert("Request rejected!");
         reload();
@@ -89,7 +91,7 @@ function User({ user, reload, myUser }){
     if(!user) return;
     onClick(e);
     // console.log(user);
-    request.post(`${import.meta.env.VITE_API_BASE}/auth/${user.privileges == "volunteer" ? 'promote' : 'demote'}`, new URLSearchParams({id: user._id})).then(res => {
+    request.post(`${API_BASE}/auth/${user.privileges == "volunteer" ? 'promote' : 'demote'}`, new URLSearchParams({id: user._id})).then(res => {
       if(res.status === 200){
         alert("User's admin status changed!");
         reload();
@@ -141,10 +143,10 @@ function Dashboard(){
     setPendingRequests(undefined);
     setAllUsers(undefined);
     // get user details
-    let _user = await (await request.get(`${import.meta.env.VITE_API_BASE}/auth/user`)).json();
+    let _user = await (await request.get(`${API_BASE}/auth/user`)).json();
     setUser(_user);
     // get all users
-    let _allUsers = await (await request.get(`${import.meta.env.VITE_API_BASE}/auth/users`)).json();
+    let _allUsers = await (await request.get(`${API_BASE}/auth/users`)).json();
     // sort all users, keeping admins on top and volunteers at bottom
     _allUsers.sort((a, b) => {
       if(a.privileges == "admin" && b.privileges == "volunteer") return -1;
@@ -153,7 +155,7 @@ function Dashboard(){
     });
     setAllUsers(_allUsers);
     // get pending requests
-    let _pendingRequests = await (await request.get(`${import.meta.env.VITE_API_BASE}/auth/pending_requests`)).json();
+    let _pendingRequests = await (await request.get(`${API_BASE}/auth/pending_requests`)).json();
     setPendingRequests(_pendingRequests);
   }
 

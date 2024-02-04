@@ -5,6 +5,8 @@ import headerImg from '../assets/hero_image3.jpg';
 import logoImg from '../assets/peslogo.png';
 import "../styles/pagesStyles/AuthPage.css";
 
+import { API_BASE } from "../../constants";
+
 function LoginPage() {
   const navigate = useNavigate();
 
@@ -26,7 +28,7 @@ function LoginPage() {
       e.target.value = "Login"
       return;
     }
-    fetch(`http://localhost:5000/auth/login`, {
+    fetch(`${API_BASE}/auth/login`, {
       method: 'POST',
       body: formData,
     }).then(res => {
