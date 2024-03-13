@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "home": ".",
+  "home": "/pehchaanes",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
