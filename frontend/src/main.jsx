@@ -33,7 +33,7 @@ import GetAttPage from "./pages/dashboard/GetAttPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename='/pehchaanes'>
+    <BrowserRouter basename={process.env.NODE_ENV === 'development' ? '/' : '/pehchaanes'}>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
