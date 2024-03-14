@@ -33,16 +33,16 @@ const joinForm_routes = require('./src/routes/joinForm.js')
 const attendance_routes = require('./src/routes/attendance.js');
 const profile_routes = require('./src/routes/profile.js');
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.use('/api/events', events_routes);
-app.use('/api/auth', auth_routes);
-app.use('/api/contact', contactForm_routes);
-app.use('/api/join', joinForm_routes);
-app.use('/api/attendance', attendance_routes);
-app.use('/api/profile', profile_routes);
+app.use('/events', events_routes);
+app.use('/auth', auth_routes);
+app.use('/contact', contactForm_routes);
+app.use('/join', joinForm_routes);
+app.use('/attendance', attendance_routes);
+app.use('/profile', profile_routes);
 
 //database connection 
 connectDB().then(()=>{

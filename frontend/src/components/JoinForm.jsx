@@ -89,7 +89,7 @@ function JoinForm() {
 
         // Send form data to the backend and mailing to PES
         const respone = await fetch(
-            `${import.meta.env.VITE_API_BASE}/api/join/send-email`,
+            `${import.meta.env.VITE_API_BASE}/join/send-email`,
             {
               method: "POST",
               headers: {
