@@ -33,6 +33,71 @@
   margin-bottom: 3%;
 }
 
+.FAQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4%;
+  margin-bottom: 6%;
+  
+}
+
+.FAQ > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 65px;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(255, 102, 0);
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-underline-offset: 20px;
+  text-decoration-thickness: 2.5px;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.FAQitem {
+  width: 80%;
+  margin: 1px 0;
+   
+  padding-bottom: 10px;
+}
+
+.FAQitem > h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(40, 40, 40);
+  margin-bottom: 8px;
+  
+}
+
+.FAQitem > p {
+  padding: 8px 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(73, 72, 72);
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .FAQ > h1 {
+    font-size: 44px;
+  }
+
+  .FAQitem > h3 {
+    font-size: 20px;
+  }
+
+  .FAQitem > p {
+    font-size: 14px;
+  }
+}
+
 .AboutUs {
   display: flex;
   flex-direction: column;
