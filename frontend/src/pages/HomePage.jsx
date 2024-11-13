@@ -276,6 +276,20 @@ function HomePage() {
           ))}
         </Slider>
       </div>
+      <div className="FAQ">
+        <h1>FAQ</h1>
+        <div className="FAQitem"><h3>1. What is Pehchan Ek Safar?</h3>
+        <p>Pehchan Ek Safar is a non-profit organization dedicated to providing education to underprivileged children. We believe that education is a basic right and a powerful tool to lift children and their families out of poverty, creating better opportunities for a brighter future.</p>
+        <h3>2. How does Pehchan Ek Safar help underprivileged children?</h3>
+        <p>We provide quality education, school supplies, and a supportive learning environment for children who may not have access to traditional schooling. Our programs focus on both academic learning and life skills, aiming to nurture well-rounded individuals.</p>
+
+        <h3>3. Who are the children you support?</h3>
+        <p>We support children from marginalized communities who lack access to quality education due to economic or social constraints. These children are often first-generation learners, and Pehchan Ek Safar is committed to giving them the resources they need to thrive.</p>
+        <h3>4. How can I contribute to Pehchan Ek Safar?</h3>
+        <p>You can contribute by donating funds, school supplies, or volunteering your time. Every contribution, big or small, helps us reach more children and make a significant impact in their lives. For more information on how to donate or volunteer, please visit our Contribute page.</p>
+
+        </div>
+      </div>
 
       
 
