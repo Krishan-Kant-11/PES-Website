@@ -59,6 +59,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path='/dashboard/profile' element={<ProfilePage />} />
         <Route path="/dashboard/events" element={<ManageEventsPage />} />
         <Route path="/dashboard/get-attendance" element={<GetAttPage />} />
+        <Route path="/faq" element={<HomePage />} />
+        <Route path="/aboutus" element={<HomePage />} />
+        <Route path="/contactus" element={<ContactPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
