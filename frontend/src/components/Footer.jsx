@@ -59,16 +59,16 @@ export default function Footer() {
               <h3>Quick Links</h3>
               <ul className="footer-links">
                 <li>
-                  <a href="#">About Us</a>
+                  <a href="/aboutus">About Us</a>
                 </li>
                 <li>
-                  <a href="#">Contact Us</a>
+                  <a href="/contactus">Contact Us</a>
                 </li>
                 <li>
-                  <a href="#">Contribute</a>
+                  <a href="/Donate">Contribute</a>
                 </li>
                 <li>
-                  <a href="#">FAQs</a>
+                  <a href="/faq">FAQs</a>
                 </li>
               </ul>
             </div>
