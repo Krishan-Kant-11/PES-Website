@@ -1,3 +1,6 @@
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import "../styles/pagesStyles/HomePage.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
@@ -153,6 +156,27 @@ function HomePage() {
     autoplaySpeed: 8000,
     pauseOnHover: false,
   };
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll instant to FAQ section if the location is '/faq'
+    if (location.pathname === "/faq") {
+      const faqSection = document.getElementById("faq-section");
+      if (faqSection) {
+        faqSection.scrollIntoView({ behavior: "instant", block:"start",inline:"nearest" });
+      }
+    }
+  }, [location]);
+
+  useEffect(() => {
+    // Scroll to about us section if the location is '/aboutus'
+    if (location.pathname === "/aboutus") {
+      const abtSection = document.getElementById("about-us");
+      if (abtSection) {
+        abtSection.scrollIntoView({ behavior: "instant", block:"start",inline:"nearest" });
+      }
+    }
+  }, [location]);
 
   return (
     <>
@@ -277,7 +301,7 @@ function HomePage() {
         </Slider>
       </div>
       <div className="FAQ">
-        <h1>FAQ</h1>
+        <h1 id="faq-section">FAQ</h1>
         <div className="FAQitem"><h3>1. What is Pehchan Ek Safar?</h3>
         <p>Pehchan Ek Safar is a non-profit organization dedicated to providing education to underprivileged children. We believe that education is a basic right and a powerful tool to lift children and their families out of poverty, creating better opportunities for a brighter future.</p>
         <h3>2. How does Pehchan Ek Safar help underprivileged children?</h3>
