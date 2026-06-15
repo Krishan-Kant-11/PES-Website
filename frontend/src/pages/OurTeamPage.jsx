@@ -2,16 +2,18 @@ import { Link } from 'react-router-dom';
 import "../styles/pagesStyles/OurTeamPage.css"
 import TeamsCard from "../components/TeamsCard"
 // import profilepic from "../assets/governingbody/president.png"
-import president from "../assets/governingbody/Ruchita.jpg"
-import vicepresident from "../assets/governingbody/Jay.jpg"
+
+import Saikat from "../assets/governingbody/Saikat.jpeg"
 import agrasen from "../assets/governingbody/Agrasen.jpg"
-import brajesh from "../assets/governingbody/Brajesh.jpg"
-import pranav from "../assets/governingbody/Pranav.jpg"
-import shashank from "../assets/governingbody/Shashank.jpg"
-import udit from "../assets/governingbody/Udit.jpg"
-import yogesh from "../assets/governingbody/Yogesh.jpeg"
+import brajesh from "../assets/governingbody/Brajesh.jpeg"
+import Vipul from "../assets/governingbody/Vipul.jpeg"
+import Dhruv from "../assets/governingbody/Dhruv.jpeg"
+
+import madhav from "../assets/governingbody/madhav.jpeg"
+import Muskan from "../assets/governingbody/Muskan.jpeg"
+import Pooja from "../assets/governingbody/Pooja.jpeg"
 import shiva from "../assets/governingbody/shiva.jpg"
-import diya from "../assets/governingbody/diya.jpg"
+import Vivek from "../assets/governingbody/Vivek.jpeg"
 import directorPic from "../assets/patronAndMentor/rajeev_sir.jpeg"
 import pps_sir from "../assets/patronAndMentor/pps_sir.jpeg"
 import harpreet_sir from "../assets/patronAndMentor/harpreet_sir.jpg"
@@ -62,67 +64,73 @@ function OurTeamPage(){
                     <h1>Governing Body</h1>
                     <div className="Cards">
                         <TeamsCard
-                            img = {president}
-                            name = "Ruchita Gupta"
+                            img = {brajesh}
+                            name = "Brajesh Khokad"
                             designation = "President"
-                            email = "2022meb1339@iitrpr.ac.in"
+                            email = "2023csb1111@iitrpr.ac.in"
                         />
                         <TeamsCard
-                            img = {vicepresident}
-                            name = "Jay Goel"
+                            img = {Saikat}
+                            name = "Saikat Biswas"
                             designation = "Vice President"
-                            email = "2022eeb1178@iitrpr.ac.in"
+                            email = "saikat.23mez0016@iitrpr.ac.in"
                         />
                        
                           <TeamsCard
-                            img = {pranav}
-                            name = "Pranav Menon"
+                            img = {shiva}
+                            name = "Shiva Kumar"
                             designation = "Secretary-1"
-                            email = "2022csb1329@iitrpr.ac.in"
+                            email = "2023eeb1244@iitrpr.ac.in"
                         />
                         <TeamsCard
-                            img = {yogesh}
-                            name = "Yogesh Rathia"
+                            img = {Pooja}
+                            name = "Pooja Pachar"
                             designation = "Secretary-2"
-                            email = "2023csm1022@iitrpr.ac.in"
+                            email = "2023meb1367@iitrpr.ac.in"
                         />
                         <TeamsCard
+                            img = {agrasen}
+                            name = "Agrasen Yadav"
+                            designation = "Treasurer"
+                            email = "2023meb1327@iitrpr.ac.in"
+                        />
+                        {/* <TeamsCard
                             img = {udit}
                             name = "Udit Vijay"
                             designation = "PR and Sponsorship Lead"
                             email = "2022ceb1033@iitrpr.ac.in"
-                        />
+                        /> */}
                           <TeamsCard
-                            img = {agrasen}
-                            name = "Agrasen Yadav"
+                            img = {Muskan}
+                            name = "Muskan Yadav"
                             designation = "Paathshala Lead"
-                            email = "2023meb1327@iitrpr.ac.in"
+                            email = "2024bbm1003@iitrpr.ac.in"
                         />
                           <TeamsCard
-                            img = {shiva}
-                            name = "Shiva Kumar"
+                            img = {Vipul}
+                            name = "Vipul Kumar"
                             designation = "Office Team Lead"
-                            email = "2023eeb1244@iitrpr.ac.in"
+                            email = "2023eeb1254@iitrpr.ac.in"
                         />
                           
                           <TeamsCard
-                            img = {diya}
-                            name = "Diya Seal"
+                            img = {Vivek}
+                            name = "Vivek C K"
                             designation = "Social Media Lead"
-                            email = "2023meb1341@iitrpr.ac.in"
+                            email = "2023eeb1255@iitrpr.ac.in"
                         />
                           <TeamsCard
-                            img = {shashank}
-                            name = "Shashank Kumar"
+                            img = {madhav}
+                            name = "Madhav Kundnani"
                             designation = "Outreach Lead"
-                            email = "2021csb1131@iitrpr.ac.in"
+                            email = "2024epb1272@iitrpr.ac.in"
                         />
                      
                              <TeamsCard
-                            img = {brajesh}
-                            name = "Brajesh Khokad"
-                            designation = "Event Management Lead"
-                            email = "2023csb1111@iitrpr.ac.in"
+                            img = {Dhruv}
+                            name = "Dhruv Sharma"
+                            designation = "PR and Sponsorship Lead"
+                            email = "2024bbm1001@iitrpr.ac.in"
                         />
                               
                               
